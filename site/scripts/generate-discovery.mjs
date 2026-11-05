@@ -69,7 +69,7 @@ export function buildDiscovery(config, faqs) {
     "Choose supported models and reasoning effort for planning, implementation, review, and other roles. A deeper reasoning model can resolve uncertain decisions, while an efficient coding model implements a bounded brief. Independent assignments can run in parallel after agreeing shared boundaries. Actual savings depend on model prices, context, task complexity, and coordination overhead. These preferences guide delegated roles, not the model running the current chat.",
     "## Installation and activation",
     "Requires Python 3.11+ and Git for installation. Choose one native plugin or standalone export per harness.",
-    "```sh\ngit clone " + config.repository + ".git\ncd kishu-stack\npython scripts/kishu.py install --harness codex\n```",
+    "```sh\ngit clone --branch v0.1.5 --single-branch " + config.repository + ".git\ncd kishu-stack\npython scripts/kishu.py install --harness codex\n```",
     "Use `--harness cursor` or `--harness claude` for those hosts. Start a fresh session after installation.",
     "| Host | Work command | Model setup |\n| --- | --- | --- |\n| Codex plugin | `$kishu:kishu-mode` | `$kishu:kishu setup` |\n| Cursor | `/kishu-mode` | `/kishu setup` |\n| Claude Code | `/kishu:kishu-mode` | `/kishu:kishu setup` |",
     "## Common questions",

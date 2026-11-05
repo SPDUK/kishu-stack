@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "upstreamCommit": "ae5650febf4320793844c12c4adaa937f417f8da",
   "kishuRef": "main",
-  "kishuSourceHash": "7e67d5f2e74e5ad2a63cf9ddb0652f244caef0cb2b90cba332f842c36a2686c5",
+  "kishuSourceHash": "4096d29bf19177e4df97d8879aafb03b9df2f0cb8cb03c870459a5fa7f1a298a",
   "sources": [
     {
       "id": "895e5dccd019",
@@ -7526,17 +7526,19 @@
       "url": "https://github.com/SPDUK/kishu-stack/blob/main/src/guides/update.md",
       "upstreamUrl": "",
       "editPath": "src/guides/update.md",
-      "hash": "a99dc089c1d65105d2b98c503400c162cf222116f1d7ce26679a4d4f71500231",
+      "hash": "47b7ec11d1c25e15c25de2cc9d53dc4179e3da53e878096ea8047553e1188262",
       "excludedLines": [],
       "ruleIds": [
-        "R-5a37ba1b638d",
+        "R-d34af9e774fd",
         "R-855cea7bf0ce",
         "R-383d71f50b13",
         "R-22720114cb74",
-        "R-ddf64ad5ccee",
-        "R-6ec631171183",
+        "R-e4a4aa3587e9",
+        "R-0eadf181fcbd",
+        "R-1474bee2eae9",
+        "R-26a8599932d2",
         "R-e22478734c80",
-        "R-78c166c61d64"
+        "R-12b3194433b3"
       ]
     },
     {
@@ -7599,18 +7601,19 @@
       "url": "https://github.com/SPDUK/kishu-stack/blob/main/src/scripts/update_kishu.py",
       "upstreamUrl": "",
       "editPath": "src/scripts/update_kishu.py",
-      "hash": "4020e77acf7606296de4aaa07647e0e014fd28a137d222dd8134b5684a1b8fc3",
+      "hash": "5dec83561c0157da400418d3f40a5aa25f8f0194999fd60a59aa0da65e539df5",
       "excludedLines": [],
       "ruleIds": [
-        "R-608a683cdb7b",
+        "R-cb87d569af7c",
         "R-288512f501ad",
-        "R-9a771a20e17e",
-        "R-3da7b8a7cad2",
+        "R-a793d070d52c",
+        "R-63ed4dac639f",
         "R-cb0ab8ae8837",
         "R-52f11c1e5638",
         "R-20c9ecfcdee8",
-        "R-5af1bdc05cb6",
-        "R-597772bf4392",
+        "R-7a3673a5f35d",
+        "R-1b4add22991a",
+        "R-2c8a3dcaec1a",
         "R-fac87f835741"
       ]
     },
@@ -7627,13 +7630,13 @@
       "url": "https://github.com/SPDUK/kishu-stack/blob/main/scripts/kishu.py",
       "upstreamUrl": "",
       "editPath": "scripts/kishu.py",
-      "hash": "5d7ff769996901b8e90e347c46c8e849e13b1cd24d3dec55367d1404c79168e2",
+      "hash": "ac83b777a294fabe6c3850c1bee6ea1aeca0bd56e695bbbc99a064ba8b34ebe6",
       "excludedLines": [],
       "ruleIds": [
         "R-f8dd7948fc3d",
         "R-d5b6a8286b7f",
         "R-676935a9fdd0",
-        "R-c8f54463c0f5",
+        "R-407aa080e296",
         "R-b2dd2d8e70c1",
         "R-c9568abb1b83",
         "R-402d9a7c1897",
@@ -43803,10 +43806,10 @@
       "section": "Update Kishu",
       "start": 3,
       "end": 3,
-      "text": "This command installs the latest committed Kishu from `https://github.com/SPDUK/kishu-stack.git`, branch `main`. It does **not** update pstack, Impeccable, or i-have-adhd independently; those revisions are reviewed and pinned by Kishu's maintainers.",
-      "id": "R-5a37ba1b638d",
+      "text": "This command installs the latest published stable GitHub release from `https://github.com/SPDUK/kishu-stack`. Drafts, prereleases, unassociated Git tags, and unreleased `main` changes are excluded. It does **not** update pstack, Impeccable, or i-have-adhd independently; those revisions are reviewed and pinned by Kishu's maintainers.",
+      "id": "R-d34af9e774fd",
       "source": "367e62fbfa5e",
-      "hash": "fd396e5e328232c224a70290b61a155ee311c83fa229ccd26b50b34b346dd603"
+      "hash": "8c4cd54dc0fa953c7b81bafc8439b8830ab64ec8e7c59f1419f62c88ce87cd6c"
     },
     {
       "section": "Update Kishu",
@@ -43839,24 +43842,42 @@
       "section": "Update Kishu",
       "start": 13,
       "end": 13,
-      "text": "For **Claude Code**, inspect `claude plugin marketplace list --json` first. If `kishu-local` already uses a local directory, use that registered Kishu directory as `--checkout`; the updater still verifies its remote, branch, and clean state. If it is already a Git/GitHub source for this exact repository with no pinned ref or with `main`, use `claude plugin marketplace update kishu-local` followed by `claude plugin update kishu@kishu-local` and report their actual results. Resolve a different source or pinned ref with the user before changing it. Never remove a Claude marketplace to switch its source: the host can delete its plugins and saved data.",
-      "id": "R-ddf64ad5ccee",
+      "text": "If the user names a version, append `--version <version>`, for example `--version 0.1.5` or `--version v0.1.5`. This also supports an explicitly requested rollback to an older published stable release. Never pass a branch or prerelease. An ordinary update selects GitHub's latest stable release; do not silently choose another version when lookup fails.",
+      "id": "R-e4a4aa3587e9",
       "source": "367e62fbfa5e",
-      "hash": "327b567394b9cc3153b108aad5c761d9197949d196ff99870b7bbee994e73b97"
+      "hash": "374f0877cca47500595ee17deb65cdc215e1e06ee649102767208f02111725e5"
     },
     {
       "section": "Update Kishu",
       "start": 15,
       "end": 15,
-      "text": "The updater keeps a separate checkout at `~/.kishu/source` by default. It verifies the origin and branch, refuses local edits or unpublished/divergent commits, fetches `main`, fast-forwards, and invokes that revision's installer. It does not touch the user's project repository or personal model configuration. `--checkout <path>` can use another dedicated Kishu checkout when explicitly requested. Never stash, reset, force-push, or overwrite local work to bypass an update refusal.",
-      "id": "R-6ec631171183",
+      "text": "For **Claude Code**, inspect `claude plugin marketplace list --json` first. If `kishu-local` already uses a local directory, use that registered Kishu directory as `--checkout`; the updater still verifies its remote and clean state. A clean legacy `main` checkout can migrate to a detached release commit. If the marketplace uses a Git/GitHub source, a different repository, or another pinned ref, explain the source conflict and resolve it with the user. Do not fall back to a host marketplace update that could track `main`. Never remove a Claude marketplace to switch its source: the host can delete its plugins and saved data.",
+      "id": "R-0eadf181fcbd",
       "source": "367e62fbfa5e",
-      "hash": "376cca2e0d80f70836c0aff281e0b0c813e7801bfc53a0d4e8c5f861033c6f2d"
+      "hash": "a1c74c4705c30842abc85480d7cb599714cf558410753165e40a174b1bddcfdc"
     },
     {
       "section": "Update Kishu",
       "start": 17,
       "end": 17,
+      "text": "The updater keeps a separate checkout at `~/.kishu/releases` by default. Existing `~/.kishu/source` checkouts are preserved. It verifies the origin, refuses local edits, development branches and unpublished/divergent commits, resolves a published release, checks out that exact tag's commit in detached mode, and invokes its installer. It fetches `main` only to check whether existing local commits are published; it never installs `main` as a fallback. A tag/package version mismatch stops installation. If the installer fails, the previous existing source checkout is restored; this does not guarantee rollback of any host-side partial installation.",
+      "id": "R-1474bee2eae9",
+      "source": "367e62fbfa5e",
+      "hash": "43aeca7361da05bf7c265d3b8b9193e8cfe467c7f38a8ca203c570608217281e"
+    },
+    {
+      "section": "Update Kishu",
+      "start": 19,
+      "end": 19,
+      "text": "It does not touch the user's project repository or personal model configuration. `--checkout <path>` can use another dedicated Kishu checkout when explicitly requested. Never stash, reset, force-push, or overwrite local work to bypass an update refusal.",
+      "id": "R-26a8599932d2",
+      "source": "367e62fbfa5e",
+      "hash": "02e3b22e9dba5a9595694840d4fdb55ade4f2dc99c5479b014191a61ba1f28d7"
+    },
+    {
+      "section": "Update Kishu",
+      "start": 21,
+      "end": 21,
       "text": "Use the host's normal permissions for network and installation writes. If Git, Python, harness installation tools, or access to the GitHub repository is unavailable, report the specific missing prerequisite. The repository may require GitHub authentication; do not ask for secrets in chat. Do not claim the update succeeded if installation fails.",
       "id": "R-e22478734c80",
       "source": "367e62fbfa5e",
@@ -43864,12 +43885,12 @@
     },
     {
       "section": "Update Kishu",
-      "start": 19,
-      "end": 19,
-      "text": "After success, report the installed version and source commit printed by the updater. Refresh the skill inventory or start a new chat to load the new instructions. Always-on rules should reference the installed skill by name so they follow the update; if a legacy Kishu block points at a versioned cache, explain that it needs to be refreshed through setup rather than claiming that stale reference was updated.",
-      "id": "R-78c166c61d64",
+      "start": 23,
+      "end": 23,
+      "text": "After success, report the installed version, release tag and source commit printed by the updater. Refresh the skill inventory or start a new chat to load the new instructions. Always-on rules should reference the installed skill by name so they follow the update; if a legacy Kishu block points at a versioned cache, explain that it needs to be refreshed through setup rather than claiming that stale reference was updated.",
+      "id": "R-12b3194433b3",
       "source": "367e62fbfa5e",
-      "hash": "f60dde633b0e5b02d3e19f7102bc0578fce0224d6aeb5ffedd63ae664d57ab68"
+      "hash": "a7fefeeacd4d495f5cd4af48838013137964ea86ff0955c86e42f03a7f0bf41e"
     },
     {
       "section": "Activation and metadata",
@@ -43974,10 +43995,10 @@
       "section": "Overview",
       "start": 1,
       "end": 1,
-      "text": "\"\"\"Install the latest published Kishu from its own repository. Python 3.11+, Git.\"\"\"",
-      "id": "R-608a683cdb7b",
+      "text": "\"\"\"Install a published stable Kishu release. Python 3.11+, Git; no dependencies.\"\"\"",
+      "id": "R-cb87d569af7c",
       "source": "cf7600a2c909",
-      "hash": "8ae96bcd32d0d8f6ac6b444b8722b1c6de41a29b4380f8fff9bc2755370d240f"
+      "hash": "cffb1100e926564df3129117c5e85b47ae447c7013de65097331cdf117793ffa"
     },
     {
       "section": "Overview",
@@ -43991,25 +44012,25 @@
     {
       "section": "Overview",
       "start": 5,
-      "end": 9,
-      "text": "import argparse\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys",
-      "id": "R-9a771a20e17e",
-      "source": "cf7600a2c909",
-      "hash": "0bb6c91c8dadbd3626ce7d8adc0f5444959cc1b07c08b68916b9383dad94e03e"
-    },
-    {
-      "section": "Overview",
-      "start": 12,
       "end": 12,
-      "text": "OFFICIAL_REMOTE = \"https://github.com/SPDUK/kishu-stack.git\"",
-      "id": "R-3da7b8a7cad2",
+      "text": "import argparse\nimport json\nfrom pathlib import Path\nimport re\nimport subprocess\nimport sys\nfrom urllib.error import HTTPError, URLError\nfrom urllib.request import Request, urlopen",
+      "id": "R-a793d070d52c",
       "source": "cf7600a2c909",
-      "hash": "9eb9efe3901fa912500f36c585fdfaf186e7412492413a0107ca26eae3aa1dde"
+      "hash": "9940829a9211b30c5615afb5308d9cea59cc785357b012d0c9531e1c26a1e8bf"
     },
     {
       "section": "Overview",
       "start": 15,
-      "end": 16,
+      "end": 17,
+      "text": "OFFICIAL_REMOTE = \"https://github.com/SPDUK/kishu-stack.git\"\nRELEASE_API = \"https://api.github.com/repos/SPDUK/kishu-stack/releases\"\nSTABLE_TAG = re.compile(r\"v(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\")",
+      "id": "R-63ed4dac639f",
+      "source": "cf7600a2c909",
+      "hash": "04117178a3f4d567f80f43079b7826d9764673af4d45be1f70c5c0fb64ec795d"
+    },
+    {
+      "section": "Overview",
+      "start": 20,
+      "end": 21,
       "text": "class UpdateError(RuntimeError):\n    pass",
       "id": "R-cb0ab8ae8837",
       "source": "cf7600a2c909",
@@ -44017,8 +44038,8 @@
     },
     {
       "section": "Overview",
-      "start": 19,
-      "end": 24,
+      "start": 24,
+      "end": 29,
       "text": "def run(*args, cwd=None):\n    result = subprocess.run([str(a) for a in args], cwd=cwd, capture_output=True,\n                            text=True, encoding=\"utf-8\", errors=\"replace\")\n    if result.returncode:\n        raise UpdateError(result.stderr.strip() or result.stdout.strip() or f\"Command failed: {args[0]}\")\n    return result.stdout.strip()",
       "id": "R-52f11c1e5638",
       "source": "cf7600a2c909",
@@ -44026,8 +44047,8 @@
     },
     {
       "section": "Overview",
-      "start": 27,
-      "end": 28,
+      "start": 32,
+      "end": 33,
       "text": "def git(checkout, *args):\n    return run(\"git\", \"-C\", checkout, *args)",
       "id": "R-20c9ecfcdee8",
       "source": "cf7600a2c909",
@@ -44035,26 +44056,35 @@
     },
     {
       "section": "Overview",
-      "start": 31,
-      "end": 70,
-      "text": "def update(checkout: Path, harness: str, destination: Path | None = None, *, remote=OFFICIAL_REMOTE):\n    if harness == \"generic\" and destination is None:\n        raise UpdateError(\"A standalone update requires --destination with the existing skill directory.\")\n    checkout = checkout.expanduser().absolute()\n    if checkout.is_symlink():\n        raise UpdateError(f\"Refusing a symlinked checkout: {checkout}\")\n    if not (checkout / \".git\").exists():\n        if checkout.exists() and any(checkout.iterdir()):\n            raise UpdateError(f\"Refusing to clone into a nonempty directory: {checkout}\")\n        checkout.parent.mkdir(parents=True, exist_ok=True)\n        run(\"git\", \"clone\", \"--branch\", \"main\", \"--single-branch\", remote, checkout)\n    if git(checkout, \"remote\", \"get-url\", \"origin\").rstrip(\"/\").removesuffix(\".git\") != remote.rstrip(\"/\").removesuffix(\".git\"):\n        raise UpdateError(\"The checkout's origin is not the expected Kishu repository.\")\n    if git(checkout, \"branch\", \"--show-current\") != \"main\":\n        raise UpdateError(\"The Kishu checkout is not on main; keep development branches separate.\")\n    if git(checkout, \"status\", \"--porcelain\"):\n        raise UpdateError(\"The Kishu checkout has local changes; preserve them before updating.\")\n    git(checkout, \"fetch\", \"origin\", \"main\")\n    ancestry = subprocess.run([\"git\", \"-C\", str(checkout), \"merge-base\", \"--is-ancestor\", \"HEAD\", \"FETCH_HEAD\"],\n                              capture_output=True, text=True)\n    if ancestry.returncode:\n        raise UpdateError(\"The Kishu checkout has unpublished or divergent commits; no local history was replaced.\")\n    git(checkout, \"merge\", \"--ff-only\", \"FETCH_HEAD\")\n    installer = checkout / \"scripts/kishu.py\"\n    manifest = checkout / \"plugin/plugin.json\"\n    if not installer.is_file() or not manifest.is_file():\n        raise UpdateError(\"The fetched revision is missing Kishu's installer or generated plugin.\")\n    arguments = [sys.executable, installer, \"install\"]\n    if harness != \"generic\":\n        arguments.extend([\"--harness\", harness])\n    if destination is not None:\n        arguments.extend([\"--destination\", destination.expanduser().resolve()])\n    output = run(*arguments, cwd=checkout)\n    if output:\n        print(output)\n    version = json.loads(manifest.read_text(encoding=\"utf-8\"))[\"version\"]\n    commit = git(checkout, \"rev-parse\", \"HEAD\")\n    print(json.dumps({\"updated\": True, \"version\": version, \"commit\": commit,\n                      \"installation\": \"standalone\" if destination else harness}, indent=2))\n    return commit",
-      "id": "R-5af1bdc05cb6",
+      "start": 36,
+      "end": 62,
+      "text": "def release_tag(version: str | None = None, *, api=RELEASE_API) -> str:\n    requested = None if version is None else \"v\" + version.removeprefix(\"v\")\n    if requested is not None and not STABLE_TAG.fullmatch(requested):\n        raise UpdateError(\"Use a stable version such as 0.1.5 or v0.1.5; branches and prereleases are not accepted.\")\n    endpoint = \"latest\" if requested is None else \"tags/\" + requested\n    request = Request(f\"{api}/{endpoint}\", headers={\n        \"Accept\": \"application/vnd.github+json\", \"User-Agent\": \"kishu-updater\",\n        \"X-GitHub-Api-Version\": \"2026-03-10\"})\n    try:\n        with urlopen(request, timeout=30) as response:\n            release = json.load(response)\n    except HTTPError as error:\n        error.close()\n        if error.code == 404:\n            raise UpdateError(f\"No published stable release found for {requested or 'Kishu'}. No main-branch fallback.\") from error\n        raise UpdateError(f\"GitHub release lookup failed (HTTP {error.code}); retry later. No update was installed.\") from error\n    except (URLError, TimeoutError) as error:\n        raise UpdateError(f\"Cannot reach GitHub releases: {error}. No update was installed.\") from error\n    except (ValueError, UnicodeError) as error:\n        raise UpdateError(\"GitHub returned invalid release data; no update was installed.\") from error\n    if (not isinstance(release, dict) or release.get(\"draft\") is not False\n            or release.get(\"prerelease\") is not False or not release.get(\"published_at\")):\n        raise UpdateError(\"Only published stable releases can be installed; drafts and prereleases are excluded.\")\n    tag = release.get(\"tag_name\")\n    if not isinstance(tag, str) or not STABLE_TAG.fullmatch(tag) or (requested and tag != requested):\n        raise UpdateError(\"The release does not identify the requested stable version.\")\n    return tag",
+      "id": "R-7a3673a5f35d",
       "source": "cf7600a2c909",
-      "hash": "f73c21e9b6d286ee6909bbc0f8edd08fbbf6837b61165e1627b5b5e4d8fa6a60"
+      "hash": "4f421a851fdf3914cf1578790c361606484023d812de6cece4c2fddb0336b36f"
     },
     {
       "section": "Overview",
-      "start": 73,
-      "end": 83,
-      "text": "def main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--harness\", choices=[\"codex\", \"claude\", \"cursor\", \"generic\"], required=True)\n    parser.add_argument(\"--checkout\", type=Path, default=Path.home() / \".kishu/source\")\n    parser.add_argument(\"--destination\", type=Path)\n    args = parser.parse_args()\n    try:\n        update(args.checkout, args.harness, args.destination)\n    except (UpdateError, OSError, ValueError, KeyError) as error:\n        print(f\"kishu update: {error}\", file=sys.stderr)\n        raise SystemExit(1)",
-      "id": "R-597772bf4392",
+      "start": 65,
+      "end": 126,
+      "text": "def update(checkout: Path, harness: str, destination: Path | None = None, *,\n           version: str | None = None, remote=OFFICIAL_REMOTE, api=RELEASE_API):\n    if harness == \"generic\" and destination is None:\n        raise UpdateError(\"A standalone update requires --destination with the existing skill directory.\")\n    checkout = checkout.expanduser().absolute()\n    if checkout.is_symlink():\n        raise UpdateError(f\"Refusing a symlinked checkout: {checkout}\")\n    existing = (checkout / \".git\").exists()\n    previous_branch = previous_commit = None\n    if existing:\n        if git(checkout, \"remote\", \"get-url\", \"origin\").rstrip(\"/\").removesuffix(\".git\") != remote.rstrip(\"/\").removesuffix(\".git\"):\n            raise UpdateError(\"The checkout's origin is not the expected Kishu repository.\")\n        previous_branch = git(checkout, \"branch\", \"--show-current\")\n        if previous_branch not in {\"\", \"main\"}:\n            raise UpdateError(\"The Kishu checkout is on a development branch; use a dedicated release checkout.\")\n        if git(checkout, \"status\", \"--porcelain\"):\n            raise UpdateError(\"The Kishu checkout has local changes; preserve them before updating.\")\n        previous_commit = git(checkout, \"rev-parse\", \"HEAD\")\n    elif checkout.exists() and any(checkout.iterdir()):\n        raise UpdateError(f\"Refusing to clone into a nonempty directory: {checkout}\")\n    tag = release_tag(version, api=api)\n    if not existing:\n        checkout.parent.mkdir(parents=True, exist_ok=True)\n        run(\"git\", \"clone\", \"--branch\", tag, \"--single-branch\", remote, checkout)\n    # Main is fetched only to protect local work, never as an installation target.\n    git(checkout, \"fetch\", \"--no-tags\", \"origin\", \"refs/heads/main\")\n    published_head = git(checkout, \"rev-parse\", \"FETCH_HEAD^{commit}\")\n    if existing:\n        ancestry = subprocess.run([\"git\", \"-C\", str(checkout), \"merge-base\", \"--is-ancestor\", previous_commit, published_head],\n                                  capture_output=True, text=True)\n        if ancestry.returncode:\n            raise UpdateError(\"The Kishu checkout has unpublished or divergent commits; no local history was replaced.\")\n    git(checkout, \"fetch\", \"--no-tags\", \"origin\", \"refs/tags/\" + tag)\n    commit = git(checkout, \"rev-parse\", \"FETCH_HEAD^{commit}\")\n    metadata = json.loads(git(checkout, \"show\", f\"{commit}:plugin/plugin.json\"))\n    if not isinstance(metadata, dict) or metadata.get(\"name\") != \"kishu\" or metadata.get(\"version\") != tag[1:]:\n        raise UpdateError(\"The release tag and plugin version do not match; no update was installed.\")\n    git(checkout, \"cat-file\", \"-e\", f\"{commit}:scripts/kishu.py\")\n    git(checkout, \"checkout\", \"--detach\", commit)\n    installer = checkout / \"scripts/kishu.py\"\n    manifest = checkout / \"plugin/plugin.json\"\n    if not installer.is_file() or not manifest.is_file():\n        raise UpdateError(\"The fetched revision is missing Kishu's installer or generated plugin.\")\n    arguments = [sys.executable, installer, \"install\"]\n    if harness != \"generic\":\n        arguments.extend([\"--harness\", harness])\n    if destination is not None:\n        arguments.extend([\"--destination\", destination.expanduser().resolve()])\n    try:\n        output = run(*arguments, cwd=checkout)\n    except UpdateError:\n        if existing:\n            if previous_branch:\n                git(checkout, \"checkout\", previous_branch)\n            else:\n                git(checkout, \"checkout\", \"--detach\", previous_commit)\n        raise\n    if output:\n        print(output)\n    print(json.dumps({\"updated\": True, \"version\": metadata[\"version\"], \"tag\": tag, \"commit\": commit,\n                      \"installation\": \"standalone\" if destination else harness}, indent=2))\n    return commit",
+      "id": "R-1b4add22991a",
       "source": "cf7600a2c909",
-      "hash": "a0c14dab0f80257952997dda14621b4102ee3c0a39470c64b6897ec0b4f912de"
+      "hash": "517fbafe6a332c012c2b91c9a0c3f925351be665a62788de6e5f14e0395dc9a8"
     },
     {
       "section": "Overview",
-      "start": 86,
-      "end": 87,
+      "start": 129,
+      "end": 140,
+      "text": "def main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--harness\", choices=[\"codex\", \"claude\", \"cursor\", \"generic\"], required=True)\n    parser.add_argument(\"--checkout\", type=Path, default=Path.home() / \".kishu/releases\")\n    parser.add_argument(\"--destination\", type=Path)\n    parser.add_argument(\"--version\", help=\"Install a specific published stable release, e.g. 0.1.5; default: latest\")\n    args = parser.parse_args()\n    try:\n        update(args.checkout, args.harness, args.destination, version=args.version)\n    except (UpdateError, OSError, ValueError, KeyError) as error:\n        print(f\"kishu update: {error}\", file=sys.stderr)\n        raise SystemExit(1)",
+      "id": "R-2c8a3dcaec1a",
+      "source": "cf7600a2c909",
+      "hash": "1f7648695200ec0fa08926ca04850182f29fc01bf3f66566c4f1dc9772056443"
+    },
+    {
+      "section": "Overview",
+      "start": 143,
+      "end": 144,
       "text": "if __name__ == \"__main__\":\n    main()",
       "id": "R-fac87f835741",
       "source": "cf7600a2c909",
@@ -44091,10 +44121,10 @@
       "section": "Overview",
       "start": 20,
       "end": 23,
-      "text": "ROOT = Path(__file__).resolve().parents[1]\nLIBRARIES = {\"pstack\": \"pstack\", \"impeccable\": \"impeccable\", \"i-have-adhd\": \"communication\"}\nVERSION = \"0.1.4\"\nMARKER = \".kishu-generated.json\"",
-      "id": "R-c8f54463c0f5",
+      "text": "ROOT = Path(__file__).resolve().parents[1]\nLIBRARIES = {\"pstack\": \"pstack\", \"impeccable\": \"impeccable\", \"i-have-adhd\": \"communication\"}\nVERSION = \"0.1.5\"\nMARKER = \".kishu-generated.json\"",
+      "id": "R-407aa080e296",
       "source": "560f93b3268d",
-      "hash": "761c5bfa96250d1185d0f776aa6db00aa251757bbf093476c4871b5fd24f939b"
+      "hash": "75adbc8c2ac67c0c570bb6d0d9f8e7ef730a011660ffdedab27970fbc9208102"
     },
     {
       "section": "Overview",

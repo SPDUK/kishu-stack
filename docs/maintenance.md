@@ -21,18 +21,25 @@ python scripts/kishu.py package
 
 The reproducible zip is written under ignored `dist/` and contains only `plugin/`. Packaging does not publish or install it. Local preview captures and Sites registration data are ignored separately under `site/`; design records, source provenance and original licenses remain part of the project.
 
+Add release notes at `docs/releases/v<VERSION>.md` and update the pinned installation commands in the README and site. Push the verified commit to `main`, then push the matching `vMAJOR.MINOR.PATCH` tag. The tag-triggered `Verify Kishu` workflow runs both Windows and Ubuntu verification jobs before packaging the plugin and publishing a stable GitHub Release with its ZIP and SHA-256 checksum. It refuses mismatched tags, missing notes and commits outside `main` history. A tag alone is not an installable release. Do not move a published tag; fix regressions in a new version.
+
 ## Update an installed copy
 
-For a clean checkout you manage yourself:
+From an existing Kishu source checkout:
 
 ```sh
-git pull --ff-only
-python scripts/kishu.py install --harness codex
+python src/scripts/update_kishu.py --harness codex
 ```
 
 Choose your host in the final command, then refresh skills or start a new chat.
 
-End users can run `/kishu update` (Codex: `$kishu:kishu update`). The packaged updater fetches Kishu's own GitHub `main` into a separate clean checkout and runs its installer. It refuses local edits, a changed origin, a non-main branch, and unpublished/divergent commits. This is separate from the upstream-maintenance command below. On Codex, installation can migrate the Kishu-only local marketplace to the managed checkout, restoring the previous registration if migration fails.
+End users can run `/kishu update` (Codex: `$kishu:kishu update`). The packaged updater queries GitHub's latest published stable release, fetches its tag into `~/.kishu/releases`, validates the tag/package version, and installs the exact detached commit. Old `~/.kishu/source` checkouts are preserved. Drafts, prereleases and unreleased `main` changes are excluded; no available release or a failed lookup stops the update without a fallback to `main`.
+
+It refuses local edits, a changed origin, development branches, and unpublished/divergent commits. A clean existing `main` checkout can migrate with `--checkout`; `main` is fetched only for the local-history check. This is separate from the upstream-maintenance command below. On Codex, installation can migrate the Kishu-only local marketplace to the release checkout, restoring the previous registration if migration fails.
+
+To install an exact version or roll back, use the installed plugin's `scripts/update_kishu.py` or the source command above with `--version 0.1.5`. Only versions with a published stable GitHub Release are accepted. An installer failure restores the prior existing source checkout and reports failure; host-side partial changes may still need a repeat installation of the previous release.
+
+If GitHub is unavailable or rate-limited, keep using the installed copy and retry later. If local changes or a source conflict are reported, preserve that checkout and use a fresh dedicated location with `--checkout`; do not reset it. Refresh the host's skill inventory or start a new chat after a successful installation. Report reproducible problems through [GitHub Issues](https://github.com/SPDUK/kishu-stack/issues), including the host, installed version and error text without credentials.
 
 The source checkouts are pristine. Kishu's preferences are separate from upstream, so refreshing a repository cannot silently erase them.
 

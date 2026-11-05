@@ -440,7 +440,7 @@ Source: `scripts/kishu.py`. Edit owner: `scripts/kishu.py`.
 
 Kishu's installation, activation, export, or update implementation. Included to expose enforced behavior and preservation rules; this code runs only when its command is invoked.
 
-[Read and review](index.html#R-608a683cdb7b) · [Source on GitHub](https://github.com/SPDUK/kishu-stack/blob/main/src/scripts/update_kishu.py)
+[Read and review](index.html#R-cb87d569af7c) · [Source on GitHub](https://github.com/SPDUK/kishu-stack/blob/main/src/scripts/update_kishu.py)
 
 Source: `src/scripts/update_kishu.py`. Edit owner: `src/scripts/update_kishu.py`.
 
@@ -1266,7 +1266,7 @@ Source: `src/guides/setup.md`. Edit owner: `src/guides/setup.md`.
 
 Kishu's own entrypoint, setup/update instructions, or host mapping. Host capabilities and explicit user choices constrain inherited workflows. Setup is not run on ordinary tasks.
 
-[Read and review](index.html#R-5a37ba1b638d) · [Source on GitHub](https://github.com/SPDUK/kishu-stack/blob/main/src/guides/update.md)
+[Read and review](index.html#R-d34af9e774fd) · [Source on GitHub](https://github.com/SPDUK/kishu-stack/blob/main/src/guides/update.md)
 
 Source: `src/guides/update.md`. Edit owner: `src/guides/update.md`.
 

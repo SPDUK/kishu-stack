@@ -2,6 +2,21 @@
 
 Verification history from the local Windows workspace. Each revision below records its executed checks and limits; the original installation checks began on November 2, 2026 (America/Los_Angeles).
 
+## Stable release updater: 0.1.5 — November 4, 2026
+
+Kishu now selects GitHub's latest published stable release, or an explicitly requested published version, and installs its exact tagged commit. Drafts, prereleases, missing releases and tag/package mismatches are rejected without installing `main`. The default checkout is `~/.kishu/releases`; older managed sources are preserved. The release workflow packages and publishes only after both hosted verification jobs succeed.
+
+Executed before publication:
+
+- Root regression suite: **43 passed**, including **17 updater cases** with real temporary Git repositories and a simulated GitHub HTTP boundary. Cases cover newer unreleased `main`, annotated release tags, repeated installation, rollback, clean legacy-main migration, local-work protection, unavailable releases, invalid metadata, rate limiting, offline lookup and source restoration after installer failure.
+- Generated-package check and reproducible ZIP packaging: passed for **0.1.5**.
+- Native Codex isolated smoke: installation, both enabled public skill discoveries, cache/package comparison, repeat installation, same-version content refresh and marketplace-source migration passed.
+- Preference-review verification: **6 Python and 7 Node cases** passed; snapshot freshness passed. Site verification: **38 tests**, discovery/resource checks and the MMO/story checks passed. The combined local suites contain **94 passing tests**.
+- An actual unauthenticated GitHub lookup for the not-yet-published `v0.1.5` returned the intended failure; the updater exited unsuccessfully without creating its checkout or installing anything.
+- Workflow YAML parsed successfully. Independent review found no actionable correctness, data-loss or publication blocker.
+
+These are local pre-publication results. The [Actions workflow](https://github.com/SPDUK/kishu-stack/actions/workflows/verify.yml) records hosted checks and publication, and the [v0.1.5 release](https://github.com/SPDUK/kishu-stack/releases/tag/v0.1.5) contains the packaged artifact and checksum. Live Cursor and Claude Code loading remains unverified.
+
 ## License packaging and publication preparation — November 4, 2026
 
 The public demo collection now contains Veldrift, Meridian and Stillroom, with original generated artwork and separate visual directions. The integrated site suite passed **38 tests**, recursive resource and discovery checks passed, and browser flows and responsive layouts were exercised. The [site verification record](../site/VERIFICATION.md) describes those observations and the detector's remaining advisories. Together with 33 root regression cases and 6 Python / 7 Node preference-review cases, the local suites contain **84 passing tests**. The first hosted check exposed a commit-dependent review snapshot; its [reproducibility fix](preference-review/VERIFICATION.md) is included in this release.

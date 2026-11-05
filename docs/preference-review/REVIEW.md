@@ -340,4 +340,4 @@ Use the [source inventory](INVENTORY.md) to pick a topic, or search **All instru
 4. Check representative behavior: a small edit, a logic change needing tests, an expensive-test decision, a performance request, and an explicitly rigorous long-running task.
 5. Show the resulting diff and proof before reporting the revision complete. Publish or install it only under the applicable authorization.
 
-Snapshot: Kishu 0.1.4; source-content SHA-256 7e67d5f2e74e5ad2a63cf9ddb0652f244caef0cb2b90cba332f842c36a2686c5; pstack ae5650febf4320793844c12c4adaa937f417f8da. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.
+Snapshot: Kishu 0.1.5; source-content SHA-256 4096d29bf19177e4df97d8879aafb03b9df2f0cb8cb03c870459a5fa7f1a298a; pstack ae5650febf4320793844c12c4adaa937f417f8da. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kishu",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Kishu mode: thoughtful work routing, a design taste engine, focused communication, meaningful tests, and useful proof.",
   "author": {
     "name": "Kishu contributors"

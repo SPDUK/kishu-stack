@@ -145,7 +145,7 @@ const installDetails = {
   claude: "The installer uses the Claude Code CLI marketplace flow. Refresh the plugin or start a new session after installation. Python 3.11+ and Git are needed.",
 };
 function installCommands() {
-  return "git clone https://github.com/SPDUK/kishu-stack.git\ncd kishu-stack\n" + getInstallCommand(host);
+  return "git clone --branch v0.1.5 --single-branch https://github.com/SPDUK/kishu-stack.git\ncd kishu-stack\n" + getInstallCommand(host);
 }
 document.querySelectorAll("[data-host]").forEach((tab) => tab.addEventListener("click", () => {
   host = tab.dataset.host;

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "sources": {
     "pstack": {
       "url": "https://github.com/cursor/plugins.git",
@@ -22,15 +22,15 @@
     }
   },
   "files": {
-    ".claude-plugin/plugin.json": "ff60e56207e69f6131f7f52aa4f2af7ac15451a5a49f38d28f1b5ed278a953a6",
-    ".codex-plugin/plugin.json": "60a1994901f3873b9769744744ccbeef8bfeb20e9b4d73ab60e64bdd4aa6069a",
-    ".cursor-plugin/plugin.json": "3b8a0eb5580998ab1ede7bc1369db3f253a09e0c40477693eef463e760c9a3a5",
+    ".claude-plugin/plugin.json": "ebc85672eafadd3101ca98e1f8ca4ba41697e28b69956aa34ac8aecbc9f38737",
+    ".codex-plugin/plugin.json": "d056ac18cfc30d96bf7d1bbd49c4aebd697faab4957621d8f54a707c1771f753",
+    ".cursor-plugin/plugin.json": "cd2fa0bec737106fdceba15943ae8f254ebaa26631c74cfb2b4645c8fe6bef32",
     "adapters/claude-code.md": "5f7d8a1580ca8336dc11c85be2d21e3858feb5bd900f683e86ca364bf81c34bc",
     "adapters/codex.md": "bb87b691e31d478a78baefd451b2da4bdeb25fe90f7169df607650ef8b4a8742",
     "adapters/cursor.md": "bb4e78a26a7ba315960e62186b80c4dc70211e71646e85b07a02d12f8b1a4caa",
     "adapters/generic.md": "c187df739dd7833213b7214dbebe3acd81f396ad88d9519253e30e02737847d9",
     "guides/setup.md": "be4826427cad81d3165604b03c50d8fbb3807f0fd191e95420252cc35bdc1438",
-    "guides/update.md": "a99dc089c1d65105d2b98c503400c162cf222116f1d7ce26679a4d4f71500231",
+    "guides/update.md": "47b7ec11d1c25e15c25de2cc9d53dc4179e3da53e878096ea8047553e1188262",
     "lib/communication/agents/gemini.toml": "5108a6123beb9df24846e0dd3f902c652d18522dfbc56e5762032ea383041c62",
     "lib/communication/agents/openai.yaml": "2c51291283dcefdca43ca6b0c08172f225c7c26a9783ec444d6bdfa51ca96f8f",
     "lib/communication/LICENSE": "8acbb618089b738404f76ac60fca1aaa995d9a87995eddf95f0b777acd7f7d2c",
@@ -674,9 +674,9 @@
     "lib/pstack/skills/why/references/synthesizer-prompt.md": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb",
     "lib/pstack/skills/why/SKILL.md": "c8f2c2799ef546b70552558b0be408221c35aa4903e6ea194702167f5c44efaa",
     "LICENSE": "29c73ec3d08233d3d1e93dbc6f4f91cff664296052549d8763b88166db7e2868",
-    "plugin.json": "49c8343ad540c77b139d89f56ee0ab690f1c1c2c3a0c9bad3d5cbfbbdfae9b4c",
+    "plugin.json": "f2a117c6de9e8a2cab4f350f72baaba316820c177d1325314e6f1f47197b11b3",
     "README.md": "14d3be883a438f47af619d3e9c489d39f06170e23c989cc2c9d7c62de93baa1b",
-    "scripts/update_kishu.py": "4020e77acf7606296de4aaa07647e0e014fd28a137d222dd8134b5684a1b8fc3",
+    "scripts/update_kishu.py": "5dec83561c0157da400418d3f40a5aa25f8f0194999fd60a59aa0da65e539df5",
     "skills/kishu/SKILL.md": "e39788b026dd69c2db88818ed7ed7cc065e516b973a0b1292cd312e4bfa33024",
     "skills/kishu-mode/agents/openai.yaml": "04685e9e839184cacf6310b75d257ea4890d0503c583834c9f54222adde0381f",
     "skills/kishu-mode/SKILL.md": "2de1298a5b2486e4d56b2ae8789e68e49dea252d6ea87066bb2c749928bb8cdc",

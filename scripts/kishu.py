@@ -19,7 +19,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 LIBRARIES = {"pstack": "pstack", "impeccable": "impeccable", "i-have-adhd": "communication"}
-VERSION = "0.1.4"
+VERSION = "0.1.5"
 MARKER = ".kishu-generated.json"
 
 

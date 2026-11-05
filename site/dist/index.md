@@ -21,7 +21,7 @@ Choose supported models and reasoning effort for planning, implementation, revie
 Requires Python 3.11+ and Git for installation. Choose one native plugin or standalone export per harness.
 
 ```sh
-git clone https://github.com/SPDUK/kishu-stack.git
+git clone --branch v0.1.5 --single-branch https://github.com/SPDUK/kishu-stack.git
 cd kishu-stack
 python scripts/kishu.py install --harness codex
 ```

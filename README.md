@@ -39,7 +39,7 @@ Python 3.11+ is needed for the maintenance/install script. Git is needed to fetc
 Clone the source repository, then install for your host:
 
 ```sh
-git clone https://github.com/SPDUK/kishu-stack.git
+git clone --branch v0.1.5 --single-branch https://github.com/SPDUK/kishu-stack.git
 cd kishu-stack
 python scripts/kishu.py install --harness codex
 ```
@@ -93,7 +93,9 @@ Codex does not gain a custom slash command merely from a skill manifest. Use its
 
 `setup` walks through supported model choices, reasoning effort, and optional project-wide or personal always-on activation. Existing choices can be kept; a setup walkthrough does not reset them.
 
-`update` installs the latest Kishu committed to `SPDUK/kishu-stack` on `main`. It uses a separate checkout at `~/.kishu/source`, preserves personal model settings, and refuses to overwrite local edits or unpublished commits. It does not independently upgrade Kishu's three bundled upstreams.
+`update` installs the latest published stable [Kishu release](https://github.com/SPDUK/kishu-stack/releases). It uses a separate checkout at `~/.kishu/releases`, preserves personal model settings, and refuses to overwrite local edits or unpublished commits. Drafts, prereleases and unreleased `main` changes are excluded. If release lookup fails, the installed copy stays in place. It does not independently upgrade Kishu's three bundled upstreams.
+
+To choose an exact published version or roll back, ask Kishu to “update to v0.1.5.” The updater accepts `--version 0.1.5` and verifies the tag matches the package version. Older `~/.kishu/source` checkouts are preserved. See [update and recovery instructions](docs/maintenance.md#update-an-installed-copy).
 
 Cursor supports the spellings above. Codex exposes the administration skill as `$kishu:kishu setup` and `$kishu:kishu update` (also available through `/skills`). Claude Code uses `/kishu:kishu setup` and `/kishu:kishu update`. The standalone export supports the same actions through `kishu-mode setup` and `kishu-mode update`, using the host's normal skill selector. Ordinary work stays on `kishu-mode`.
 

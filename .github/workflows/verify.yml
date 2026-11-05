@@ -66,3 +66,49 @@ jobs:
       - name: Deploy the verified site
         id: deployment
         uses: actions/deploy-pages@v4
+
+  release:
+    needs: verify
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: release-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Validate the release tag and notes
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, pathlib, re, sys
+          sys.path.insert(0, "scripts")
+          import kishu
+          tag = os.environ["GITHUB_REF_NAME"]
+          if not re.fullmatch(r"v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)", tag) or tag != f"v{kishu.VERSION}":
+              raise SystemExit("Release tag must match the stable package version.")
+          if not pathlib.Path(f"docs/releases/{tag}.md").is_file():
+              raise SystemExit("Release notes are required.")
+          PY
+          git merge-base --is-ancestor HEAD origin/main
+      - name: Package the verified plugin
+        run: |
+          python scripts/kishu.py sync
+          python scripts/kishu.py package
+      - name: Create package checksum
+        working-directory: dist
+        run: sha256sum kishu-*.zip > SHA256SUMS.txt
+      - name: Publish the stable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "$GITHUB_REF_NAME" dist/kishu-*.zip dist/SHA256SUMS.txt
+          --verify-tag --title "Kishu $GITHUB_REF_NAME"
+          --notes-file "docs/releases/$GITHUB_REF_NAME.md" --latest
