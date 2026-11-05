@@ -1,0 +1,89 @@
+{
+  "scope": "Original generated artwork. No third-party reference images were supplied. The names and worlds are fictional; no exclusivity or trademark-clearance claim is made.",
+  "assets": [
+    {
+      "asset": "hero.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: full-bleed desktop hero artwork for Veldrift, an original fictional fantasy MMO concept website. Create one exquisite cinematic hand-painted fantasy landscape in a wide 16:9 composition, rich brushwork and atmospheric depth, refined fantasy book-cover craftsmanship. A small company of three original human wayfarers in weathered indigo cloaks, carrying simple brass astrolabes and rolled charts, stand on a mossy stone overlook at the LEFT of the painting. Below them: a sprawling coastal city of pale limestone, copper roofs, long aqueducts, lantern-lit canals, and tall sails. Beyond: immense floating limestone arches above a luminous sea, a pale broken-ring moon, layered blue-green mountains at dawn. Warm apricot sunrise rim-light against deep petrol blue and soft turquoise. Make the left 55 percent breathtakingly detailed; let the right 45 percent resolve into dark blue atmospheric sky and mist with quiet lower-contrast shapes, because live ivory headline text will be laid over that area. Full bleed, no border. No text, no lettering, no logo, no watermark, no UI. Create wholly original characters, architecture and scenery; do not reproduce any recognizable game franchise, armor, creature, emblem, character or existing artwork.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "93a17aff7043ffba502558dfbdbc84ce09a96beb40c837a70606dfcf232bd365",
+      "sha256": "c61e4e8fd63741d5dadaf951751d5cc0650cd94fb4034cc934c6206f5b161c29",
+      "width": 1672,
+      "height": 941,
+      "bytes": 312182
+    },
+    {
+      "asset": "hero-mobile.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: tall portrait mobile hero artwork for Veldrift, an original fictional fantasy MMO concept website. Create a vertical 2:3 cinematic hand-painted fantasy landscape with refined brushwork, tactile materials, huge atmospheric depth and an editorial fantasy-book-cover finish. The upper two thirds show three small human wayfarers in weathered indigo cloaks standing on a mossy stone balcony, overlooking a copper-roofed limestone coastal city with lit canals, long aqueducts and tall sails; immense floating pale stone arches rise from a luminous sea beneath a pale broken-ring moon. Warm apricot dawn strikes the upper architecture against deep petrol blue and turquoise distance. The bottom third falls naturally into quiet dark blue shadow and mist, leaving breathing room for live ivory website copy. Do not include text, letters, logos, UI, borders, or watermarks. Entirely original fantasy world and people, no recognizable existing game locations, characters, weapons, armor or branding.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "ef86a29d828e24168ab5437dad5a039b18027e18e8dc0fa9a14c278c5543a6ec",
+      "sha256": "eabe2d03a5951e0d3da181ac4be69f700fdf3ab7f66443191ff67c5168e9192f",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 272646
+    },
+    {
+      "asset": "lantern-coast.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: wide 16:9 world-exploration painting for Veldrift, an original fictional fantasy MMO concept. Paint the Lantern Coast: a breathtaking Mediterranean-like fantasy harbor seen from a high old stone footbridge, sweeping pale limestone terraces, copper domes, amber lanterns strung between weathered masts, warm glowing windows, teal tidal pools and an enormous natural stone arch that spans the bay. An empty curving stairway invites you into the image. The city and arch occupy center and right, with dark shaded foliage and water at bottom left for overlaid live white text. Late blue-hour sky, apricot horizon, reflected gold lights; richly painted premium fantasy concept art, convincing architecture, subtle brush texture, lush depth. Full bleed wide composition. No text, logos, symbols from real games, watermark, border or UI. Original invented architecture and world.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "a0c5130cd5fab3414bfc39ec24a311e37827f805d4c4b3b97799461b5d48cd79",
+      "sha256": "f236e228e50680143f3e21ec37ddd078d34fb52bb087b6b66a648cb24d8e4851",
+      "width": 1672,
+      "height": 941,
+      "bytes": 489294
+    },
+    {
+      "asset": "glassroot-vale.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: wide 16:9 world-exploration painting for Veldrift, an original fictional fantasy MMO concept. Create Glassroot Vale: a sublime quiet forest valley under immense translucent pale-amber tree roots that arch like natural cathedrals. Turquoise streams thread over dark slate, luminous tiny pollen drifts in the sun shafts, fern-covered stone steps wind to a distant warm lantern shrine with simple copper roof. A tiny cloaked traveler for scale far in the distance, not a close character. Emerald, petrol blue, soft amber, ivory sunlight, painterly texture, exceptionally detailed environmental storytelling and cinematic depth. Main glowing forest canopy across center and right; keep bottom left a shadowed lower-contrast riverbank for live ivory website copy. Wholly original fantasy landscape, no recognizable existing game setting or characters. No text, lettering, logos, UI, borders or watermarks.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "82274acc5b9796c2d140efc71c38343ab11362f41f59e8260d959dbbafc7a407",
+      "sha256": "be04821c4f608a75549e5f0e3c25af8dd170f718a7170ed9b3860de539a85c76",
+      "width": 1672,
+      "height": 941,
+      "bytes": 483754
+    },
+    {
+      "asset": "astral-reach.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: wide 16:9 world-exploration painting for Veldrift, an original fictional fantasy MMO concept. Paint the Astral Reach, an awe-inspiring remote mountaintop observatory above a cloud ocean. Weathered pale stone concentric terraces and brass astronomical instruments encircle an open roofless dome with a giant delicate orrery. Long elegant suspension footbridges connect slender needle peaks, a distant broken-ring moon hangs in a deep blue sky, quiet apricot dawn on the horizon. Cloud sea, sheer scale, cold blue atmosphere and restrained gold accents; premium cinematic hand-painted fantasy art with fine brush texture and very convincing light. The observatory occupies center-right; left foreground dark blue rock and cloud shadow leaves room for ivory web text. Fully original architecture and world, no recognizable existing game scenery or iconography. No text, logo, UI, border, watermark.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "3f02ed512d687a165b3d255eaca6cdcd25299dfdc7da57f750e59cadfa01b175",
+      "sha256": "764857fa7312ca2263a4fd1b4ad81efcf975027e3409b8330566eba4654321b0",
+      "width": 1672,
+      "height": 941,
+      "bytes": 306028
+    },
+    {
+      "asset": "wayfarer.webp",
+      "generator": "OpenAI built-in image_gen",
+      "generated_for": "Kishu public demo collection",
+      "date": "2026-11-04",
+      "input_images": [],
+      "prompt": "Use case: stylized-concept. Asset type: wide 16:9 featured-character painting for Veldrift, an original fictional fantasy MMO concept website. An original human female cartographer in her late twenties, warm brown skin, close-cropped curly dark hair with a simple copper clasp, an expressive resolute face, wears a practical elegant midnight teal travel coat, weathered leather map straps and a tiny brass astrolabe. She stands at the RIGHT third of the image in three-quarter profile, holding a rolled star chart, her pale linen scarf streaming in the wind. Behind her at right are exquisite copper-sailed flying skiffs and ancient suspended bridges crossing a luminous cloud sea. LEFT HALF is quiet dark petrol-blue mist, ready for live ivory copy. Warm apricot sunrise rims her face and coat, soft turquoise cloud shadows; superb painterly fantasy illustration with tactile fabric and atmospheric depth, not photorealistic, not exaggerated armor. No elves, no borrowed game characters, no recognizable franchise costumes, no weapon focus. No text, logos, lettering, watermark, border or UI. Full-bleed landscape.",
+      "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+      "source_sha256": "9f3fa488cd3ca9a062de1605088081e083c29f8f0432415d794071693cba323b",
+      "sha256": "f0306e53184cf1a97f540b42ff86276707d50d10ef8c473ba68042abc59c9787",
+      "width": 1672,
+      "height": 941,
+      "bytes": 191244
+    }
+  ]
+}

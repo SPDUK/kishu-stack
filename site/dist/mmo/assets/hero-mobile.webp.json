@@ -1,0 +1,14 @@
+{
+  "asset": "hero-mobile.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: stylized-concept. Asset type: tall portrait mobile hero artwork for Veldrift, an original fictional fantasy MMO concept website. Create a vertical 2:3 cinematic hand-painted fantasy landscape with refined brushwork, tactile materials, huge atmospheric depth and an editorial fantasy-book-cover finish. The upper two thirds show three small human wayfarers in weathered indigo cloaks standing on a mossy stone balcony, overlooking a copper-roofed limestone coastal city with lit canals, long aqueducts and tall sails; immense floating pale stone arches rise from a luminous sea beneath a pale broken-ring moon. Warm apricot dawn strikes the upper architecture against deep petrol blue and turquoise distance. The bottom third falls naturally into quiet dark blue shadow and mist, leaving breathing room for live ivory website copy. Do not include text, letters, logos, UI, borders, or watermarks. Entirely original fantasy world and people, no recognizable existing game locations, characters, weapons, armor or branding.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "ef86a29d828e24168ab5437dad5a039b18027e18e8dc0fa9a14c278c5543a6ec",
+  "sha256": "eabe2d03a5951e0d3da181ac4be69f700fdf3ab7f66443191ff67c5168e9192f",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 272646
+}

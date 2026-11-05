@@ -1,0 +1,14 @@
+{
+  "asset": "printmaking.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: photorealistic-natural. Asset type: original editorial photograph for STILLROOM, a fictional creative-workshop booking website. Beautiful tactile independent magazine photography, natural morning light, authentic imperfections, warm ivory and muted terracotta palette with restrained cobalt accents. No text, branding, logos, watermark, borders, collage or UI. No readable writing on any object. Landscape 3:2 composition. Overhead still life of a botanical printmaking workspace on a cream linen table: freshly inked deep cobalt fern prints on handmade ivory paper, a real fern frond, a small black rubber brayer, a carved botanical lino block, and blue ink in a ceramic dish. Graphic but believable photographic composition, fine paper fibers, directional sunlight with soft leaf shadows, generous negative space, beautiful careful human craft.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "9dcc74403fe264c14e2844748e4794989744ba380986024bf9b3e31e633ec625",
+  "sha256": "577c801a9b8dcae77638f26c2a184071fe876e1ddb78329d7ee91005a039d1f8",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 545694
+}

@@ -1,0 +1,9 @@
+# Serve at the host root to control crawling.
+# A GitHub Pages project-subpath copy does not override the host's robots.txt.
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://spduk.github.io/kishu-stack/sitemap.xml

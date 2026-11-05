@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "review_reason": "Reviewed P1 performance applicability and checker; retain live review requirements and route visual exploration through Impeccable",
+  "files": {
+    "i-have-adhd/SKILL.md": "88955c019bbb1419ff4b49dbb1f80a867467de6233d7865af2e06a7d7b76c7d3",
+    "pstack/skills/how/SKILL.md": "08a00079bb15b4258874ac3ff62d4ca7e94350ffedb521d0fd296dc9dd21904e",
+    "pstack/skills/poteto-mode/playbooks/bug-fix.md": "66e26542dad131cfd7df80ac0cdf81ed4d85e7b5e3f0eb65b933888760c4831f",
+    "pstack/skills/poteto-mode/playbooks/feature.md": "af8ce700b99953741cb547e34308fde0cf6b98ce67e1652c800d0deedf53aba1",
+    "pstack/skills/poteto-mode/playbooks/investigation.md": "dc66bcf6af3a074fc7f67aa5e12b93ef571a4fb4d8e17f2f1af5ae5359f42e46",
+    "pstack/skills/poteto-mode/playbooks/multi-phase-plan.md": "2b4fbb547e5ccfe46d1279d714eb0199d28e995f06bdc4eda4afbca9221fbbe6",
+    "pstack/skills/poteto-mode/playbooks/opening-a-pr.md": "b22b7ad7cd102b99d334f4399ae1dba78e0aaf4bee2d5241fda71753c7ce48f9",
+    "pstack/skills/poteto-mode/playbooks/refactoring.md": "0f5dd38113379ea8cf61e2182eca0a7478eea9a869eb40c2dddab3335aeca197",
+    "pstack/skills/poteto-mode/scripts/check-plan.mjs": "e3d4e9ca638c6fb4a2b52c434c17c7af30da4fdd44605ccfe9906f82fe37b555",
+    "pstack/skills/poteto-mode/SKILL.md": "ee1848c973a112026f09ba12ea7a13c1654006e7bf170d1c34bf5d5816bc439b",
+    "pstack/skills/principle-prove-it-works/SKILL.md": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+    "pstack/skills/setup-pstack/SKILL.md": "df8ad3638a4dca31fb4b43d58056f0299f23ad0530614166d55ef989062b41ec",
+    "pstack/skills/tdd/SKILL.md": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f"
+  }
+}

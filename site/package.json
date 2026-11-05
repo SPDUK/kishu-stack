@@ -1,0 +1,13 @@
+{
+  "name": "kishu-demo-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/app.mjs && node --check dist/demo-engine.mjs && node --check dist/motion.mjs && node scripts/generate-discovery.mjs --check && node scripts/check-site.mjs",
+    "discovery": "node scripts/generate-discovery.mjs",
+    "mmo:record": "node scripts/build-mmo-record.mjs",
+    "mmo:check": "node --check dist/mmo/app.mjs && node scripts/check-mmo.mjs"
+  }
+}

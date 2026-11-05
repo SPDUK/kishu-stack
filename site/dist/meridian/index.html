@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1018">
+  <meta name="description" content="Explore MERIDIAN, a fictional crypto market dashboard. All prices, balances, and orders are simulated. A working interface built with Kishu.">
+  <title>MERIDIAN — Simulated crypto workspace</title>
+  <link rel="icon" href="./mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-mark" viewBox="0 0 24 24"><path d="M3 18V6l9 9 9-9v12M3 6h4l5 5 5-5h4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m14 7-5 5 5 5M9 12h11"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></symbol>
+    <symbol id="coin-BTC" viewBox="0 0 24 24"><path d="M9 6h5a3 3 0 0 1 0 6H9m0 0h6a3 3 0 0 1 0 6H9V6Zm2-3v3m4-3v3m-4 12v3m4-3v3M6 6h3M6 18h3"/></symbol>
+    <symbol id="coin-ETH" viewBox="0 0 24 24"><path d="m12 2-7 11 7 4 7-4-7-11Zm-7 11 7-3 7 3M5 16l7 6 7-6M12 2v15"/></symbol>
+    <symbol id="coin-SOL" viewBox="0 0 24 24"><path d="m6 4-3 4h15l3-4H6Zm-3 6 3 4h15l-3-4H3Zm3 6-3 4h15l3-4H6Z"/></symbol>
+    <symbol id="coin-AVAX" viewBox="0 0 24 24"><path d="m12 3-9 17h11l3-6-5-11Zm6 13-2 4h5l-3-4Z"/></symbol>
+    <symbol id="coin-LINK" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 4L7 9v6l5 3 5-3V9l-5-3Z"/></symbol>
+    <symbol id="coin-DOT" viewBox="0 0 24 24"><ellipse cx="12" cy="4" rx="2.5" ry="1.5"/><ellipse cx="12" cy="20" rx="2.5" ry="1.5"/><ellipse cx="5" cy="8" rx="1.5" ry="2.5" transform="rotate(-30 5 8)"/><ellipse cx="19" cy="8" rx="1.5" ry="2.5" transform="rotate(30 19 8)"/><ellipse cx="5" cy="16" rx="1.5" ry="2.5" transform="rotate(30 5 16)"/><ellipse cx="19" cy="16" rx="1.5" ry="2.5" transform="rotate(-30 19 16)"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#workspace">Skip to market workspace</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="MERIDIAN home"><svg aria-hidden="true"><use href="#i-mark"/></svg>MERIDIAN<span class="brand-point">.</span></a>
+    <nav aria-label="Workspace"><a href="#workspace" class="current" aria-current="page">Trade</a><a href="#portfolio">Portfolio</a><a href="#activity">Activity</a></nav>
+    <div class="account-label"><span>Personal workspace</span><span class="avatar" aria-label="Fictional account Alex Morgan">AM</span></div>
+  </header>
+  <div class="demo-strip"><p><span class="demo-dot"></span><strong>Simulated market · Demo</strong><span class="demo-explainer">Fictional funds. Real room to explore.</span></p><a href="../index.html#examples"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Back to Kishu</a></div>
+  <main id="workspace" class="dashboard">
+    <aside class="markets" aria-labelledby="markets-heading">
+      <div class="market-title"><h1 id="markets-heading">Markets</h1><span>USD</span></div>
+      <label class="search-box"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="market-search" type="search" placeholder="Find an asset" aria-label="Find an asset" autocomplete="off"></label>
+      <div class="market-filters" aria-label="Market filter"><button id="all-markets" class="active" aria-pressed="true">All assets</button><button id="watchlist-filter" aria-pressed="false">Watchlist <span id="watchlist-count">3</span></button></div>
+      <div class="market-columns" aria-hidden="true"><span>Asset</span><span>Price / 24h</span></div>
+      <div id="market-list" class="market-list"></div>
+      <p id="market-empty" class="market-empty" hidden></p>
+      <div class="market-note"><svg aria-hidden="true"><use href="#i-info"/></svg><p>A market you can explore.<br>Every number here is simulated.</p></div>
+      <div class="sidebar-bottom"><span class="connection-dot"></span><span>Local simulation</span><span class="version">v.01</span></div>
+    </aside>
+    <div class="workspace-body">
+      <section id="portfolio" class="portfolio-strip" aria-label="Fictional portfolio summary">
+        <div class="portfolio-value"><p>Portfolio value <span class="demo-tag">DEMO</span></p><strong id="portfolio-total">$73,049.81</strong><span>Across 3 assets &amp; USD</span></div>
+        <div class="cash-summary"><p>Available USD</p><strong id="cash-total">$24,860.00</strong><span>No deposits. No real funds.</span></div>
+        <div class="allocation"><div class="allocation-label"><span>Allocation</span><span id="allocation-cash">34% cash</span></div><div id="allocation-bar" class="allocation-bar" aria-label="Portfolio allocation"></div><div class="allocation-legend"><span><i class="btc-color"></i>BTC</span><span><i class="eth-color"></i>ETH</span><span><i class="sol-color"></i>SOL</span><span><i class="cash-color"></i>USD</span></div></div>
+      </section>
+      <div class="workspace-title"><div><span class="workspace-dot"></span><h2>Spot workspace</h2><span class="workspace-pair">USD markets</span></div><button id="simulation-toggle" class="pause-button" aria-pressed="false"><svg aria-hidden="true"><use href="#i-pause"/></svg><span>Pause simulation</span></button></div>
+      <div class="trade-grid">
+        <section class="chart-panel" aria-labelledby="asset-heading">
+          <div class="asset-heading-row"><div class="asset-identity"><span id="selected-coin" class="coin coin-large"></span><div><div class="asset-name-row"><h2 id="asset-heading">Bitcoin</h2><span id="asset-pair">BTC / USD</span></div><p>Simulated spot price</p></div></div><button id="asset-watch" class="icon-button" aria-label="Remove Bitcoin from watchlist" aria-pressed="true"><svg aria-hidden="true"><use href="#i-star"/></svg></button></div>
+          <div class="quote-row"><div><strong id="selected-price" class="main-price">$68,421.80</strong><span id="selected-change" class="price-change positive">+2.84% <span>24h</span></span></div><dl class="quote-stats"><div><dt>24h high</dt><dd id="day-high">69,284.80</dd></div><div><dt>24h low</dt><dd id="day-low">66,032.70</dd></div><div><dt>24h volume</dt><dd id="day-volume">$28.42B</dd></div></dl></div>
+          <div class="chart-toolbar"><div class="timeframes" aria-label="Chart timeframe"><button data-timeframe="1H" aria-pressed="false">1H</button><button data-timeframe="24H" class="active" aria-pressed="true">24H</button><button data-timeframe="1W" aria-pressed="false">1W</button><button data-timeframe="1M" aria-pressed="false">1M</button></div><span class="chart-unit">Price <span>USD</span></span></div>
+          <figure class="price-chart"><div class="chart-frame"><div id="chart-plot" class="chart-plot" tabindex="0" role="img" aria-label="Bitcoin price chart. Use left and right arrow keys to inspect prices." aria-describedby="chart-summary"><svg id="price-svg" viewBox="0 0 800 320" preserveAspectRatio="none" aria-hidden="true"></svg><div id="chart-tooltip" class="chart-tooltip" hidden></div></div><div id="price-axis" class="price-axis" aria-hidden="true"></div></div><div id="time-axis" class="time-axis" aria-hidden="true"></div><figcaption id="chart-summary" class="sr-only"></figcaption></figure>
+          <div class="chart-footer"><span><i></i>Simulated volume</span><span class="inspect-hint">Hover or use arrow keys to inspect</span></div>
+        </section>
+        <section class="order-panel" aria-labelledby="order-heading">
+          <div class="panel-title"><h2 id="order-heading">Place a demo order</h2><span class="demo-tag">DEMO</span></div>
+          <form id="order-form" novalidate>
+            <div class="order-sides" aria-label="Order side"><button type="button" id="buy-side" class="active" aria-pressed="true">Buy</button><button type="button" id="sell-side" aria-pressed="false">Sell</button></div>
+            <div class="order-type"><span>Market order</span><span>Simulated fill</span></div>
+            <div class="available-row"><span>Available</span><span id="order-available">24,860.00 USD</span></div>
+            <label class="amount-label" for="order-amount">Amount</label><div class="amount-input"><input type="number" id="order-amount" name="amount" min="10" step="0.01" inputmode="decimal" placeholder="0.00" autocomplete="off" aria-describedby="order-error order-hint"><span>USD</span></div>
+            <div class="amount-presets" aria-label="Use a percentage of your available balance"><button type="button" data-percent="25">25%</button><button type="button" data-percent="50">50%</button><button type="button" data-percent="75">75%</button><button type="button" data-percent="100">Max</button></div>
+            <p id="order-error" class="order-error" role="alert"></p>
+            <dl class="order-estimate"><div><dt>Estimated quantity</dt><dd id="order-quantity">0.000000 BTC</dd></div><div><dt>Simulation fee</dt><dd>$0.00</dd></div><div><dt>Total</dt><dd id="order-total">$0.00</dd></div></dl>
+            <button id="order-submit" class="submit-order" type="submit">Simulate buy <span>BTC</span><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+            <p id="order-hint" class="order-disclaimer"><svg aria-hidden="true"><use href="#i-info"/></svg>No money moves. Orders only update this fictional portfolio.</p>
+            <p id="order-feedback" class="order-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        <section id="activity" class="ledger-panel" aria-label="Portfolio holdings and simulated activity">
+          <div class="ledger-tabs" role="tablist" aria-label="Portfolio data"><button id="holdings-tab" role="tab" aria-selected="true" aria-controls="holdings-panel" tabindex="0">Holdings <span id="holding-count">3</span></button><button id="activity-tab" role="tab" aria-selected="false" aria-controls="activity-panel" tabindex="-1">Activity <span id="activity-count">0</span></button></div>
+          <div id="holdings-panel" role="tabpanel" aria-labelledby="holdings-tab"><table class="holdings-table"><caption class="sr-only">Fictional asset holdings</caption><thead><tr><th scope="col">Asset</th><th scope="col">Balance</th><th scope="col">Value</th><th scope="col">24h</th></tr></thead><tbody id="holdings-body"></tbody></table></div>
+          <div id="activity-panel" role="tabpanel" aria-labelledby="activity-tab" hidden><div id="activity-empty" class="activity-empty"><svg aria-hidden="true"><use href="#i-activity"/></svg><div><h3>Your first move starts here.</h3><p>Simulate a buy or sell. Your orders will appear here.</p></div></div><div id="orders-list" class="orders-list"></div></div>
+        </section>
+        <section class="book-panel" aria-labelledby="book-heading"><div class="panel-title"><h2 id="book-heading">Order book</h2><span class="book-unit" id="book-symbol">BTC</span></div><div class="book-columns"><span>Price (USD)</span><span>Amount</span><span>Total</span></div><div id="asks" class="book-rows"></div><div class="book-mid"><strong id="book-mid-price">68,421.80</strong><span>Simulated spread <b>0.02%</b></span></div><div id="bids" class="book-rows"></div></section>
+      </div>
+      <footer class="workspace-footer"><div><span id="status-dot" class="connection-dot"></span><span id="simulation-status">Simulation running</span><span class="footer-separator">/</span><time id="simulation-time">16:32:00 UTC</time></div><span>Built with <a href="../index.html#examples">Kishu</a></span></footer>
+    </div>
+  </main>
+  <div id="announcer" class="sr-only" aria-live="polite"></div>
+  <noscript><p class="noscript">This local market simulation needs JavaScript. No account or network connection is required.</p></noscript>
+</body>
+</html>

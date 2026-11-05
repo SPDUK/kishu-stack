@@ -1,0 +1,14 @@
+{
+  "asset": "studio.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: photorealistic-natural. Asset type: original editorial photograph for STILLROOM, a fictional creative-workshop booking website. Beautiful tactile independent magazine photography, natural morning light, authentic imperfections, warm ivory and muted terracotta palette with restrained cobalt accents. No text, branding, logos, watermark, borders, collage or UI. No readable writing on any object. Landscape 3:2 composition. A sunlit artist's workshop seen obliquely across a spacious pale oak worktable: hand-thrown porcelain bowls, a cobalt blue glazed vase with tall branching stems, a crumpled linen apron, a small mound of clay, well-used wooden tools and a milky cup of coffee. Large old industrial windows softly out of focus, cream plaster walls, olive tree shadows. Intimate, bright, calm and sophisticated. Entire room subtly alive with the human trace of making, no people, no clutter.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "f61505323417509585b08ad35e529b0db255c0587c0bed1946b61d2ad2a2909f",
+  "sha256": "e64da310634df1070a09fb1a74eebd4964fd110c812e7013e382c58f8d76c40c",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 277362
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <meta name="description" content="A fictional creative studio. Find a little space for clay, printmaking, and good company in this interactive workshop booking demo." />
+    <title>STILLROOM — Make room for making</title>
+    <link rel="icon" href="./mark.svg" type="image/svg+xml" />
+    <link rel="preload" href="../fonts/bricolage-700.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/studio.webp" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workshops">Skip to workshops</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="Stillroom home"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8" stroke="currentColor" stroke-width="3" /></svg>STILLROOM</a>
+      <nav aria-label="Main navigation"><a href="#workshops">The workshops</a><a href="#studio">The studio</a></nav>
+      <a class="back-link" href="../index.html#examples">A Kishu demo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.5" /></svg></a>
+    </header>
+
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Make room<br />for <span>making.</span></h1>
+          <p>A morning away from the usual. Clay, ink, a shared table — and something to take home.</p>
+          <a class="button button-blue" href="#workshops">Find your workshop <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" /></svg></a>
+          <div class="hero-footnote"><span class="small-sun" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8" stroke="currentColor" stroke-width="2" /></svg></span><p>Good company. <br />No experience needed.</p></div>
+        </div>
+        <figure class="hero-photo"><img src="./assets/studio.webp" width="1440" height="1080" alt="A sunlit studio worktable with clay bowls, tools, coffee, and fresh flowers" fetchpriority="high" /><figcaption><span>A little time. Something made.</span><span>Slow mornings, by design.</span></figcaption><div class="photo-label" aria-hidden="true">A place<br />to begin.</div></figure>
+      </section>
+
+      <div class="welcome-strip wrap"><p>Come as you are.<br /><span>Leave with something you made.</span></p><p>Small groups, thoughtful materials,<br />and a little space to try.</p><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 5v36m-12-12 12 12 12-12" stroke="currentColor" stroke-width="1.5" /></svg></div>
+
+      <section id="workshops" class="workshops-section wrap" aria-labelledby="workshops-title">
+        <div class="section-intro"><h2 id="workshops-title">Pick your pause.</h2><p>Three ways to spend a few good hours.<br />All materials and a warm welcome included.</p></div>
+        <div class="demo-notice"><span>Fictional studio · November 2026</span><span>Demo booking — no payment or reservation is sent.</span></div>
+        <div class="filters">
+          <fieldset class="category-filter"><legend class="sr-only">Filter by workshop type</legend><label><input type="radio" name="category" value="all" checked /><span>All workshops</span></label><label><input type="radio" name="category" value="clay" /><span>Clay</span></label><label><input type="radio" name="category" value="print" /><span>Print</span></label><label><input type="radio" name="category" value="table" /><span>Table</span></label></fieldset>
+          <label class="date-filter" for="date-filter">Make time on <select id="date-filter"><option value="all">Any date</option><option value="2026-11-14">Sat, Nov 14</option><option value="2026-11-15">Sun, Nov 15</option><option value="2026-11-21">Sat, Nov 21</option><option value="2026-11-22">Sun, Nov 22</option><option value="2026-11-28">Sat, Nov 28</option><option value="2026-11-29">Sun, Nov 29</option></select></label>
+        </div>
+        <div class="workshop-layout">
+          <div class="workshop-list-region"><p id="filter-status" class="sr-only" role="status" aria-live="polite"></p><div id="workshop-list" class="workshop-list"></div><noscript><p class="no-script">Workshop browsing and demo booking need JavaScript. The studio is fictional; no reservations or payments are sent.</p></noscript><p class="price-note">Illustrative prices in USD, per person. Materials included. No added fees.</p></div>
+          <aside id="reservation" class="reservation" aria-label="Your demo booking"></aside>
+        </div>
+      </section>
+
+      <section id="studio" class="studio-section wrap" aria-labelledby="studio-title">
+        <figure class="studio-image"><img src="./assets/table.webp" width="1200" height="800" alt="Handmade pottery and seasonal flowers gathered around a linen-covered table" loading="lazy" /></figure>
+        <div class="studio-copy"><h2 id="studio-title">A space for<br />the in-between.</h2><p>Bring a little curiosity to a few unhurried hours with clay, ink, flowers, and good company.</p><p>At our imagined studio, we keep the groups small, the kettle on, and the door open to first-timers. Everything you need is already on the table.</p><details><summary>What should I bring?<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.5" /></svg></summary><p>Just yourself and clothes you don’t mind getting a little messy. Tools, materials, aprons, and refreshments are part of every illustrative session.</p></details><details><summary>Can I come on my own?<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.5" /></svg></summary><p>Absolutely. These fictional workshops are designed for solo makers, friends, and anyone trying something for the first time.</p></details></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="wrap"><a class="footer-wordmark" href="#">STILLROOM<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8" stroke="currentColor" stroke-width="2" /></svg></a><div class="footer-bottom"><p>A fictional studio for the simple joy of making.</p><a href="../index.html#examples">Explore more Kishu demos <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.5" /></svg></a></div></div></footer>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+name: Verify Kishu
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Fetch pinned upstream sources
+        run: python scripts/kishu.py sync
+      - name: Check committed generated package
+        run: python scripts/kishu.py check
+      - name: Exercise builds, updates, rollback, and exports
+        run: python -m unittest discover -s tests -v
+      - name: Check the preference-review snapshot
+        run: python tools/preference-review/build.py --check
+      - name: Test preference-review generation
+        run: python -m unittest discover -s tools/preference-review -p test_build.py -v
+      - name: Test preference-review interactions
+        run: node tools/preference-review/test-review.cjs
+      - name: Test the demo site
+        run: npm --prefix site test
+      - name: Check site assets and discovery data
+        run: npm --prefix site run check
+      - name: Check the MMO demo and public story
+        run: npm --prefix site run mmo:check
+
+  deploy-pages:
+    needs: verify
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && github.event.repository.private == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/dist
+      - name: Deploy the verified site
+        id: deployment
+        uses: actions/deploy-pages@v4

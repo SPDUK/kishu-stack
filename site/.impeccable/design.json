@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T01:41:19.957Z",
+  "title": "Design System: Kishu",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0045 93.0)",
+          "oklch(26% 0.0079 93.0)",
+          "oklch(38% 0.0115 93.0)",
+          "oklch(49% 0.0136 93.0)",
+          "oklch(61% 0.0136 93.0)",
+          "oklch(72% 0.0136 93.0)",
+          "oklch(84% 0.0087 93.0)",
+          "oklch(95% 0.0027 93.0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0091 172.3)",
+          "oklch(26% 0.0158 172.3)",
+          "oklch(38% 0.0231 172.3)",
+          "oklch(49% 0.0274 172.3)",
+          "oklch(61% 0.0274 172.3)",
+          "oklch(72% 0.0274 172.3)",
+          "oklch(84% 0.0175 172.3)",
+          "oklch(95% 0.0055 172.3)"
+        ]
+      },
+      "vermilion": {
+        "role": "primary",
+        "displayName": "Vermilion",
+        "tonalRamp": [
+          "oklch(15% 0.0659 32.2)",
+          "oklch(26% 0.1143 32.2)",
+          "oklch(38% 0.1670 32.2)",
+          "oklch(49% 0.1978 32.2)",
+          "oklch(61% 0.1978 32.2)",
+          "oklch(72% 0.1978 32.2)",
+          "oklch(84% 0.1266 32.2)",
+          "oklch(95% 0.0396 32.2)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint",
+        "tonalRamp": [
+          "oklch(15% 0.0148 151.4)",
+          "oklch(26% 0.0256 151.4)",
+          "oklch(38% 0.0374 151.4)",
+          "oklch(49% 0.0443 151.4)",
+          "oklch(61% 0.0443 151.4)",
+          "oklch(72% 0.0443 151.4)",
+          "oklch(84% 0.0284 151.4)",
+          "oklch(95% 0.0089 151.4)"
+        ]
+      },
+      "mint-light": {
+        "role": "secondary",
+        "displayName": "Mint light",
+        "tonalRamp": [
+          "oklch(15% 0.0059 131.9)",
+          "oklch(26% 0.0102 131.9)",
+          "oklch(38% 0.0149 131.9)",
+          "oklch(49% 0.0176 131.9)",
+          "oklch(61% 0.0176 131.9)",
+          "oklch(72% 0.0176 131.9)",
+          "oklch(84% 0.0113 131.9)",
+          "oklch(95% 0.0035 131.9)"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "tonalRamp": [
+          "oklch(15% 0.0061 86.1)",
+          "oklch(26% 0.0106 86.1)",
+          "oklch(38% 0.0154 86.1)",
+          "oklch(49% 0.0183 86.1)",
+          "oklch(61% 0.0183 86.1)",
+          "oklch(72% 0.0183 86.1)",
+          "oklch(84% 0.0117 86.1)",
+          "oklch(95% 0.0037 86.1)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "tonalRamp": [
+          "oklch(15% 0.0052 159.5)",
+          "oklch(26% 0.0090 159.5)",
+          "oklch(38% 0.0132 159.5)",
+          "oklch(49% 0.0156 159.5)",
+          "oklch(61% 0.0156 159.5)",
+          "oklch(72% 0.0156 159.5)",
+          "oklch(84% 0.0100 159.5)",
+          "oklch(95% 0.0031 159.5)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Paper rule",
+        "tonalRamp": [
+          "oklch(15% 0.0060 117.3)",
+          "oklch(26% 0.0103 117.3)",
+          "oklch(38% 0.0151 117.3)",
+          "oklch(49% 0.0179 117.3)",
+          "oklch(61% 0.0179 117.3)",
+          "oklch(72% 0.0179 117.3)",
+          "oklch(84% 0.0115 117.3)",
+          "oklch(95% 0.0036 117.3)"
+        ]
+      },
+      "terminal": {
+        "role": "neutral",
+        "displayName": "Terminal ink",
+        "tonalRamp": [
+          "oklch(15% 0.0088 171.3)",
+          "oklch(26% 0.0153 171.3)",
+          "oklch(38% 0.0223 171.3)",
+          "oklch(49% 0.0264 171.3)",
+          "oklch(61% 0.0264 171.3)",
+          "oklch(72% 0.0264 171.3)",
+          "oklch(84% 0.0169 171.3)",
+          "oklch(95% 0.0053 171.3)"
+        ]
+      },
+      "ink-hover": {
+        "role": "neutral",
+        "displayName": "Ink hover",
+        "tonalRamp": [
+          "oklch(15% 0.0124 160.3)",
+          "oklch(26% 0.0215 160.3)",
+          "oklch(38% 0.0314 160.3)",
+          "oklch(49% 0.0372 160.3)",
+          "oklch(61% 0.0372 160.3)",
+          "oklch(72% 0.0372 160.3)",
+          "oklch(84% 0.0238 160.3)",
+          "oklch(95% 0.0074 160.3)"
+        ]
+      },
+      "mint-hover": {
+        "role": "secondary",
+        "displayName": "Mint hover",
+        "tonalRamp": [
+          "oklch(15% 0.0131 141.7)",
+          "oklch(26% 0.0227 141.7)",
+          "oklch(38% 0.0332 141.7)",
+          "oklch(49% 0.0393 141.7)",
+          "oklch(61% 0.0393 141.7)",
+          "oklch(72% 0.0393 141.7)",
+          "oklch(84% 0.0251 141.7)",
+          "oklch(95% 0.0079 141.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The largest hero statement; responsive sizes are recorded in Layout."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major editorial section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Principle titles; the installation title uses the related base heading line height."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base interface and general explanatory copy."
+      },
+      "introduction": {
+        "displayName": "Introduction",
+        "purpose": "Larger leading description, constrained to a short readable measure."
+      },
+      "detail": {
+        "displayName": "Detail",
+        "purpose": "Meaningful compact explanatory paragraphs."
+      },
+      "workflow-copy": {
+        "displayName": "Workflow copy",
+        "purpose": "Descriptions of individual steps, using the final cascade."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The 11px functional minimum for short metadata and status."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Semibold primary control labels."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Copyable installation commands; command strips use a shorter line height."
+      }
+    },
+    "shadows": [
+      {
+        "name": "walkthrough",
+        "value": "0 18px 44px rgba(30,48,30,.09)",
+        "purpose": "The joined terminal and result container."
+      },
+      {
+        "name": "embedded-preview",
+        "value": "0 8px 20px rgba(35,50,30,.04)",
+        "purpose": "Subtle depth within the walkthrough."
+      },
+      {
+        "name": "toast",
+        "value": "0 6px 24px rgba(0,0,0,.13)",
+        "purpose": "Transient feedback above the page."
+      },
+      {
+        "name": "puppy-filter",
+        "value": "drop-shadow(0 16px 16px rgba(30,45,30,.10))",
+        "purpose": "CSS filter on the transparent puppy silhouette."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared expressive easing for button and puppy movement."
+      },
+      {
+        "name": "control-color",
+        "value": "0.2s",
+        "purpose": "Background and text state changes."
+      },
+      {
+        "name": "control-lift",
+        "value": "0.25s",
+        "purpose": "A 2px upward button hover movement with the shared easing."
+      },
+      {
+        "name": "puppy-arrival",
+        "value": "1.2s",
+        "purpose": "Character entrance; disabled when reduced motion is requested."
+      },
+      {
+        "name": "puppy-hover",
+        "value": "0.5s",
+        "purpose": "Small resting-rotation change; disabled when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1500px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "800px"
+      },
+      {
+        "name": "intermediate-hero-max",
+        "value": "720px"
+      },
+      {
+        "name": "intermediate-hero-min",
+        "value": "601px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-mobile-max",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main ink action with a small upward hover movement.",
+      "html": "<button type=\"button\" class=\"ds-primary\">Unleash the demo <svg class=\"ds-primary-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:54px;padding:15px 23px;border:1px solid var(--ink, #192c26);background:var(--ink, #192c26);color:var(--cream, #fff9ec);border-radius:6px;font-family:var(--body, Geist, Arial, sans-serif);font-size:14px;font-weight:600;line-height:1.4;transition:background .2s,color .2s,transform .25s var(--ease, cubic-bezier(.16,1,.3,1));white-space:nowrap;cursor:pointer;text-decoration:none}.ds-primary:hover{background:#30483b;color:var(--cream, #fff9ec);transform:translateY(-2px)}.ds-primary:active{transform:translateY(0)}.ds-primary:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-primary-icon{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Small header action",
+      "kind": "button",
+      "refersTo": "button-small",
+      "description": "Compact header sizing of the primary action.",
+      "html": "<button type=\"button\" class=\"ds-small\">Get Kishu <svg class=\"ds-small-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button>",
+      "css": ".ds-small{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:43px;padding:11px 17px;border:1px solid var(--ink, #192c26);background:var(--ink, #192c26);color:var(--cream, #fff9ec);border-radius:6px;font-family:var(--body, Geist, Arial, sans-serif);font-size:13px;font-weight:600;line-height:1.4;transition:background .2s,color .2s,transform .25s var(--ease, cubic-bezier(.16,1,.3,1));white-space:nowrap;cursor:pointer;text-decoration:none}.ds-small:hover{background:#30483b;color:var(--cream, #fff9ec);transform:translateY(-2px)}.ds-small:active{transform:translateY(0)}.ds-small:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-small-icon{width:15px;height:15px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(prefers-reduced-motion:reduce){.ds-small{transition:none}}.ds-small-icon{width:20px;height:20px}@media(max-width:600px){.ds-small{font-size:11px;gap:9px;min-height:38px;padding:9px 12px}.ds-small-icon{width:15px;height:15px}}"
+    },
+    {
+      "name": "Mint run action",
+      "kind": "button",
+      "refersTo": "button-mint",
+      "description": "The contrasting mint action used inside the dark walkthrough.",
+      "html": "<button type=\"button\" class=\"ds-run\"><svg class=\"ds-run-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 5 11 7-11 7Z\"/></svg><span>Run the demo</span></button>",
+      "css": ".ds-run{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:42px;padding:11px 15px;border:1px solid var(--mint, #b7d4bd);background:var(--mint, #b7d4bd);color:var(--ink, #192c26);border-radius:6px;font-family:var(--body, Geist, Arial, sans-serif);font-size:11px;font-weight:600;line-height:1.4;transition:background .2s,color .2s,transform .25s var(--ease, cubic-bezier(.16,1,.3,1));white-space:nowrap;cursor:pointer;text-decoration:none}.ds-run:hover{background:#d0e5cd;color:var(--ink, #192c26);transform:translateY(-2px)}.ds-run:active{transform:translateY(0)}.ds-run:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-run-icon{width:15px;height:15px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(prefers-reduced-motion:reduce){.ds-run{transition:none}}.ds-run:disabled{opacity:.65;transform:none;cursor:default}@media(max-width:600px){.ds-run{min-height:43px;padding:11px 14px}}"
+    },
+    {
+      "name": "Outlined download action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The mascot download action fills with ink on hover.",
+      "html": "<button type=\"button\" class=\"ds-outline\">Take Kishu with you <svg class=\"ds-outline-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v12m-5-5 5 5 5-5M4 15v6h16v-6\"/></svg></button>",
+      "css": ".ds-outline{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:54px;padding:15px 23px;border:1px solid var(--ink, #192c26);background:transparent;color:var(--ink, #192c26);border-radius:6px;font-family:var(--body, Geist, Arial, sans-serif);font-size:12px;font-weight:600;line-height:1.4;transition:background .2s,color .2s,transform .25s var(--ease, cubic-bezier(.16,1,.3,1));white-space:nowrap;cursor:pointer;text-decoration:none}.ds-outline:hover{background:var(--ink, #192c26);color:var(--cream, #fff9ec);transform:translateY(-2px)}.ds-outline:active{transform:translateY(0)}.ds-outline:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-outline-icon{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none}}@media(max-width:800px){.ds-outline{font-size:11px;gap:15px;padding-inline:16px}}@media(max-width:600px){.ds-outline{font-size:12px}}"
+    },
+    {
+      "name": "Text copy action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "A compact label and inline icon used beside explanatory copy.",
+      "html": "<button type=\"button\" class=\"ds-text\">Copy this prompt <svg class=\"ds-text-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M15 8V4H4v11h4\"/></svg></button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;gap:10px;border:0;background:transparent;color:#52624f;padding:8px 0;font-family:var(--body, Geist, Arial, sans-serif);font-size:11px;font-weight:600;line-height:1.4;white-space:nowrap;cursor:pointer}.ds-text:hover{text-decoration:underline;text-underline-offset:5px}.ds-text:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-text-icon{width:15px;height:15px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(max-width:800px){.ds-text{padding-top:0}}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Simple text navigation that reduces to the demo link before hiding at the narrowest width.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a class=\"ds-nav-link\" href=\"#demo\">The demo</a><a class=\"ds-nav-link\" href=\"#approach\">The approach</a><a class=\"ds-nav-link\" href=\"#mascot\">The puppy</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;align-items:center;color:var(--ink, #192c26);font-family:var(--body, Geist, Arial, sans-serif);font-size:13px;line-height:1.6}.ds-nav-link{padding-block:14px;color:inherit;text-decoration:none;text-underline-offset:5px}.ds-nav-link:hover{text-decoration:underline}.ds-nav-link:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}@media(max-width:800px){.ds-nav{gap:20px;font-size:11px}.ds-nav-link:nth-child(n+2){display:none}}@media(max-width:360px){.ds-nav{display:none}}"
+    },
+    {
+      "name": "Scenario choice tabs",
+      "kind": "chip",
+      "refersTo": "scenario-tab",
+      "description": "A static sample of the real walkthrough choice states; the shipped page supplies the tab behavior.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Choose an engineering challenge\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" id=\"ds-build-tab\" aria-selected=\"true\" aria-controls=\"ds-example-panel\">Build a feature</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-example-panel\" tabindex=\"-1\">Fix a tricky bug</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" aria-controls=\"ds-example-panel\" tabindex=\"-1\">Untangle a system</button></div><div class=\"ds-example-panel\" id=\"ds-example-panel\" role=\"tabpanel\" aria-labelledby=\"ds-build-tab\" hidden></div>",
+      "css": ".ds-tabs{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-family:var(--body, Geist, Arial, sans-serif);line-height:1.6}.ds-tab{background:transparent;border:1px solid transparent;border-radius:5px;padding:11px 15px;font-family:var(--body, Geist, Arial, sans-serif);font-size:12px;line-height:1.6;color:#45584a;min-height:42px;transition:background .2s;cursor:pointer}.ds-tab:hover{background:#d5dfcf}.ds-tab[aria-selected=true]{background:var(--ink, #192c26);border-color:var(--ink, #192c26);color:var(--cream, #fff9ec)}.ds-tab:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:5px}@media(max-width:1100px){.ds-tab{padding:10px}}@media(max-width:600px){.ds-tabs{align-items:stretch;gap:4px;flex-wrap:nowrap;width:100%;justify-content:space-between}.ds-tab{font-size:11px;line-height:1.45;flex:1;padding:10px 7px;min-height:44px}}@media(prefers-reduced-motion:reduce){.ds-tab{transition:none}}"
+    },
+    {
+      "name": "Editorial principle row",
+      "kind": "card",
+      "refersTo": "principle-row",
+      "description": "An open content row with a circular icon and fine divider, without card elevation.",
+      "html": "<article class=\"ds-principle\"><div class=\"ds-principle-mark\" aria-hidden=\"true\"><svg class=\"ds-principle-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m7 7-5 5 5 5m10-10 5 5-5 5m-4-14-2 22\"/></svg></div><div class=\"ds-principle-content\"><h3 class=\"ds-principle-title\">The right thinking.</h3><p class=\"ds-principle-copy\">pstack routes the work. A quick fix stays quick. A difficult problem gets the investigation it deserves.</p><span class=\"ds-principle-source\">Powered by pstack</span></div></article>",
+      "css": ".ds-principle{display:flex;align-items:flex-start;gap:20px;padding-bottom:25px;border-bottom:1px solid var(--line,#d2d5c8);color:var(--ink, #192c26);font-family:var(--body, Geist, Arial, sans-serif);line-height:1.6}.ds-principle-mark{flex-shrink:0;width:43px;height:43px;border:1px solid #b0baa7;border-radius:50%;display:grid;place-items:center;margin-top:3px}.ds-principle-icon{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-principle-title{margin:0;font-family:var(--display, Bricolage, Georgia, serif);font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-.025em;text-wrap:balance}.ds-principle-copy{font-size:14px;color:var(--muted,#56605a);margin:10px 0 0;max-width:365px;line-height:1.8}.ds-principle-source{display:block;font-size:12px;color:#5d6b54;margin-top:12px}@media(max-width:1100px){.ds-principle-copy{font-size:13px}}@media(max-width:800px){.ds-principle{gap:12px}.ds-principle-mark{width:33px;height:33px}.ds-principle-icon{width:16px;height:16px}.ds-principle-title{font-size:22px}}@media(max-width:600px){.ds-principle{gap:17px;padding-bottom:24px}.ds-principle-mark{width:40px;height:40px}.ds-principle-icon{width:19px;height:19px}.ds-principle-title{font-size:26px}}"
+    },
+    {
+      "name": "Signature command strip",
+      "kind": "custom",
+      "refersTo": "command-strip",
+      "description": "Ink command surface with a mint invocation and an accessible copy control.",
+      "html": "<div class=\"ds-command\"><div class=\"ds-command-content\"><svg class=\"ds-command-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m7 7-5 5 5 5m10-10 5 5-5 5m-4-14-2 22\"/></svg><code class=\"ds-command-code\"><span class=\"ds-command-prefix\">$kishu:kishu-mode</span> build something remarkable.</code></div><button type=\"button\" class=\"ds-command-copy\" aria-label=\"Copy the Kishu example command\"><svg class=\"ds-copy-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M15 8V4H4v11h4\"/></svg></button></div>",
+      "css": ".ds-command{display:flex;align-items:center;justify-content:space-between;background:var(--ink, #192c26);color:var(--cream, #fff9ec);border-radius:7px;padding:13px 16px 13px 22px;max-width:740px;gap:8px}.ds-command-content{display:flex;align-items:center;gap:15px;min-width:0}.ds-command-icon{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-command-icon{color:var(--mint, #b7d4bd)}.ds-command-code{font-family:var(--mono, 'Geist Mono', monospace);font-size:12px;line-height:1.65}.ds-command-prefix{color:var(--mint, #b7d4bd)}.ds-command-copy{display:inline-flex;align-items:center;justify-content:center;min-width:42px;min-height:42px;border:0;border-radius:5px;background:transparent;color:inherit;cursor:pointer}.ds-command-copy:hover{background:rgba(150,180,150,.15)}.ds-command-copy:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-copy-icon{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(max-width:800px){.ds-command{padding-left:16px}}@media(max-width:600px){.ds-command{padding:11px 9px 11px 14px;gap:5px;border-radius:6px}.ds-command-content{gap:10px;align-items:flex-start}.ds-command-icon{width:16px;height:16px;margin-top:3px}.ds-command-code{font-size:11px;line-height:1.8}.ds-command-prefix{display:block}.ds-command-copy{min-width:34px}}"
+    },
+    {
+      "name": "Installation code container",
+      "kind": "card",
+      "refersTo": "code-container",
+      "description": "Wrapping command text with a trailing copy control; no editable input is implied.",
+      "html": "<div class=\"ds-code\"><pre class=\"ds-code-pre\"><code class=\"ds-code-text\">git clone https://github.com/SPDUK/kishu-stack.git\ncd kishu-stack\npython scripts/kishu.py install --harness codex</code></pre><button type=\"button\" class=\"ds-code-copy\" aria-label=\"Copy installation commands\"><svg class=\"ds-code-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M15 8V4H4v11h4\"/></svg></button></div>",
+      "css": ".ds-code{background:#e9eadd;color:var(--ink, #192c26);border:1px solid #d9dccd;border-radius:6px;padding:16px 43px 16px 15px;position:relative;min-height:56px}.ds-code-pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.ds-code-text{font-family:var(--mono, 'Geist Mono', monospace);font-size:12px;font-weight:400;line-height:1.9;overflow-wrap:anywhere}.ds-code-copy{display:inline-flex;align-items:center;justify-content:center;position:absolute;right:4px;top:7px;width:35px;min-width:35px;height:35px;min-height:35px;border:0;border-radius:5px;background:transparent;color:inherit;cursor:pointer}.ds-code-copy:hover{background:rgba(150,180,150,.15)}.ds-code-copy:focus-visible{outline:3px solid var(--vermillion, #ed5035);outline-offset:5px;border-radius:4px}.ds-code-icon{width:15px;height:15px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}@media(max-width:800px){.ds-code{padding-left:12px}}@media(max-width:600px){.ds-code{padding:17px 42px 17px 13px}.ds-code-text{font-size:11px}.ds-code-copy{min-height:40px;min-width:40px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Companion Studio Poster",
+    "overview": "The Companion Studio Poster makes ambitious engineering feel approachable. Warm paper, deep green-black ink and a vermilion disk frame an ivory chibi Kishu puppy; mint brings a quieter working surface into the same world. The Japanese influence comes through composition, the sun geometry and a small amount of Japanese lettering.\n\nLarge curved display type and generous editorial spacing give the identity room. Fine rules and compact, readable UI organize the denser technical material. The full-body puppy and compact stamp are the reusable identity: preserve their ivory fur, mint shading and vermilion bandana across light and dark applications.",
+    "keyCharacteristics": [
+      "Paper and ink foundations, with vermilion identity accents and mint working surfaces.",
+      "Curved Bricolage display lettering, Geist interface copy and Geist Mono commands.",
+      "Editorial rules, modest rounded controls and selective soft depth.",
+      "One puppy identity expressed as a full character and a compact stamp."
+    ],
+    "rules": [
+      {
+        "name": "The Color Roles Rule",
+        "body": "Use ink for reading and primary actions, vermilion for identity and focus, and mint for working surfaces and the contrasting action on ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Voices Rule",
+        "body": "Bricolage carries headings and the wordmark; Geist carries explanations and controls; Geist Mono carries commands, code and technical status.",
+        "section": "typography"
+      },
+      {
+        "name": "The Resolved Cascade Rule",
+        "body": "Use the final, applicable CSS declaration when extending a component. The early compact media rules are not a second typography system.",
+        "section": "typography"
+      },
+      {
+        "name": "The Selective Lift Rule",
+        "body": "Keep editorial sections flat. Use soft depth for the walkthrough, its embedded preview, transient feedback and the isolated puppy artwork.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the full puppy and compact stamp recognizable on paper, ink and vermilion backgrounds.",
+      "Do use the three font roles and preserve readable explanatory copy, generally 12–14px in compact content and larger for introductions.",
+      "Do retain visible vermilion keyboard focus and inline SVG icons with text or accessible labels.",
+      "Do stack the walkthrough at 800px and the principal page columns at 600px.",
+      "Do preserve reduced-motion behavior when adding transitions or mascot interactions."
+    ],
+    "donts": [
+      "Don't replace the puppy identity with unrelated decorative symbols or generic stock imagery.",
+      "Don't turn the display face into the body or code face.",
+      "Don't promote superseded tiny declarations, decorative specimen captions or isolated density exceptions into reusable type roles.",
+      "Don't replace the soft shadows with hard offset shadows or apply raised cards to every editorial section.",
+      "Don't invent form-field styles from this page; it contains controls and copyable code, but no editable fields."
+    ]
+  }
+}

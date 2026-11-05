@@ -1,0 +1,284 @@
+[
+  {
+    "id": "plan-gates",
+    "title": "Ten live lanes remain; performance checks depend on the change",
+    "kind": "Enforced when invoked",
+    "group": "Long-running work",
+    "meaning": "The selected multi-phase planner requires unit verification, exactly ten numbered live lanes, and review of interaction changes. Its performance block accepts Not applicable. with a specific reason and no boxes. Applicable performance verification retains its named boxes and uses a credible concern, existing requirement, or actual platform constraint.",
+    "effect": "The executable checker enforces the explained performance exemption as well as the remaining live and review gates. A plan can still be rejected for missing mandatory lanes or review evidence. This workflow does not apply automatically to every chat, and it does not impose universal numeric performance caps.",
+    "suggestion": "Review whether ten live lanes suit the long-running work you select. Keep performance verification tied to the actual change, explain non-applicability, and derive numeric criteria from a relevant requirement, constraint, or agreed target.",
+    "locators": [
+      {"source":"current:skills/poteto-mode/playbooks/multi-phase-plan.md","contains":"**Verification.** Tests alone"},
+      {"source":"current:skills/poteto-mode/scripts/check-plan.mjs","contains":"numbers.join"},
+      {"source":"current:skills/poteto-mode/scripts/check-plan.mjs","contains":"const PERF_ITEMS"},
+      {"source":"current:skills/poteto-mode/scripts/check-plan.mjs","contains":"if (applicability.startsWith(\"Not applicable.\"))"}
+    ]
+  },
+  {
+    "id":"benchmark-inspection",
+    "title":"The benchmark checklist checks measurement quality",
+    "kind":"Conditional guidance",
+    "group":"Performance",
+    "meaning":"The benchmark checklist checks tuning, errors, whether work really ran, noise, bottlenecks, and end-to-end relevance. A full comparison asks for at least five alternating runs per side.",
+    "effect":"There is no universal millisecond or throughput limit here. The procedure can still be excessive for a modest question. A requested ballpark already has a one-run exception.",
+    "suggestion":"Keep honest measurement. Review when the full procedure is justified, and whether lighter evidence can support appropriately qualified claims.",
+    "locators":[
+      {"source":"current:skills/benchmark-checklist/SKILL.md","contains":"For a quick ballpark"},
+      {"source":"current:skills/benchmark-checklist/SKILL.md","contains":"at least 5 times"},
+      {"source":"current:skills/benchmark-checklist/SKILL.md","contains":"Call the verdict inconclusive"}
+    ]
+  },
+  {
+    "id":"measurement-limiter",
+    "title":"Do we always need to explain the bottleneck?",
+    "kind":"Conditional guidance",
+    "group":"Performance",
+    "meaning":"Explain the Number asks for a decision threshold, noise floor, and a measured limiter before trusting a result.",
+    "effect":"This protects against false speedup claims. Read literally, it can also prevent a useful qualified observation until a deeper profiling exercise is complete.",
+    "suggestion":"Distinguish a measured observation from a causal explanation or an adoption recommendation. Decide what evidence each claim needs.",
+    "locators":[
+      {"source":"current:skills/principle-explain-the-number/SKILL.md","contains":"why not double"},
+      {"source":"current:skills/principle-explain-the-number/SKILL.md","contains":"Stop when the run-to-run spread"}
+    ]
+  },
+  {
+    "id":"perf-target",
+    "title":"Stop optimizing once the chosen target is met",
+    "kind":"Conditional guidance",
+    "group":"Performance",
+    "meaning":"The performance-fix playbook tries eliminating unused work, reuse, less work, deferral, concurrency, then cheaper work. It stops once an earlier option meets the target.",
+    "effect":"This is generally an anti-overoptimization rule. The important question is who chose the target; it should not become a silent ceiling on a stronger user request.",
+    "suggestion":"Keep the ordering as a heuristic, with the target grounded in the user's request or a stated assumption.",
+    "locators":[
+      {"source":"current:skills/poteto-mode/playbooks/perf-issue.md","contains":"When an earlier mantra meets the target"},
+      {"source":"current:skills/poteto-mode/playbooks/perf-issue.md","contains":"Don't claim a perf ceiling"}
+    ]
+  },
+  {
+    "id":"hillclimb-floor",
+    "title":"Optimization loops can require a minimum number of attempts",
+    "kind":"Optional workflow",
+    "group":"Performance",
+    "meaning":"Hillclimb pairs its metric target with an attempt floor. Its example is 50% improvement and ten iterations, not a global setting.",
+    "effect":"This applies when sustained optimization is selected. It can keep running after an early success; later wording also permits stopping when ideas no longer earn their cost.",
+    "suggestion":"Make the floor, target, and stopping tradeoff explicit when starting a sustained run. Do not infer this workflow from an ordinary feature request.",
+    "locators":[
+      {"source":"current:skills/poteto-mode/playbooks/hillclimb.md","contains":"floor on attempts"},
+      {"source":"current:skills/poteto-mode/playbooks/hillclimb.md","contains":"remaining ideas are marginal"}
+    ]
+  },
+  {
+    "id":"statechart-limits",
+    "title":"Statechart has actual exploration and drawing limits",
+    "kind":"Enforced when invoked",
+    "group":"Executable tools",
+    "meaning":"The tool draws a full graph only up to 500 states. Follow-up checking runs after the first broken rule stop at 100,000 distinct states. The initial check is a different case.",
+    "effect":"These limit the optional model-checking tool, not the size or performance of software Kishu may build. Unchecked rules must be reported; they do not count as passing.",
+    "suggestion":"Keep the distinction between drawing and proof visible. If this tool matters to your work, consider configurable limits and a cost decision before bigger runs.",
+    "locators":[
+      {"source":"current:skills/statechart/scripts/ir.ts","contains":"RERUN_STATES = 100_000"},
+      {"source":"current:skills/statechart/scripts/ir.ts","contains":"CHART_STATES = 500"},
+      {"source":"current:skills/statechart/SKILL.md","contains":"After the first break"},
+      {"source":"current:skills/statechart/SKILL.md","contains":"budget of 500 states"}
+    ]
+  },
+  {
+    "id":"lever-everywhere",
+    "title":"Build a tool even for one-off nontrivial work",
+    "kind":"Inherited preference",
+    "group":"Scope & autonomy",
+    "meaning":"Build the Lever defaults to a script, generator, codemod, or delegate skill whenever work is not trivial. It explicitly says repetition is not required.",
+    "effect":"A rerunnable tool can be valuable proof. Making one compulsory can add maintenance and time when a direct edit plus existing checks would be sufficient.",
+    "suggestion":"Consider a benefit-based trigger: repeated work, meaningful error risk, or proof that needs to be rerun. Keep the option for one-off work without requiring it.",
+    "locators":[
+      {"source":"current:skills/principle-build-the-lever/SKILL.md","contains":"Default to building the lever"},
+      {"source":"current:skills/principle-build-the-lever/SKILL.md","contains":"The bar is triviality"}
+    ]
+  },
+  {
+    "id":"architecture-minimum",
+    "title":"Selecting Architect still means at least two designs",
+    "kind":"Optional workflow",
+    "group":"Code design",
+    "meaning":"Kishu removed the rule that crossing a function boundary automatically activates Architect. Inside Architect, two structurally distinct candidates are still required.",
+    "effect":"The outer trigger is lighter, but the selected workflow can still spend multiple model runs on an otherwise settled design.",
+    "suggestion":"Decide whether two candidates should be mandatory only when competing approaches are genuinely unresolved or when the user asks for comparison.",
+    "locators":[
+      {"source":"current:skills/architect/SKILL.md","contains":"Design it twice"},
+      {"source":"current:skills/poteto-mode/SKILL.md","contains":"A function boundary alone"},
+      {"source":"current:skills/principle-exhaust-the-design-space/SKILL.md","contains":"2-3 competing prototypes"}
+    ]
+  },
+  {
+    "id":"redesign-vs-small-diff",
+    "title":"Smallest change and first-principles redesign can pull apart",
+    "kind":"Preference tension",
+    "group":"Code design",
+    "meaning":"One principle minimizes the diff; another says to redesign around a new requirement as if it were foundational from day one.",
+    "effect":"Both are useful lenses. An agent can over-refactor if it treats redesign as an instruction to rewrite rather than a way to evaluate the needed change.",
+    "suggestion":"Clarify that thinking broadly does not authorize broad edits. Expand implementation scope when the requirement or demonstrated defect needs it.",
+    "locators":[
+      {"source":"current:skills/principle-redesign-from-first-principles/SKILL.md","contains":"Redesign as if"},
+      {"source":"current:skills/principle-laziness-protocol/SKILL.md","contains":"Minimize the diff"}
+    ]
+  },
+  {
+    "id":"comment-removal",
+    "title":"The optional comment reviewer has a strong deletion bias",
+    "kind":"Optional workflow",
+    "group":"Code design",
+    "meaning":"Comment Sicko keeps only specific exceptions, deletes uncertain comments, and flags internal surprises for code redesign.",
+    "effect":"Kishu stopped running it before every review. If selected, it can still turn a comment cleanup into pressure for a refactor. Legal headers and public API contracts are explicit exceptions.",
+    "suggestion":"Consider retaining useful non-obvious rationale and requiring concrete value before restructuring code. Or keep this specialist explicitly opt-in with its current personality.",
+    "locators":[
+      {"source":"current:agents/comment-sicko.md","contains":"When I am not sure a keep clause"},
+      {"source":"current:skills/no-comments/SKILL.md","contains":"MUST KILL"},
+      {"source":"current:skills/poteto-mode/SKILL.md","contains":"No universal security pass"}
+    ]
+  },
+  {
+    "id":"internal-validation",
+    "title":"Trust internal types unconditionally",
+    "kind":"Inherited preference",
+    "group":"Code design",
+    "meaning":"Boundary Discipline centralizes validation at inputs and treats internal validation as redundant.",
+    "effect":"This can simplify well-typed pure code. Dynamic inputs, persisted corruption, concurrency, and mixed-language boundaries need more care than a literal unconditional rule permits.",
+    "suggestion":"Keep boundary validation as the default while allowing checks that protect a real invariant or trust boundary. Avoid adding defensive checks without a concrete failure mode.",
+    "locators":[
+      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"Trust internal code unconditionally"},
+      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"If not, validation is redundant"}
+    ]
+  },
+  {
+    "id":"typescript-opinions",
+    "title":"Some TypeScript rules are stronger than common project conventions",
+    "kind":"Language-specific preference",
+    "group":"Code design",
+    "meaning":"The skill favors branded primitives, no unchecked casts, object arguments, running real dependencies, and structured logging.",
+    "effect":"These can improve correctness, but need repository and hot-path context. They are not constraints imposed by TypeScript itself.",
+    "suggestion":"Review the individual table rows. Preserve useful exceptions and project conventions rather than replacing the entire rule set.",
+    "locators":[
+      {"source":"current:skills/typescript-best-practices/SKILL.md","contains":"| Object args |"},
+      {"source":"current:skills/typescript-best-practices/SKILL.md","contains":"| No `as` casts |"},
+      {"source":"current:skills/typescript-best-practices/SKILL.md","contains":"| Real tests |"},
+      {"source":"current:skills/typescript-best-practices/SKILL.md","contains":"| Structured telemetry |"}
+    ]
+  },
+  {
+    "id":"migration-sequencing",
+    "title":"Migration and verification principles need compatible boundaries",
+    "kind":"Preference tension",
+    "group":"Tests & proof",
+    "meaning":"Outcome-Oriented Execution allows planned intermediate breakage; Sequence Verifiable Units says not to advance until a unit is green and prescribes trunk-first sequencing.",
+    "effect":"They can coexist if the verifiable unit is an agreed migration phase. A literal per-edit interpretation can create unnecessary compatibility scaffolding or repeated checks.",
+    "suggestion":"Define meaningful verification boundaries for the task, preserve useful checks, and leave commit/rebase mechanics to the actual delivery workflow.",
+    "locators":[
+      {"source":"current:skills/principle-outcome-oriented-execution/SKILL.md","contains":"Intermediate breakage is acceptable"},
+      {"source":"current:skills/principle-sequence-verifiable-units/SKILL.md","contains":"Rebase onto clean trunk first"}
+    ]
+  },
+  {
+    "id":"capability-vs-polish",
+    "title":"Fewer polished features must not erase requested capability",
+    "kind":"Inherited preference",
+    "group":"Scope & autonomy",
+    "meaning":"Experience First favors fewer polished features; Subtract Before You Add prefers removal before construction.",
+    "effect":"These are useful product heuristics. Taken as authority to reduce the brief or clean unrelated code, they conflict with Kishu's scope preservation.",
+    "suggestion":"Use these principles to discuss tradeoffs, while delivering the agreed capability and asking about material scope changes.",
+    "locators":[
+      {"source":"current:skills/principle-experience-first/SKILL.md","contains":"Ship less, ship better"},
+      {"source":"current:skills/principle-subtract-before-you-add/SKILL.md","contains":"Sequence removal before construction"},
+      {"source":"current:skills/poteto-mode/SKILL.md","contains":"Preserve the requested scope"}
+    ]
+  },
+  {
+    "id":"context-budgets",
+    "title":"Phase and turn budgets should organize work, not shrink the goal",
+    "kind":"Inherited preference",
+    "group":"Delegation",
+    "meaning":"Guard the Context Window explicitly suggests limiting files per phase, setting turn budgets, and accounting for mechanism costs.",
+    "effect":"This manages the agent's working context. It is not a stated performance limit on your software or a reason to silently omit requirements.",
+    "suggestion":"Keep phased execution and compact context. Make any reduction in scope or meaningful quality/cost tradeoff explicit.",
+    "locators":[
+      {"source":"current:skills/principle-guard-the-context-window/SKILL.md","contains":"Size phases and cap scope"}
+    ]
+  },
+  {
+    "id":"kishu-tests",
+    "title":"Kishu already replaces automatic expensive-test skipping",
+    "kind":"Kishu override",
+    "group":"Tests & proof",
+    "meaning":"Test logic that could regress, reuse sufficient coverage, run affected checks, and ask when useful coverage has substantial setup, runtime, service, or maintenance cost.",
+    "effect":"A declined or unavailable test remains a visible coverage gap. This policy intentionally replaces the upstream cheap-test-only bias.",
+    "suggestion":"Likely keep. Review the meaning of substantial cost and what an estimate should include, without adding a fixed budget that silently makes the decision for you.",
+    "locators":[
+      {"source":"current:skills/tdd/SKILL.md","contains":"Substantial fixture setup"},
+      {"source":"current:skills/tdd/SKILL.md","contains":"Do not silently skip"},
+      {"source":"upstream:skills/tdd/SKILL.md","contains":"expensive"}
+    ]
+  },
+  {
+    "id":"kishu-proof",
+    "title":"Evidence should match the claim and can be reused",
+    "kind":"Kishu override",
+    "group":"Tests & proof",
+    "meaning":"Visual changes get inspected rendered evidence where possible; APIs get actual calls and responses; logic gets executed checks. Evidence is rerun when invalidated, not merely on the next message.",
+    "effect":"This adds useful proof without making every task produce screenshots, videos, benchmarks, and a report. It does not substitute a screenshot for meaningful tests.",
+    "suggestion":"Likely keep. Review any workflow that separately reimposes a larger evidence package regardless of the change.",
+    "locators":[
+      {"source":"current:skills/principle-prove-it-works/SKILL.md","contains":"Match the evidence to the work"},
+      {"source":"current:skills/principle-prove-it-works/SKILL.md","contains":"Rerun when subsequent edits"}
+    ]
+  },
+  {
+    "id":"scope-and-gates",
+    "title":"Autonomy must preserve the user's gates and scope",
+    "kind":"Kishu override",
+    "group":"Scope & autonomy",
+    "meaning":"Kishu restricts side discoveries to necessary authorized work and preserves the expensive-test decision gate. Its router removes automatic security audits, comment deletion, PRs, and unrelated skill repair.",
+    "effect":"The inherited Never Block on the Human principle is subordinate to these exceptions and host permissions. A reversible action alone is not unlimited authority.",
+    "suggestion":"Likely keep. Review the exact cases where you want a decision versus an autonomous assumption.",
+    "locators":[
+      {"source":"current:skills/poteto-mode/playbooks/autonomous-run.md","contains":"Handle discoveries necessary"},
+      {"source":"current:skills/principle-never-block-on-the-human/SKILL.md","contains":"Proceed, then present"}
+    ]
+  },
+  {
+    "id":"models-and-delegation",
+    "title":"Configured model roles do not change the main chat model",
+    "kind":"Kishu override",
+    "group":"Models & setup",
+    "meaning":"Kishu resolves user/project configuration, checks available models, passes effort separately in Codex, and inherits the parent where appropriate.",
+    "effect":"Upstream leaf skills still mention their bundled model defaults and cross-family panels. Kishu's router and adapters govern them; an unavailable family must be disclosed, not invented.",
+    "suggestion":"Keep capability-aware selection. Review any per-role cost policy separately from the software's performance. Your private local model file is not copied into this shareable catalog.",
+    "locators":[
+      {"source":"current:skills/poteto-mode/SKILL.md","contains":"These choices control delegated roles"},
+      {"source":"kishu:src/adapters/codex.md","contains":"Pass reasoning effort separately"},
+      {"source":"current:skills/arena/SKILL.md","contains":"skip the judge"}
+    ]
+  },
+  {
+    "id":"watcher-limits",
+    "title":"PR watching has configurable operational defaults",
+    "kind":"Enforced when invoked",
+    "group":"Delivery",
+    "meaning":"The watcher defaults to 60-second polling, 300-second stack sweeps, no timeout, and a five-consecutive-query-error budget.",
+    "effect":"These control an optional watcher, not the build quality or feature scope. Query-error exhaustion is a tool failure to report, not evidence that a PR passed.",
+    "suggestion":"Probably keep as visible command options; tune them when a specific monitoring task needs it.",
+    "locators":[
+      {"source":"current:skills/poteto-mode/scripts/watch-pr/cli.ts","contains":"--interval <seconds>"}
+    ]
+  },
+  {
+    "id":"optional-benny",
+    "title":"Benny's time budgets belong to a separate optional automation",
+    "kind":"Optional automation",
+    "group":"Optional automation",
+    "meaning":"The bundled Benny example contains triage, reproduction, fixing, follow-up, and artifact-retention budgets.",
+    "effect":"These are configuration examples for that issue automation. Merely including pstack does not schedule Benny or activate its budgets in every Kishu chat.",
+    "suggestion":"Leave this out of ordinary-work defaults. Review its settings if you decide to configure the automation.",
+    "locators":[
+      {"source":"current:automations/benny/templates/configuration.example.yaml","contains":"budgets:"}
+    ]
+  }
+]

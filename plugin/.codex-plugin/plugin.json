@@ -1,0 +1,20 @@
+{
+  "name": "kishu",
+  "version": "0.1.4",
+  "description": "Kishu mode: thoughtful work routing, a design taste engine, focused communication, meaningful tests, and useful proof.",
+  "author": {
+    "name": "Kishu contributors"
+  },
+  "license": "MIT AND Apache-2.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Kishu",
+    "shortDescription": "A no-fuss generalist stack for your agent",
+    "capabilities": [
+      "Instructions"
+    ],
+    "defaultPrompt": [
+      "Use kishu-mode for this task."
+    ]
+  }
+}

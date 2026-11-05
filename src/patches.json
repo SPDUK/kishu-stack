@@ -1,0 +1,50 @@
+[
+  {
+    "source": "pstack",
+    "path": "skills/architect/SKILL.md",
+    "old": "Build a real mental model of every system the new code touches. Run the **how** skill over the relevant subsystems. Naming a file isn't grounding. Produce the architectural explanation `how` prescribes.",
+    "new": "Use current, verified investigation of the systems the change touches. Run the **how** skill only for unresolved gaps; do not repeat a completed investigation or require a separate explanation when the existing findings are sufficient."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/playbooks/perf-issue.md",
+    "old": "If it crosses a function boundary, `architect` first. Delegate implementation to a subagent using your configured perf-issue model (default `grok-4.7-xhigh-fast`).",
+    "new": "Use `architect` for consequential unresolved design choices. Implement directly or delegate separable implementation when useful, honoring the host adapter and configured model-role choices."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/playbooks/autonomous-run.md",
+    "old": "4. Mid-run discoveries that support the goal are yours. Address broken skills, related bugs, flaky verifiers, review noise, tooling failures, orphaned follow-ups, and fixable drift yourself via poteto-mode. Put out-of-band fixes in their own PR. Do not park reversible work for the human or use `AskQuestion`. Surface only irreversible actions, genuine product or preference calls no experiment can settle, or a real dead end. Keep the predicate as the main drive, and return to it after each side fix.",
+    "new": "4. Handle discoveries necessary to the authorized goal, keeping unrelated work out of scope. Preserve explicit gates, including Kishu's decision gate for substantial testing costs. Ask when that decision is needed and continue independent work while waiting. Do not create unrelated skill-repair PRs or broaden the goal automatically."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/playbooks/autopilot-full.md",
+    "old": "The code is ready only after the slop-strip (the `deslop` skill from the `cursor-team-kit` plugin (`/deslop`)) and the `/no-comments` pass, so the full swarm runs on finished code.",
+    "new": "The code is ready after scoped review and the project's required checks. Additional review specialists are optional when they add value; no external review plugin is a prerequisite."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/principle-exhaust-the-design-space/SKILL.md",
+    "old": "It also applies to product design decisions where user experience depends on feel, not logic.",
+    "new": "It also applies to product design decisions where user experience depends on feel, not logic.\n\nFor visual and interaction decisions, use [Impeccable](../../../impeccable/SKILL.md) to choose the competing directions and assess their fit to the brief and existing identity."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/playbooks/prototype.md",
+    "old": "2. Gather references when the design space is open. Search for prior art, summarize a moodboard of themes, palettes, and layouts, let the user pick directions before building. Skip when the direction is set.",
+    "new": "2. Gather references when the design space is open. For visual and interaction decisions, use [Impeccable](../../../../impeccable/SKILL.md) to curate prior art into a moodboard that fits the brief. Let the user pick directions before building. Reuse established context when the direction is set."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/playbooks/prototype.md",
+    "old": "4. When comparing alternatives, build them behind one switcher (buttons or a keypress), each variant labeled. This is the **exhaust-the-design-space** principle skill made cheap.",
+    "new": "4. Choose alternatives that expose the decision's meaningful tradeoffs, using Impeccable for visual and interaction judgment. When comparing alternatives, build them behind one switcher (buttons or a keypress), each variant labeled. This is the **exhaust-the-design-space** principle skill made cheap."
+  },
+  {
+    "source": "pstack",
+    "path": "skills/poteto-mode/scripts/check-plan.test.ts",
+    "old": "Tests alone are not sufficient verification. A PR is verified only when its unit, live, and perf boxes are all checked.",
+    "new": "Tests alone are not sufficient verification. A PR is verified only when its unit and live boxes and any applicable perf boxes are all checked."
+  }
+]

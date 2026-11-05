@@ -1,0 +1,13 @@
+{
+  "kind": "browser-screenshot",
+  "source": "meridian/index.html",
+  "captured": "2026-11-04",
+  "tool": "Codex computer-use browser screenshot",
+  "encoding": "JPEG quality 2; original screenshot dimensions",
+  "dimensions": {
+    "width": 1425,
+    "height": 990
+  },
+  "sha256": "40dde13667433ac695e72aa0426333d4933ac1c771e23e20ae98e280012d6763",
+  "artwork": "Original SVG icons and data-driven chart; entirely fictional market data"
+}

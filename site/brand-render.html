@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kishu social artwork</title>
+    <style>
+      @font-face {
+        font-family: Bricolage;
+        src: url("./fonts/bricolage-700.ttf");
+        font-weight: 700;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f6f3e9;
+        color: #192c26;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        font-family: Bricolage, Arial, sans-serif;
+      }
+      main {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        padding: 48px 64px;
+      }
+      .logo {
+        font-size: 40px;
+        letter-spacing: -2px;
+      }
+      .logo span {
+        color: #ed5035;
+      }
+      h1 {
+        font-size: 86px;
+        line-height: 1;
+        letter-spacing: -3px;
+        margin: 66px 0 24px;
+        font-weight: 700;
+      }
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 22px;
+        line-height: 1.6;
+        color: #56605a;
+        margin: 0;
+      }
+      .route {
+        position: absolute;
+        right: 64px;
+        top: 160px;
+        width: 398px;
+        padding: 26px 30px 34px;
+        border-radius: 24px;
+        background: #203d34;
+        color: #f6f3e9;
+        box-shadow: 0 20px 46px #203d3414;
+      }
+      .route-label { font: 13px Arial, sans-serif; letter-spacing: 2px; color: #c4d4c1; margin-bottom: 25px; }
+      .step { display: flex; align-items: center; gap: 16px; padding: 15px 0; border-top: 1px solid #ffffff20; font-size: 24px; letter-spacing: -.4px; }
+      .step span { font: 12px Arial, sans-serif; letter-spacing: .5px; color: #c4d4c1; width: 22px; }
+      .step small { display: block; margin-top: 4px; font: 15px Arial, sans-serif; color: #c4d4c1; letter-spacing: 0; }
+      .puppy {
+        position: absolute;
+        width: 142px;
+        height: 142px;
+        object-fit: contain;
+        right: -20px;
+        bottom: -26px;
+        transform: rotate(7deg);
+      }
+      .line {
+        position: absolute;
+        left: 64px;
+        right: 64px;
+        bottom: 52px;
+        height: 1px;
+        background: #d2d5c8;
+      }
+      .sign {
+        position: absolute;
+        right: 64px;
+        bottom: 70px;
+        font:
+          13px Arial,
+          sans-serif;
+      }
+      .category { position: absolute; right: 64px; top: 67px; font: 13px Arial, sans-serif; letter-spacing: 1.8px; color: #56605a; }
+      .address { position: absolute; left: 64px; bottom: 70px; font: 13px Arial, sans-serif; color: #56605a; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo">kishu<span>.</span></div>
+      <div class="category">AI CODING WORKFLOWS</div>
+      <h1>Think big.<br />Build smarter.</h1>
+      <p>The right model for each step.<br />Your workflow. Your call.</p>
+      <div class="route">
+        <div class="route-label">ONE PROMPT. A CLEAR PATH.</div>
+        <div class="step"><span>01</span><div>Plan with depth<small>A thinking model for hard decisions</small></div></div>
+        <div class="step"><span>02</span><div>Build efficiently<small>A coding model for focused work</small></div></div>
+        <div class="step"><span>03</span><div>Polish &amp; check<small>A clear result, ready to review</small></div></div>
+        <img class="puppy" src="./assets/kishu-puppy.webp" alt="" />
+      </div>
+      <div class="line"></div>
+      <div class="address">spduk.github.io/kishu-stack</div>
+      <div class="sign">Codex · Cursor · Claude Code</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "kind": "browser-screenshot",
+  "source": "stillroom/index.html",
+  "captured": "2026-11-04",
+  "tool": "Codex computer-use browser screenshot",
+  "encoding": "JPEG quality 2; original screenshot dimensions",
+  "dimensions": {
+    "width": 1425,
+    "height": 990
+  },
+  "sha256": "b0527f469beda11878ff4549db627ecd841b41ac21c10644b5e13247dd1c9430",
+  "artwork": "Original text-only image generation; see assets/provenance.json"
+}

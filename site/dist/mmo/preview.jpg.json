@@ -1,0 +1,13 @@
+{
+  "kind": "browser-screenshot",
+  "source": "mmo/index.html",
+  "captured": "2026-11-04",
+  "tool": "Codex computer-use browser screenshot",
+  "encoding": "JPEG quality 2; original screenshot dimensions",
+  "dimensions": {
+    "width": 1425,
+    "height": 990
+  },
+  "sha256": "26069b84ba9f4a8c3042b54b762387a349cfad4e9e591e4d722d0f02c25996d7",
+  "artwork": "Original text-only image generation; see assets/provenance.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "kishu-local",
+  "owner": {"name": "Kishu contributors"},
+  "plugins": [
+    {
+      "name": "kishu",
+      "description": "A no-fuss generalist stack built on pstack, Impeccable, and clear communication.",
+      "source": "./plugin",
+      "category": "productivity"
+    }
+  ]
+}

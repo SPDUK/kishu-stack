@@ -1,0 +1,6 @@
+interface:
+  display_name: "Kishu mode"
+  short_description: "Generalist routing with useful tests and proof"
+  default_prompt: "Use $kishu:kishu-mode to complete this task."
+policy:
+  allow_implicit_invocation: true

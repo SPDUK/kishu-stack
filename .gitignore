@@ -1,0 +1,7 @@
+/upstream/
+/.work/
+/.kishu-stage-*/
+/dist/
+__pycache__/
+*.pyc
+/kishu.local.json

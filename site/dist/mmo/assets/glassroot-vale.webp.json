@@ -1,0 +1,14 @@
+{
+  "asset": "glassroot-vale.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: stylized-concept. Asset type: wide 16:9 world-exploration painting for Veldrift, an original fictional fantasy MMO concept. Create Glassroot Vale: a sublime quiet forest valley under immense translucent pale-amber tree roots that arch like natural cathedrals. Turquoise streams thread over dark slate, luminous tiny pollen drifts in the sun shafts, fern-covered stone steps wind to a distant warm lantern shrine with simple copper roof. A tiny cloaked traveler for scale far in the distance, not a close character. Emerald, petrol blue, soft amber, ivory sunlight, painterly texture, exceptionally detailed environmental storytelling and cinematic depth. Main glowing forest canopy across center and right; keep bottom left a shadowed lower-contrast riverbank for live ivory website copy. Wholly original fantasy landscape, no recognizable existing game setting or characters. No text, lettering, logos, UI, borders or watermarks.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "82274acc5b9796c2d140efc71c38343ab11362f41f59e8260d959dbbafc7a407",
+  "sha256": "be04821c4f608a75549e5f0e3c25af8dd170f718a7170ed9b3860de539a85c76",
+  "width": 1672,
+  "height": 941,
+  "bytes": 483754
+}

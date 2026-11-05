@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#10181f" />
+  <meta name="description" content="Explore VELDRIFT, an original, fictional MMO concept. Follow lantern-lit shores, luminous forests, and a horizon full of possibility. Made with Kishu." />
+  <title>VELDRIFT — The horizon is only the start</title>
+  <link rel="icon" href="assets/veldrift-mark.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/gfs-didot-regular.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the journey</a>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+    <symbol id="down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" /></symbol>
+  </defs></svg>
+  <header class="navigation">
+    <a class="brand" href="#main" aria-label="Veldrift, beginning"><img src="assets/veldrift-mark.svg" alt="" width="42" height="48" /><span>VELDRIFT</span></a>
+    <nav aria-label="Main navigation"><a href="#world">The world</a><a href="#wayfarers">The Wayfarers</a><a class="nav-cta" href="#world">Choose a horizon <svg aria-hidden="true"><use href="#arrow" /></svg></a></nav>
+  </header>
+  <main id="main">
+    <section class="opening" aria-labelledby="opening-title">
+      <picture class="opening-art"><source media="(max-width: 640px)" srcset="assets/hero-mobile.webp" width="1024" height="1536" /><img src="assets/hero.webp" alt="Travelers overlook a lantern-lit coastal city, with floating stone arches and waterfalls against a blue mountain horizon." width="1672" height="941" fetchpriority="high" /></picture>
+      <div class="opening-shade" aria-hidden="true"></div>
+      <div class="opening-copy">
+        <h1 id="opening-title">The horizon<br /><em>is only the start.</em></h1>
+        <p>A light in the distance. A path you haven’t taken. Someone beside you, ready to see what comes next.</p>
+        <a class="button brass" href="#world">Find your next horizon <svg aria-hidden="true"><use href="#arrow" /></svg></a>
+      </div>
+      <div class="opening-footer"><span>VELDRIFT <span class="footer-dot">/</span> A WORLD TO WANDER</span><a href="#story">Every journey begins with a little wonder <svg aria-hidden="true"><use href="#down" /></svg></a><span class="study-label">An original MMO concept</span></div>
+    </section>
+
+    <section class="prologue page-width" id="story" aria-labelledby="story-title">
+      <h2 id="story-title">A place to go.<br /><em>A reason to stay.</em></h2>
+      <div class="prologue-copy"><p>Some journeys begin long before you know where you’re going.</p><p>In Veldrift, a lantern on the shore can lead to a forest of living light. A stranger’s map can become a shared memory. The world is wide. There’s room for your story.</p><a class="text-link" href="#world">Let curiosity lead <svg aria-hidden="true"><use href="#down" /></svg></a></div>
+    </section>
+
+    <section class="world" id="world" aria-labelledby="world-title">
+      <div class="world-heading page-width"><h2 id="world-title">Find your <em>somewhere.</em></h2><p>Three places. A thousand reasons to wander. <br />Choose a horizon.</p></div>
+      <div class="world-stage">
+        <article class="scene" id="scene-lantern" role="tabpanel" aria-labelledby="tab-lantern" tabindex="0">
+          <img class="scene-art" src="assets/lantern-coast.webp" alt="Lanterns glow along a limestone harbor, where copper roofs overlook a calm sea beneath a great stone arch." width="1672" height="941" loading="lazy" />
+          <div class="scene-shade" aria-hidden="true"></div>
+          <div class="scene-copy"><h3>Follow the lights.<br /><em>Find a welcome.</em></h3><p>Sea air, open doors, and a hundred stories arriving with the tide. There’s always one more lantern burning for the traveler still on the road.</p><span class="location">Lantern Coast <span>Where every voyage begins</span></span></div>
+        </article>
+        <article class="scene" id="scene-glassroot" role="tabpanel" aria-labelledby="tab-glassroot" tabindex="0" hidden>
+          <img class="scene-art" src="assets/glassroot-vale.webp" alt="Amber-lit crystalline boughs arch above a stream and stone steps leading to a lantern-lit forest pavilion." width="1672" height="941" loading="lazy" />
+          <div class="scene-shade" aria-hidden="true"></div>
+          <div class="scene-copy"><h3>Take the quiet path.<br /><em>Let wonder find you.</em></h3><p>Beneath the amber boughs, the forest keeps its own soft light. Stay a little longer. The loveliest discoveries rarely ask to be found.</p><span class="location">Glassroot Vale <span>A forest that holds the light</span></span></div>
+        </article>
+        <article class="scene" id="scene-astral" role="tabpanel" aria-labelledby="tab-astral" tabindex="0" hidden>
+          <img class="scene-art" src="assets/astral-reach.webp" alt="A brass orrery and open observatory terraces rise among snowy mountain spires above a sea of clouds." width="1672" height="941" loading="lazy" />
+          <div class="scene-shade" aria-hidden="true"></div>
+          <div class="scene-copy"><h3>A little farther.<br /><em>A little closer to awe.</em></h3><p>Climb beyond the clouds to a place built for looking up. Here, the sky feels close enough to touch, and the next horizon is never the last.</p><span class="location">Astral Reach <span>An observatory above the clouds</span></span></div>
+        </article>
+      </div>
+      <div class="destination-bar page-width"><div class="destination-tabs" role="tablist" aria-label="Choose a destination"><button type="button" role="tab" id="tab-lantern" aria-selected="true" aria-controls="scene-lantern" tabindex="0"><span class="tab-line"></span><span>Lantern Coast</span><svg aria-hidden="true"><use href="#arrow" /></svg></button><button type="button" role="tab" id="tab-glassroot" aria-selected="false" aria-controls="scene-glassroot" tabindex="-1"><span class="tab-line"></span><span>Glassroot Vale</span><svg aria-hidden="true"><use href="#arrow" /></svg></button><button type="button" role="tab" id="tab-astral" aria-selected="false" aria-controls="scene-astral" tabindex="-1"><span class="tab-line"></span><span>Astral Reach</span><svg aria-hidden="true"><use href="#arrow" /></svg></button></div><span class="destination-hint">Follow your curiosity.</span></div>
+      <noscript><p class="no-script">This still view is Lantern Coast. Enable JavaScript to explore the other two destinations.</p></noscript>
+    </section>
+
+    <section class="wayfarers" id="wayfarers" aria-labelledby="wayfarers-title">
+      <img class="wayfarers-art" src="assets/wayfarer.webp" alt="A human cartographer holds a rolled map above the clouds, with stone bridges and small airships behind her." width="1672" height="941" loading="lazy" />
+      <div class="wayfarers-shade" aria-hidden="true"></div>
+      <div class="wayfarers-copy page-width"><h2 id="wayfarers-title">A map to share.<br />A road to take.<br /><em>A place among us.</em></h2><p>Meet the Wayfarers. Cartographers, stargazers, and people who never quite outgrew their curiosity. A community built on the simple joy of going together.</p><a class="text-link" href="#world">Follow a Wayfarer’s map <svg aria-hidden="true"><use href="#arrow" /></svg></a></div>
+    </section>
+
+    <section class="epilogue page-width" aria-labelledby="epilogue-title"><h2 id="epilogue-title">Your next story<br /><em>is out there.</em></h2><p>Bring your curiosity. Find your people.<br />Make a little more room for wonder.</p><a class="button brass" href="../case-studies/mmo.html">See how this world was made <svg aria-hidden="true"><use href="#arrow" /></svg></a></section>
+  </main>
+  <footer class="site-footer page-width"><div><a class="study-home" href="../case-studies/mmo.html">Made with Kishu <svg aria-hidden="true"><use href="#arrow" /></svg></a><p>An imagined world. A visible process.<br /><a href="../case-studies/mmo.html">Read the story behind the design.</a></p></div><div class="credits"><p>VELDRIFT is a fictional MMO concept, created for this design study.<br />Original world, characters, and AI-generated concept artwork. No playable game.</p><a href="../case-studies/mmo.html">About the project <svg aria-hidden="true"><use href="#arrow" /></svg></a></div></footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "title": "Design System: STILLROOM",
+  "modes": { "landing": "Persuade", "booking": "Operate" },
+  "colors": {
+    "paper": "#f4f1e8", "white": "#fffdf7", "ink": "#252b24", "blue": "#1d3fcb",
+    "blueTint": "#dde3ff", "muted": "#5a6056", "line": "#c9ccbd", "orange": "#ce4b28"
+  },
+  "typography": {
+    "display": { "fontFamily": "Bricolage", "fontSize": "clamp(53px, 7.4vw, 96px)", "fontWeight": 700, "lineHeight": 1.02, "letterSpacing": "-0.04em" },
+    "headline": { "fontFamily": "Bricolage", "fontSize": "clamp(37px, 4.6vw, 64px)", "fontWeight": 700, "lineHeight": 1.05 },
+    "body": { "fontFamily": "Geist", "fontSize": "16px", "lineHeight": 1.65 },
+    "detail": { "fontFamily": "Geist", "fontSize": "12px", "lineHeight": 1.6 }
+  },
+  "rounded": { "control": "3px" },
+  "spacing": { "related": "12px", "group": "24px", "panel": "28px", "gutter": "56px", "section": "99px" },
+  "motion": { "heroDuration": "850ms", "easing": "cubic-bezier(.16,1,.3,1)", "reducedMotion": "none" },
+  "responsive": { "stackedBooking": "760px", "compactPhone": "460px", "smallPhone": "355px" }
+}

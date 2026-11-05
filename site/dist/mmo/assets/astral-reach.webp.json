@@ -1,0 +1,14 @@
+{
+  "asset": "astral-reach.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: stylized-concept. Asset type: wide 16:9 world-exploration painting for Veldrift, an original fictional fantasy MMO concept. Paint the Astral Reach, an awe-inspiring remote mountaintop observatory above a cloud ocean. Weathered pale stone concentric terraces and brass astronomical instruments encircle an open roofless dome with a giant delicate orrery. Long elegant suspension footbridges connect slender needle peaks, a distant broken-ring moon hangs in a deep blue sky, quiet apricot dawn on the horizon. Cloud sea, sheer scale, cold blue atmosphere and restrained gold accents; premium cinematic hand-painted fantasy art with fine brush texture and very convincing light. The observatory occupies center-right; left foreground dark blue rock and cloud shadow leaves room for ivory web text. Fully original architecture and world, no recognizable existing game scenery or iconography. No text, logo, UI, border, watermark.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "3f02ed512d687a165b3d255eaca6cdcd25299dfdc7da57f750e59cadfa01b175",
+  "sha256": "764857fa7312ca2263a4fd1b4ad81efcf975027e3409b8330566eba4654321b0",
+  "width": 1672,
+  "height": 941,
+  "bytes": 306028
+}

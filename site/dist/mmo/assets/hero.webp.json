@@ -1,0 +1,14 @@
+{
+  "asset": "hero.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: stylized-concept. Asset type: full-bleed desktop hero artwork for Veldrift, an original fictional fantasy MMO concept website. Create one exquisite cinematic hand-painted fantasy landscape in a wide 16:9 composition, rich brushwork and atmospheric depth, refined fantasy book-cover craftsmanship. A small company of three original human wayfarers in weathered indigo cloaks, carrying simple brass astrolabes and rolled charts, stand on a mossy stone overlook at the LEFT of the painting. Below them: a sprawling coastal city of pale limestone, copper roofs, long aqueducts, lantern-lit canals, and tall sails. Beyond: immense floating limestone arches above a luminous sea, a pale broken-ring moon, layered blue-green mountains at dawn. Warm apricot sunrise rim-light against deep petrol blue and soft turquoise. Make the left 55 percent breathtakingly detailed; let the right 45 percent resolve into dark blue atmospheric sky and mist with quiet lower-contrast shapes, because live ivory headline text will be laid over that area. Full bleed, no border. No text, no lettering, no logo, no watermark, no UI. Create wholly original characters, architecture and scenery; do not reproduce any recognizable game franchise, armor, creature, emblem, character or existing artwork.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "93a17aff7043ffba502558dfbdbc84ce09a96beb40c837a70606dfcf232bd365",
+  "sha256": "c61e4e8fd63741d5dadaf951751d5cc0650cd94fb4034cc934c6206f5b161c29",
+  "width": 1672,
+  "height": 941,
+  "bytes": 312182
+}

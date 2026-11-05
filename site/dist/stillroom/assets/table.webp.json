@@ -1,0 +1,14 @@
+{
+  "asset": "table.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: photorealistic-natural. Asset type: original editorial photograph for STILLROOM, a fictional creative-workshop booking website. Beautiful tactile independent magazine photography, natural morning light, authentic imperfections, warm ivory and muted terracotta palette with restrained cobalt accents. No text, branding, logos, watermark, borders, collage or UI. No readable writing on any object. Landscape 3:2 composition. An intimate long artist's lunch table with four handmade ceramic place settings, warm linen, small green herbs in an earthenware vase, a torn loaf of bread, ripe pears and four clear water glasses. A small pair of hands lays a folded linen napkin at the right edge. Natural midday light through tall windows, a bright cream studio, simple materials, quiet conviviality. Fine editorial food-and-craft photography without a commercial stock-photo look.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "1089eaebd90a818eceadae938147701c1449dde719bb06e08c65596635839592",
+  "sha256": "1e749a6541a96e8c7249b5b2cf7be06d41bf69860f9c8c4f049dfb470b234826",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 253348
+}

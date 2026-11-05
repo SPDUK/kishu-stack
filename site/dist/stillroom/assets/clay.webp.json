@@ -1,0 +1,14 @@
+{
+  "asset": "clay.webp",
+  "generator": "OpenAI built-in image_gen",
+  "generated_for": "Kishu public demo collection",
+  "date": "2026-11-04",
+  "input_images": [],
+  "prompt": "Use case: photorealistic-natural. Asset type: original editorial photograph for STILLROOM, a fictional creative-workshop booking website. Beautiful tactile independent magazine photography, natural morning light, authentic imperfections, warm ivory and muted terracotta palette with restrained cobalt accents. No text, branding, logos, watermark, borders, collage or UI. No readable writing on any object. Landscape 3:2 composition. Close editorial detail of an adult ceramic artist's clay-dusted hands shaping a small bowl on a pottery wheel. Only natural hands and forearms in frame, cream linen sleeves rolled up, wheel and wet clay tactile and luminous, a cobalt glazed cup at rear, very shallow soft workshop background. Accurate anatomy and wheel, intimate craft, softly lit and inviting.",
+  "transformation": "PNG to WebP encoding at original dimensions; quality 88. No semantic editing.",
+  "source_sha256": "446c71a4883a123c44ce6eb1362be1d0d39ec05ef218a2fb60e5dfc9b7ef3b84",
+  "sha256": "c901e233e25032519fe5758804aa22e344b68c07e8fb1857a8a87020371b0d1d",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 184738
+}

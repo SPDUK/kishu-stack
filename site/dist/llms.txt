@@ -1,0 +1,16 @@
+# Kishu
+
+> Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results.
+
+Kishu is an open-source plugin for existing coding agents. Kishu mode coordinates work; it does not run visitor prompts on this website. Model choices depend on the host. Cost and time savings are task dependent, and the walkthroughs are illustrative.
+
+## Product and setup
+
+- [Product overview and common questions](https://spduk.github.io/kishu-stack/index.md): workflow, model roles, installation commands, limitations, and attribution.
+- [Source and full installation guide](https://raw.githubusercontent.com/SPDUK/kishu-stack/main/README.md): authoritative repository documentation.
+
+## Project evidence
+
+- [Site build story](https://raw.githubusercontent.com/SPDUK/kishu-stack/main/site/BUILD_STORY.md): the site as a real Kishu project.
+- [Executed verification](https://raw.githubusercontent.com/SPDUK/kishu-stack/main/site/VERIFICATION.md): actual checks and limitations.
+- [Third-party notices](https://raw.githubusercontent.com/SPDUK/kishu-stack/main/THIRD_PARTY_NOTICES.md): upstream authors and licenses.

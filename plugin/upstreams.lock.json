@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "sources": {
+    "pstack": {
+      "url": "https://github.com/cursor/plugins.git",
+      "branch": "main",
+      "commit": "ae5650febf4320793844c12c4adaa937f417f8da",
+      "subdir": "pstack"
+    },
+    "impeccable": {
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "9fadc41729c38fd47d7ae622b501558653f9d2e9",
+      "subdir": ".agents/skills/impeccable"
+    },
+    "i-have-adhd": {
+      "url": "https://github.com/ayghri/i-have-adhd.git",
+      "branch": "main",
+      "commit": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+      "subdir": "skills/i-have-adhd"
+    }
+  }
+}

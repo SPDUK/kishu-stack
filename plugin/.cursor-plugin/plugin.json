@@ -1,0 +1,11 @@
+{
+  "name": "kishu",
+  "version": "0.1.4",
+  "description": "Kishu mode: thoughtful work routing, a design taste engine, focused communication, meaningful tests, and useful proof.",
+  "author": {
+    "name": "Kishu contributors"
+  },
+  "license": "MIT AND Apache-2.0",
+  "displayName": "Kishu",
+  "skills": "./skills/"
+}

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f3e9" />
+    <!-- discovery:head:start -->
+    <title>Kishu — AI Workflows &amp; Model Routing for Coding Agents</title>
+    <meta name="description" content="Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://spduk.github.io/kishu-stack/" />
+    <link rel="alternate" type="text/markdown" href="./index.md" title="Kishu in plain text" />
+    <link rel="describedby" href="./llms.txt" type="text/plain" />
+    <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kishu" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Kishu — AI Workflows &amp; Model Routing for Coding Agents" />
+    <meta property="og:description" content="Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results." />
+    <meta property="og:url" content="https://spduk.github.io/kishu-stack/" />
+    <meta property="og:image" content="https://spduk.github.io/kishu-stack/assets/kishu-social.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kishu — Think big. Build smarter. AI workflows and model routing for Codex, Cursor, and Claude Code." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kishu — AI Workflows &amp; Model Routing for Coding Agents" />
+    <meta name="twitter:description" content="Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results." />
+    <meta name="twitter:image" content="https://spduk.github.io/kishu-stack/assets/kishu-social.jpg" />
+    <meta name="twitter:image:alt" content="Kishu — Think big. Build smarter. AI workflows and model routing for Codex, Cursor, and Claude Code." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://spduk.github.io/kishu-stack/#website",
+      "url": "https://spduk.github.io/kishu-stack/",
+      "name": "Kishu",
+      "description": "Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results.",
+      "inLanguage": "en",
+      "sameAs": "https://github.com/SPDUK/kishu-stack"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://spduk.github.io/kishu-stack/#webpage",
+      "url": "https://spduk.github.io/kishu-stack/",
+      "name": "Kishu — AI Workflows & Model Routing for Coding Agents",
+      "description": "Kishu coordinates AI coding workflows in Codex, Cursor, and Claude Code. Customize model roles, add design guidance, and get clear, checked results.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://spduk.github.io/kishu-stack/#website"
+      },
+      "mainEntity": {
+        "@id": "https://spduk.github.io/kishu-stack/#kishu"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://spduk.github.io/kishu-stack/assets/kishu-social.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://spduk.github.io/kishu-stack/#kishu",
+      "name": "Kishu",
+      "alternateName": "Kishu mode",
+      "description": "Kishu is an open-source workflow plugin for AI coding agents. It brings task routing, customizable model roles, design guidance, and ADHD-aware communication together in one entrypoint: Kishu mode.",
+      "url": "https://spduk.github.io/kishu-stack/",
+      "codeRepository": "https://github.com/SPDUK/kishu-stack",
+      "license": "https://github.com/SPDUK/kishu-stack/blob/main/LICENSE",
+      "targetProduct": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Codex"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Cursor"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Claude Code"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <!-- discovery:head:end -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32.png"
+    />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="./fonts/bricolage-700.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/kishu-puppy.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.mjs" type="module"></script>
+    <script src="./motion.mjs" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M15 8V4H4v11h4" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" />
+      </symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24">
+        <path d="M8 5v14M16 5v14" />
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path d="m7 7-5 5 5 5m10-10 5 5-5 5m-4-14-2 22" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path
+          d="M12 2c0 7-3 10-10 10 7 0 10 3 10 10 0-7 3-10 10-10-7 0-10-3-10-10Z"
+        />
+      </symbol>
+      <symbol id="i-replay" viewBox="0 0 24 24">
+        <path d="M4 9a8 8 0 1 1 0 7M4 3v6h6" />
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path
+          d="M9 19c-4 1-4-2-6-2m12 5v-3.4c0-1 .1-1.5-.5-2 3-.3 6-1.5 6-6.7 0-1.5-.5-2.7-1.4-3.7.2-.4.6-1.8-.1-3.7 0 0-1.1-.4-3.8 1.4a13 13 0 0 0-6.8 0C5.8 2.1 4.7 2.5 4.7 2.5 4 4.4 4.4 5.8 4.6 6.2a5.4 5.4 0 0 0-1.4 3.7c0 5.2 3 6.4 6 6.7-.6.5-.7 1.1-.7 2V22"
+        />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+    </svg>
+
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="Kishu home"
+        ><img
+          src="./assets/kishu-stamp-128.png"
+          width="44"
+          height="44"
+          alt=""
+        /><span>kishu<span class="wordmark-dot">.</span></span></a
+      >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#flow">How it works</a><a href="#demo">See the handoffs</a><a href="#examples">Made with Kishu</a>
+      </nav>
+      <div class="header-actions">
+        <a
+          class="github-link"
+          href="https://github.com/SPDUK/kishu-stack"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Kishu on GitHub (opens in new tab)"
+          ><svg class="icon"><use href="#i-github" /></svg></a
+        ><a class="button button-small" href="#get-kishu"
+          >Get Kishu <svg class="icon"><use href="#i-external" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <h1 id="hero-heading">Think big.<br /><span>Build smarter.</span></h1>
+          <p class="hero-description"><strong>Kishu is the workflow layer for your AI coding agent.</strong> Route hard decisions to a thinking model, give the build to an efficient one, and get clear, checked work back.</p>
+          <div class="hero-cta">
+            <a href="#demo" class="button" id="hero-demo">See how it works <svg class="icon"><use href="#i-arrow" /></svg></a>
+            <a href="#models" class="text-button">Make it yours <svg class="icon"><use href="#i-arrow" /></svg></a>
+          </div>
+          <p class="hero-note">One workflow. Your models. Less work to manage.</p>
+        </div>
+        <div class="hero-routing" aria-label="Example: a prompt flows through Kishu to a planning model, an implementation model, and a clear result">
+          <div class="routing-window">
+            <div class="routing-top"><span class="route-live-dot" aria-hidden="true"></span><span>A little coordination goes a long way.</span></div>
+            <div class="routing-prompt"><svg class="icon"><use href="#i-code" /></svg><span>“Build team workspaces with invites.”</span></div>
+            <div class="route-connector" aria-hidden="true"></div>
+            <div class="router-node"><img src="./assets/kishu-stamp-128.png" width="36" height="36" alt="" /><div><strong>Kishu routes the work</strong><span>Your brief + your model preferences</span></div><svg class="icon"><use href="#i-arrow" /></svg></div>
+            <div class="route-connector" aria-hidden="true"></div>
+            <div class="hero-models"><div><span class="role-tag reasoning">Plan</span><strong>Deep thinker</strong><p>Set the boundaries.<br />Resolve the hard parts.</p></div><svg class="icon handoff-arrow"><use href="#i-arrow" /></svg><div><span class="role-tag coding">Build</span><strong>Fast implementer</strong><p>Take a focused brief.<br />Turn decisions into code.</p></div></div>
+            <div class="routing-result"><svg class="icon"><use href="#i-check" /></svg><span>Design care. Relevant checks. Clear output.</span></div>
+          </div>
+          <button class="mascot-flair" type="button" aria-label="Make the puppy tilt" title="A little hello"><img class="hero-puppy" src="./assets/kishu-puppy.webp" alt="" width="768" height="768" fetchpriority="high" /></button>
+          <span id="mascot-message" class="visually-hidden" role="status" aria-live="polite"></span>
+        </div>
+        <div class="hero-footer"><span>An open-source plugin for the agents you already use.</span><div class="host-list"><span>Codex</span><span>Cursor</span><span>Claude Code</span></div></div>
+      </section>
+
+      <section id="flow" class="flow-section wrap" aria-labelledby="flow-heading">
+        <div class="section-heading" data-reveal="text"><h2 id="flow-heading">One prompt.<br />A considered route.</h2><p>One prompt connects task routing, model roles, and design guidance. Kishu works inside Codex, Cursor, and Claude Code.</p></div>
+        <ol class="flow-track" data-reveal="surface">
+          <li><span class="flow-number">01</span><h3>Your prompt</h3><p>Describe what you want to make or fix.</p><svg class="icon flow-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></li>
+          <li class="flow-router"><span class="flow-number">02</span><h3>Kishu router</h3><p>Choose the approach and the roles your task needs.</p><svg class="icon flow-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></li>
+          <li><span class="flow-number">03</span><h3>Plan &amp; build</h3><p>pstack playbooks.<br />Your models for each role.</p><svg class="icon flow-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></li>
+          <li><span class="flow-number">04</span><h3>Design care</h3><p>Impeccable guides interface work, when needed.</p><svg class="icon flow-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></li>
+          <li><span class="flow-number">05</span><h3>Clear output</h3><p>What changed, what was checked, and what’s left.</p></li>
+        </ol>
+        <p class="flow-note">A route, not a ritual. Small tasks stay small. Specialists and extra agents join when they help.</p>
+      </section>
+
+      <section id="demo" class="demo-section" aria-labelledby="demo-heading">
+        <div class="wrap">
+          <div class="section-heading" data-reveal="text"><h2 id="demo-heading">Watch the handoff.<br />That’s the difference.</h2><p>Explore AI coding workflows for a new feature, a tricky bug, and a refactor. See each model’s assignment and the handoff that moves the work forward.</p></div>
+          <div class="demo-toolbar"><div class="scenario-tabs" role="tablist" aria-label="Choose an engineering challenge">
+            <button role="tab" id="tab-build" aria-selected="true" aria-controls="demo-panel" data-scenario="build">Build a feature</button>
+            <button role="tab" id="tab-debug" aria-selected="false" aria-controls="demo-panel" tabindex="-1" data-scenario="debug">Fix a tricky bug</button>
+            <button role="tab" id="tab-refactor" aria-selected="false" aria-controls="demo-panel" tabindex="-1" data-scenario="refactor">Refactor a dashboard</button>
+          </div><span class="demo-label">Illustrative walkthrough</span></div>
+          <div class="demo-workspace" data-reveal="surface" id="demo-panel" role="tabpanel" aria-labelledby="tab-build">
+            <div class="demo-request"><div><code id="demo-invocation">$kishu:kishu-mode</code><p id="scenario-prompt">Add team workspaces with roles and email invites.</p></div><button id="copy-demo" class="icon-button" aria-label="Copy this example prompt"><svg class="icon"><use href="#i-copy" /></svg></button></div>
+            <div class="demo-body">
+              <div class="demo-route"><div class="workflow-heading"><span id="route-label">Feature + interface design</span><span id="workflow-state">Ready</span></div><ol id="workflow-steps" class="workflow-steps"></ol><div class="playback-controls"><button id="run-demo" class="button button-mint"><svg class="icon"><use href="#i-play" /></svg><span>Play the flow</span></button><button id="show-result" class="text-button">See result <svg class="icon"><use href="#i-arrow" /></svg></button></div><p class="step-hint">Select any step to read at your own pace.</p></div>
+              <div class="demo-detail" id="demo-detail"><div id="handoff-content"><h3 class="handoff-content-title">A clear plan for the next model.</h3><p class="handoff-description">For a team invitation feature, the planner defines roles and expiry rules. The implementer receives a focused brief, relevant files, and acceptance checks. Design guidance shapes the invitation states; review checks the result.</p><div class="artifact"><h4>What gets handed over</h4><ul><li>Decisions: owner permissions and single-use invites.</li><li>Assignment: server checks, invitation lifecycle, and interface states.</li><li>Verification: unauthorized actions, expired links, and keyboard access.</li></ul></div></div></div>
+            </div>
+            <div class="demo-payoff"><svg class="icon"><use href="#i-arrow" /></svg><p id="demo-benefit">You describe the outcome once. Kishu loads the relevant guidance.</p></div>
+          </div>
+          <p class="demo-footnote">Illustrative scenarios, not live agent runs. Model profiles are examples; your host’s available models and saved preferences determine the actual choices.</p>
+        </div>
+      </section>
+
+      <section id="models" class="models-section wrap" aria-labelledby="models-heading">
+        <div class="models-intro" data-reveal="text"><h2 id="models-heading">Big thinking.<br />Where it counts.</h2><p>A high-cost model doesn’t need to write every line. Put deeper reasoning on the tricky decisions, and let an efficient coding model carry the plan forward.</p><ul class="value-list"><li><svg class="icon"><use href="#i-check" /></svg><span><strong>Focus premium-model tokens.</strong> Reserve expensive thinking for the parts that need it.</span></li><li><svg class="icon"><use href="#i-check" /></svg><span><strong>Cut repeated discovery.</strong> Give the builder a concise brief, relevant context, and clear checks.</span></li><li><svg class="icon"><use href="#i-check" /></svg><span><strong>Move independent work together.</strong> Parallelize separate assignments after agreeing the shared plan.</span></li></ul><p class="models-caveat">The mix can reduce cost and waiting. Actual savings depend on the task, model prices, context, and coordination overhead.</p></div>
+        <div class="model-playground" data-reveal="surface"><div class="model-playground-heading"><h3>Your team. Your call.</h3><p>Try a different mix. The walkthrough updates with you.</p></div>
+          <div class="role-select-row"><label for="model-planner"><strong>Planner</strong> <span>Decisions &amp; a bounded brief</span></label><select id="model-planner" data-model-role="planner"><option value="reasoning">Deep reasoning</option><option value="coding">Fast coding</option><option value="current">Current chat model</option></select></div>
+          <div class="role-select-row"><label for="model-implementer"><strong>Implementer</strong> <span>Code &amp; interface work</span></label><select id="model-implementer" data-model-role="implementer"><option value="coding">Fast coding</option><option value="reasoning">Deep reasoning</option><option value="current">Current chat model</option></select></div>
+          <div class="role-select-row"><label for="model-reviewer"><strong>Reviewer</strong> <span>Risk &amp; relevant checks</span></label><select id="model-reviewer" data-model-role="reviewer"><option value="reasoning">Deep reasoning</option><option value="coding">Fast coding</option><option value="current">Current chat model</option></select></div>
+          <div class="model-allocation" aria-label="Selected model for each role"><div id="allocation-planner" class="reasoning"><span>Plan</span><strong>Deep reasoning</strong></div><div id="allocation-implementer" class="coding"><span>Build</span><strong>Fast coding</strong></div><div id="allocation-reviewer" class="reasoning"><span>Review</span><strong>Deep reasoning</strong></div></div>
+          <p id="model-summary" class="model-summary">Deeper thinking at the decision points. Efficient coding for the implementation.</p>
+          <button class="button" id="copy-setup">Copy my setup request <svg class="icon"><use href="#i-copy" /></svg></button>
+          <details class="setup-preview"><summary>Read the setup request</summary><p id="setup-request"></p></details>
+          <p class="playground-note">A local preview of role preferences. Copy the request into your agent to choose supported models and reasoning levels with Kishu.</p>
+        </div>
+      </section>
+
+      <section class="output-section" aria-labelledby="output-heading"><div class="wrap output-layout">
+        <div data-reveal="text"><h2 id="output-heading">The work comes back.<br />The noise doesn’t.</h2><p>ADHD-aware communication puts the outcome first. Find the change, the proof, and the next decision without digging through a wall of process.</p><a class="text-link" href="#get-kishu">Bring this to your next build <svg class="icon"><use href="#i-arrow" /></svg></a></div>
+        <div class="output-example" data-reveal="surface"><div class="output-author"><img src="./assets/kishu-stamp-128.png" width="32" height="32" alt="" /><strong>Kishu</strong><span>Example handback</span></div><h3>Team invitations are ready to review.</h3><dl><div><dt>Changed</dt><dd>Owner permissions and single-use invites, with clear expired-link recovery.</dd></div><div><dt>Checked</dt><dd>Permission boundaries, invitation states, and keyboard navigation.</dd></div><div><dt>Still to do</dt><dd>Verify delivery with your email provider.</dd></div></dl></div>
+      </div></section>
+
+      <section class="case-study wrap" aria-labelledby="case-heading"><div data-reveal="text"><h2 id="case-heading">You’re looking at<br />a real Kishu project.</h2><p>This site was built with Kishu mode: a routed brief, considered design, interactive examples, and checks against the actual result.</p></div><div class="case-evidence" data-reveal="surface"><p><strong>The proof is in the project.</strong><br />Explore the source, the demo’s behavior tests, and the record of browser checks behind this page.</p><a class="text-link" href="https://github.com/SPDUK/kishu-stack/tree/main/site" target="_blank" rel="noopener noreferrer">Explore the build <svg class="icon"><use href="#i-external" /></svg></a><p class="case-note">The site is real. The scenarios above are demonstrations of how the workflow can fit different tasks.</p></div></section>
+
+      <section id="examples" class="examples wrap" aria-labelledby="examples-title">
+        <div class="section-heading"><h2 id="examples-title">Different worlds.<br />The same Kishu.</h2><p>Three working demos. Three very different briefs.<br />Open one and try it for yourself.</p></div>
+        <article class="example-row">
+          <a class="example-preview fantasy-preview" href="mmo/index.html"><img src="mmo/preview.jpg" alt="Veldrift, an original fantasy world with painterly landscapes and cinematic typography." width="1425" height="990" loading="lazy" /><span>Explore Veldrift <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></span></a>
+          <div class="example-copy"><h3>Veldrift</h3><p class="example-type">An immersive MMO concept</p><p>A world worth wandering through. Original generated artwork, cinematic type, and three landscapes you can explore at your own pace.</p><ul class="example-details"><li>Art direction</li><li>Responsive storytelling</li><li>Accessible exploration</li></ul><a class="text-link" href="mmo/index.html">Step into the world <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div>
+        </article>
+        <article class="example-row reverse">
+          <a class="example-preview market-preview" href="meridian/index.html"><img src="meridian/preview.jpg" alt="Meridian's dark trading dashboard, with a price chart, market activity and a simulated order ticket." width="1425" height="990" loading="lazy" /><span>Try the dashboard <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></span></a>
+          <div class="example-copy"><h3>Meridian</h3><p class="example-type">A simulated trading workspace</p><p>A dark, focused dashboard with moving prices, explorable charts, and a working demo order flow. Every price and trade is fictional.</p><ul class="example-details"><li>Dense information</li><li>Live simulation</li><li>Interactive product UI</li></ul><a class="text-link" href="meridian/index.html">Open the terminal <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div>
+        </article>
+        <article class="example-row">
+          <a class="example-preview studio-preview" href="stillroom/index.html"><img src="stillroom/preview.jpg" alt="Stillroom's bright creative studio, with original workshop photography and a local booking flow." width="1425" height="990" loading="lazy" /><span>Visit the studio <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></span></a>
+          <div class="example-copy"><h3>Stillroom</h3><p class="example-type">A creative workshop booking site</p><p>Warm photography, a little breathing room, and a clear path from curiosity to a class. Choose a workshop and try the local booking flow.</p><ul class="example-details"><li>Editorial commerce</li><li>Forms and validation</li><li>Light-mode design</li></ul><a class="text-link" href="stillroom/index.html">Make room for making <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div>
+        </article>
+        <div class="examples-story"><p>Real Kishu builds. Fictional products.<br /><span>No live markets, payments, or reservations.</span></p><a class="text-link" href="case-studies/mmo.html">What happened, and why <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></div>
+      </section>
+
+      <section
+        class="get-section wrap"
+        id="get-kishu"
+        aria-labelledby="get-heading"
+      >
+        <div class="get-intro" data-reveal="text">
+          <svg class="closing-spark" viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-spark" />
+          </svg>
+          <h2 id="get-heading">Your next prompt.<br />A better way to build.</h2>
+          <p>
+            Install Kishu in your agent, choose the model roles that suit you, and bring the thing you’ve been meaning to build.
+          </p>
+          <a
+            class="text-link"
+            href="https://github.com/SPDUK/kishu-stack"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Explore Kishu on GitHub
+            <svg class="icon"><use href="#i-external" /></svg
+          ></a>
+        </div>
+        <div class="install-panel" data-reveal="surface">
+          <h3>A little setup. Then, just ask.</h3>
+          <div class="host-tabs" role="tablist" aria-label="Choose your editor">
+            <button
+              role="tab"
+              id="host-codex"
+              data-host="codex"
+              aria-controls="install-content"
+              aria-selected="true"
+            >
+              Codex</button
+            ><button
+              role="tab"
+              id="host-cursor"
+              data-host="cursor"
+              aria-controls="install-content"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Cursor</button
+            ><button
+              role="tab"
+              id="host-claude"
+              data-host="claude"
+              aria-controls="install-content"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Claude Code
+            </button>
+          </div>
+          <div
+            id="install-content"
+            role="tabpanel"
+            aria-labelledby="host-codex"
+          >
+            <p class="install-step">
+              1. Clone the repo and install the plugin.
+            </p>
+            <div class="code-block">
+              <pre><code id="install-command">git clone https://github.com/SPDUK/kishu-stack.git
+cd kishu-stack
+python scripts/kishu.py install --harness codex</code></pre>
+              <button
+                class="icon-button"
+                id="copy-install"
+                aria-label="Copy installation commands"
+              >
+                <svg class="icon"><use href="#i-copy" /></svg>
+              </button>
+            </div>
+            <p class="install-step">
+              2. Start a new chat. Give Kishu a challenge.
+            </p>
+            <div class="code-block invocation-block">
+              <code id="invoke-command">$kishu:kishu-mode</code
+              ><button
+                class="icon-button"
+                id="copy-invoke"
+                aria-label="Copy Kishu activation command"
+              >
+                <svg class="icon"><use href="#i-copy" /></svg>
+              </button>
+            </div>
+            <p class="install-detail" id="install-detail">
+              Select Kishu through /skills, or use the command above. Python
+              3.11+ and Git are needed for installation.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- discovery:faq:start -->
+      <section id="faq" class="faq-section wrap" aria-labelledby="faq-heading">
+        <div class="faq-intro" data-reveal="text"><h2 id="faq-heading">Kishu, explained.</h2><p>The practical details: where it works, how you choose your models, and what the workflow adds.</p></div>
+        <div class="faq-list" data-reveal="surface">
+          <details open><summary>What is Kishu?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary><p>Kishu is an open-source workflow plugin for AI coding agents. It brings task routing, customizable model roles, design guidance, and ADHD-aware communication together in one entrypoint: Kishu mode.</p></details>
+          <details><summary>Which coding agents does Kishu support?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary><p>Kishu provides native plugin entrypoints for Codex, Cursor, and Claude Code, plus a standalone skill export. It works inside your existing agent with the code and tools available in that environment.</p></details>
+          <details><summary>Can I choose different AI models for different roles?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary><p>Yes. Kishu setup helps you choose supported models and reasoning effort for planning, implementation, review, and other roles. Saved preferences guide delegation when it is useful. Available models depend on your host; role preferences do not change the model running your current chat.</p></details>
+          <details><summary>Can model routing reduce coding costs or save time?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary><p>It can concentrate expensive reasoning on difficult decisions, give efficient coding models a focused brief, and let independent assignments run in parallel. Savings depend on the task, model prices, context, and coordination overhead. The examples on this site are illustrative, not benchmarks.</p></details>
+          <details><summary>What do pstack and Impeccable do in Kishu?<svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg></summary><p>pstack provides the engineering playbooks behind Kishu’s routing and handoffs. Impeccable provides the foundation for its design guidance. Kishu adapts these foundations with its own preferences for scope, model choices, useful checks, and clear communication; i-have-adhd informs its communication style.</p></details>
+        </div>
+      </section>
+    <!-- discovery:faq:end -->
+      <section id="credits" class="credits-section wrap" aria-labelledby="credits-heading">
+        <div class="credits-intro" data-reveal="text">
+          <h2 id="credits-heading">Good roots.<br />A Kishu point of view.</h2>
+          <p>
+            Kishu brings three open-source foundations together with its own
+            working preferences: care where it counts, less process to manage,
+            and your choices at the center.
+          </p>
+          <a
+            class="text-link"
+            href="https://github.com/SPDUK/kishu-stack/blob/main/THIRD_PARTY_NOTICES.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Licenses &amp; full attribution
+            <svg class="icon"><use href="#i-external" /></svg
+          ></a>
+        </div>
+        <dl class="credits-list">
+          <div>
+            <dt><a href="https://github.com/cursor/plugins/tree/main/pstack" target="_blank" rel="noopener noreferrer">pstack <svg class="icon"><use href="#i-external" /></svg></a></dt>
+            <dd>By Lauren Tan · MIT. The engineering playbooks behind Kishu’s work routing, adapted to its scope, testing, and evidence preferences.</dd>
+          </div>
+          <div>
+            <dt><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">Impeccable <svg class="icon"><use href="#i-external" /></svg></a></dt>
+            <dd>By Paul Bakaus · Apache-2.0. The foundation of Kishu’s design taste engine, from visual direction to interaction critique and polish.</dd>
+          </div>
+          <div>
+            <dt><a href="https://github.com/ayghri/i-have-adhd" target="_blank" rel="noopener noreferrer">i-have-adhd <svg class="icon"><use href="#i-external" /></svg></a></dt>
+            <dd>By Ayoub G. · MIT. The starting point for Kishu’s ADHD-aware communication, adapted for clear outcomes, visible progress, and useful detail.</dd>
+          </div>
+        </dl>
+        <p class="credits-note">Original licenses and notices stay with the bundle. With thanks to the authors; attribution does not imply endorsement.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <a class="wordmark" href="#" aria-label="Back to the top"
+        ><img
+          src="./assets/kishu-stamp-128.png"
+          width="36"
+          height="36"
+          alt=""
+        /><span>kishu<span class="wordmark-dot">.</span></span></a
+      >
+      <p>Good thinking. Thoughtful handoffs.</p>
+      <div>
+        <a
+          href="https://github.com/SPDUK/kishu-stack"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Source <svg class="icon"><use href="#i-external" /></svg></a
+        ><a href="#faq">FAQ</a><a href="#credits">Credits</a><a href="./index.md">Text version</a><span lang="ja">つくるを、もっと自由に。</span>
+      </div>
+    </footer>
+    <div
+      id="announcement"
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <div id="toast" class="toast" aria-hidden="true"></div>
+    <noscript
+      ><div class="noscript-note">
+        The interactive walkthrough needs JavaScript. You can still explore
+        the workflow, model-role explanation, and installation commands above.
+      </div></noscript
+    >
+  </body>
+</html>

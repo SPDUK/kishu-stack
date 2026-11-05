@@ -1,0 +1,162 @@
+{
+  "title": "Kishu demo collection — decision record",
+  "sessionDate": "November 4, 2026 (America/Los_Angeles)",
+  "scope": "An authored record of consequential choices and observed tool outcomes. It is not a raw transcript or private reasoning trace. Generated art and fictional interactions replace the earlier source-media study.",
+  "reference": "The user's approved cinematic direction and expanded public-demo brief.",
+  "events": [
+    {
+      "id": "01",
+      "phase": "Scope",
+      "title": "Three different product experiences",
+      "actor": "User",
+      "influence": "Current brief",
+      "tool": "Chat instructions",
+      "decision": "Build an original MMO concept, a dark simulated trading dashboard, and a contrasting workshop site.",
+      "why": "Show Kishu across storytelling, dense product UI and a booking flow.",
+      "alternatives": "Keep each fictional and avoid external transactions.",
+      "outcome": "The three isolated demo scopes were assigned.",
+      "evidence": [
+        "site/dist/mmo/index.html",
+        "site/dist/meridian/index.html",
+        "site/dist/stillroom/index.html"
+      ]
+    },
+    {
+      "id": "02",
+      "phase": "Publication",
+      "title": "Replace the earlier third-party media",
+      "actor": "User and main agent",
+      "influence": "License review and current instruction",
+      "tool": "PowerShell Move-Item; repository inspection",
+      "decision": "Exclude prior media, derivative screenshots, acquisition scripts and old records from the public snapshot.",
+      "why": "The user's chosen release uses generated assets and a new parentless history.",
+      "alternatives": "Recursive deletion was blocked by policy; a non-destructive move into ignored .work/excluded-pre-release succeeded. No old media had been pushed.",
+      "outcome": "Earlier media is outside the release file tree.",
+      "evidence": [
+        "docs/licensing.md",
+        "site/.gitignore",
+        ".gitignore"
+      ]
+    },
+    {
+      "id": "03",
+      "phase": "Direction",
+      "title": "Keep the cinematic composition",
+      "actor": "Main agent and MMO worker",
+      "influence": "Kishu design guidance; existing approved layout",
+      "tool": "Repository edits",
+      "decision": "Use ink blue, ivory type, brass controls and the new fictional Veldrift world.",
+      "why": "Retain the visual quality the user liked while replacing the source material.",
+      "alternatives": "This was a scoped replacement; no new user-selected visual comp is claimed.",
+      "outcome": "The new page has three original destinations and a Wayfarers feature.",
+      "evidence": [
+        "site/mmo/DESIGN.md",
+        "site/mmo/PRODUCT.md"
+      ]
+    },
+    {
+      "id": "04",
+      "phase": "Assets",
+      "title": "Generate ten composition-specific images",
+      "actor": "Main agent",
+      "influence": "Imagegen skill and page composition",
+      "tool": "Built-in image_gen; ffmpeg; ffprobe",
+      "decision": "Generate six Veldrift paintings and four Stillroom editorial images from text-only prompts, then encode WebP at original dimensions.",
+      "why": "Artwork belongs in the layout: desktop copy needs negative space, while mobile needs a portrait composition.",
+      "alternatives": "No third-party images were used as reference inputs; originality does not claim uniqueness or trademark clearance.",
+      "outcome": "Ten generated outputs were inspected and their prompts, hashes and dimensions recorded.",
+      "evidence": [
+        "site/dist/mmo/assets/provenance.json",
+        "site/dist/stillroom/assets/provenance.json"
+      ]
+    },
+    {
+      "id": "05",
+      "phase": "Delegation",
+      "title": "Build with separate write boundaries",
+      "actor": "Main agent",
+      "influence": "Kishu router; user's saved model roles",
+      "tool": "collaboration.spawn_agent",
+      "decision": "Assign MMO, Meridian and Stillroom implementation to three separate coding workers.",
+      "why": "Independent folders let the work proceed in parallel without concurrent edits to shared files.",
+      "alternatives": "Requested model/effort are configuration records, not runtime attestation, cost or timing measurements.",
+      "outcome": "Each worker returned implementation, meaningful checks and known verification gaps.",
+      "evidence": [
+        "site/tests/mmo-scenes.test.mjs",
+        "site/tests/meridian.test.mjs",
+        "site/tests/stillroom.test.mjs"
+      ],
+      "requestedModel": "gpt-6.1-sol",
+      "reasoningEffort": "xhigh"
+    },
+    {
+      "id": "06",
+      "phase": "Interaction",
+      "title": "Use functioning local demonstrations",
+      "actor": "Demo workers",
+      "influence": "Task-specific design and behavior requirements",
+      "tool": "JavaScript; Node test runner",
+      "decision": "Retain keyboard destination navigation, simulate market/order state, and validate workshop/session capacity and quantities.",
+      "why": "The controls should demonstrate actual product behaviors.",
+      "alternatives": "Market values and products are fictional. There are no exchange, payment or booking integrations.",
+      "outcome": "Workers reported passing targeted behavior tests; integrated and browser checks are recorded separately.",
+      "evidence": [
+        "site/VERIFICATION.md",
+        "site/dist/meridian/README.md",
+        "site/dist/stillroom/README.md"
+      ]
+    },
+    {
+      "id": "07",
+      "phase": "Communication",
+      "title": "Show a concise visual story",
+      "actor": "Main agent",
+      "influence": "User request for what happened and why",
+      "tool": "HTML/CSS edits",
+      "decision": "List all three demos on the main page and explain six consequential choices in one public story.",
+      "why": "Make the range and rationale visible without technical downloads.",
+      "alternatives": "Detailed records remain source documentation. No hidden reasoning trace is presented.",
+      "outcome": "Gallery, README links and a six-step public story were implemented.",
+      "evidence": [
+        "README.md",
+        "site/dist/index.html#examples",
+        "site/dist/case-studies/mmo.html"
+      ]
+    },
+    {
+      "id": "08",
+      "phase": "Verification",
+      "title": "Check working states and actual screen widths",
+      "actor": "Main agent and demo workers",
+      "influence": "Kishu evidence guidance and Impeccable craft review",
+      "tool": "Node test runner; Codex browser controls; Impeccable detector",
+      "decision": "Exercise the real controls and inspect all five pages at phone, tablet and desktop widths.",
+      "why": "A visual showcase also needs readable layouts and credible behavior.",
+      "alternatives": "Unit checks alone do not establish rendered quality; static screenshots alone do not verify transitions.",
+      "outcome": "38 site tests passed. Resource checks passed. Browser flows confirmed scene changes, simulated orders and booking review; responsive testing found and fixed a narrow-screen minimum-width issue.",
+      "evidence": [
+        "site/VERIFICATION.md",
+        "site/scripts/check-site.mjs",
+        "site/tests/meridian.test.mjs",
+        "site/tests/stillroom.test.mjs"
+      ]
+    },
+    {
+      "id": "09",
+      "phase": "Independent review",
+      "title": "Review the finished collection in a fresh context",
+      "actor": "Independent reviewer",
+      "influence": "Kishu model roles; Impeccable finish review",
+      "tool": "collaboration.spawn_agent; local image and source inspection",
+      "decision": "Pass the renders, scoped directions and observed checks to a fresh reviewer with no inherited chat history.",
+      "why": "Independent review can challenge the builder’s assumptions before publication.",
+      "alternatives": "The reviewer had no browser and made no pixel-parity claim against unavailable historical comps.",
+      "outcome": "All sixteen required captures were inspected; disposition ship, no material fixes.",
+      "evidence": [
+        "site/VERIFICATION.md"
+      ],
+      "requestedModel": "gpt-6-astra",
+      "reasoningEffort": "xhigh"
+    }
+  ]
+}
