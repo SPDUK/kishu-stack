@@ -2,6 +2,36 @@
 
 Verification history from the local Windows workspace. Each revision below records its executed checks and limits; the original installation checks began on November 2, 2026 (America/Los_Angeles).
 
+## Release 0.1.6 preparation — November 10, 2026
+
+Rebuilt the package as 0.1.6 with the image-proof handoff rules and reviewed upstream refresh. Updated the README and site installation commands and generated discovery content to the new tag.
+
+Executed on the release candidate: 43 root regression tests, 6 preference-review Python tests, 7 preference-review Node tests, and 38 site tests passed (94 total). Generated-package validation, review snapshot freshness, site resource/discovery checks, MMO/story checks, and native Codex isolated installation, discovery, same-version refresh, and source migration passed. The ZIP was generated successfully. Hosted Windows/Ubuntu checks and publication are recorded by the tag's [release workflow](https://github.com/SPDUK/kishu-stack/actions/workflows/verify.yml).
+
+The image handoff was exercised after the earlier policy-only check: a sub-agent rendered a new local HTML proof card with Chromium headless-shell and saved a 1200 × 780 PNG. The main agent opened that exact file and embedded its absolute path in the final reply. The earlier interactive-browser attempt was stopped by Computer Use before navigation and produced no screenshot. This confirms the local artifact handoff was performed; it does not prove rendering in every client. Missing-artifact and unsupported-display evaluation cases remain unexecuted.
+
+## Upstream refresh — November 10, 2026
+
+Fetched the three tracked upstream branches with the maintenance updater. The full-file override baselines and targeted patch anchors passed without conflicts; Kishu's preferences and the image-proof handoff changes remain in place.
+
+| Source | Previous revision | Installed source revision | Result |
+| --- | --- | --- | --- |
+| pstack | `ae5650febf4320793844c12c4adaa937f417f8da` | `246bc508c139c5e036dfafea8978d31a7433279f` | Repository pin advanced; the bundled pstack subtree is byte-for-byte unchanged upstream. |
+| Impeccable | `9fadc41729c38fd47d7ae622b501558653f9d2e9` | `f2baa414a87d9acf1e21ccf776bfaec0262ad6df` | Skill 4.8.0 → 4.8.2; engine 0.1.18 → 0.1.22. Includes launcher, live editing, audit, and design guidance updates. |
+| i-have-adhd | `1ecea1993b7fce257ffbd686c070948b5e07eda6` | `1ecea1993b7fce257ffbd686c070948b5e07eda6` | Already current. |
+
+Executed after the refresh: 43 root regression tests, 6 preference-review Python tests, 7 preference-review Node tests, generated-package check, review snapshot check, and live-browser JavaScript syntax check passed. Native Codex isolated installation, skill discovery, same-version refresh, and source-migration smoke checks passed. The Windows launcher returned `impeccable-engine 0.1.22`. Design workflows and live-browser interactions were not exercised end to end.
+
+Reinstalled the local development build as Kishu 0.1.5 in the normal Codex profile. The plugin is enabled and its entire installed cache matches the generated package. This is a local upstream refresh, not a newly published Kishu release; refresh skills or start a new chat to load the new instructions.
+
+## Image proof handoff — November 10, 2026
+
+The router and proof guide now require the main agent to retrieve and inspect image evidence, including sub-agent artifacts, and embed or attach it in the final user-facing reply. The Codex adapter specifies absolute image paths, paths containing spaces, missing-artifact recovery, and honest fallback when inline display is unavailable.
+
+Executed: generated-package build/check, 43 root regression tests, 6 preference-review Python tests, 7 preference-review Node tests, 38 site tests, review snapshot freshness, site resource/discovery checks, and MMO/story checks all passed. The local Codex plugin was refreshed; the installed router, proof guide, and adapter match the generated files byte-for-byte. Changed skill frontmatter and local links were checked directly. The separate skill-creator validator could not start because this Python environment lacks PyYAML; no dependency was installed.
+
+Three behavioral evaluation briefs cover accessible sub-agent images, missing/private artifacts, and hosts without inline display. These briefs were added but not executed as independent agent trials. Package tests do not establish that a future response renders in the user's UI; live end-to-end image delivery remains unverified.
+
 ## Stable release updater: 0.1.5 — November 4, 2026
 
 Kishu now selects GitHub's latest published stable release, or an explicitly requested published version, and installs its exact tagged commit. Drafts, prereleases, missing releases and tag/package mismatches are rejected without installing `main`. The default checkout is `~/.kishu/releases`; older managed sources are preserved. The release workflow packages and publishes only after both hosted verification jobs succeed.

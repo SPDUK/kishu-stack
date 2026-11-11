@@ -39,7 +39,7 @@ Python 3.11+ is needed for the maintenance/install script. Git is needed to fetc
 Clone the source repository, then install for your host:
 
 ```sh
-git clone --branch v0.1.5 --single-branch https://github.com/SPDUK/kishu-stack.git
+git clone --branch v0.1.6 --single-branch https://github.com/SPDUK/kishu-stack.git
 cd kishu-stack
 python scripts/kishu.py install --harness codex
 ```

@@ -126,7 +126,7 @@ Evidence: [R-32b16a0e781f](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 [Read exact instructions and leave feedback](index.html#R-efea760b54ab). Topic ID: `capability-vs-polish`.
 
-Evidence: [R-efea760b54ab](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-experience-first/SKILL.md#L12), [R-2e0d8488101c](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-subtract-before-you-add/SKILL.md#L13), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L18).
+Evidence: [R-efea760b54ab](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-experience-first/SKILL.md#L12), [R-2e0d8488101c](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-subtract-before-you-add/SKILL.md#L13), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L19).
 
 ### Autonomy must preserve the user's gates and scope
 
@@ -214,7 +214,7 @@ Evidence: [R-3ecc6cae3e36](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 [Read exact instructions and leave feedback](index.html#R-115b47fa6a00). Topic ID: `comment-removal`.
 
-Evidence: [R-115b47fa6a00](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/agents/comment-sicko.md#L22), [R-d68eae112754](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/no-comments/SKILL.md#L20), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L18).
+Evidence: [R-115b47fa6a00](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/agents/comment-sicko.md#L22), [R-d68eae112754](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/no-comments/SKILL.md#L20), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L19).
 
 ## 4. Tests & visible proof
 
@@ -232,7 +232,7 @@ Keep quality high while matching verification to the behavior and its risk.
 
 [Read exact instructions and leave feedback](index.html#R-d5df73cfda40). Topic ID: `kishu-tests`.
 
-Evidence: [R-d5df73cfda40](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L14), [R-21a51dcf0c4d](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L16), [R-117fe2c9fe11](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/tdd/SKILL.md#L1), [R-e7bd6aa230a6](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/tdd/SKILL.md#L26).
+Evidence: [R-d5df73cfda40](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L14), [R-21a51dcf0c4d](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L16), [R-117fe2c9fe11](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/tdd/SKILL.md#L1), [R-e7bd6aa230a6](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/tdd/SKILL.md#L26).
 
 ### Evidence should match the claim and can be reused
 
@@ -278,7 +278,7 @@ These influence how the work is carried out, not what your software is allowed t
 
 [Read exact instructions and leave feedback](index.html#R-59cc76650833). Topic ID: `models-and-delegation`.
 
-Evidence: [R-59cc76650833](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L45), [R-2b7f04b637de](https://github.com/SPDUK/kishu-stack/blob/main/src/adapters/codex.md#L7), [R-c26340a242c0](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/arena/SKILL.md#L28).
+Evidence: [R-59cc76650833](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L46), [R-2b7f04b637de](https://github.com/SPDUK/kishu-stack/blob/main/src/adapters/codex.md#L7), [R-c26340a242c0](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/arena/SKILL.md#L28).
 
 ### Phase and turn budgets should organize work, not shrink the goal
 
@@ -340,4 +340,4 @@ Use the [source inventory](INVENTORY.md) to pick a topic, or search **All instru
 4. Check representative behavior: a small edit, a logic change needing tests, an expensive-test decision, a performance request, and an explicitly rigorous long-running task.
 5. Show the resulting diff and proof before reporting the revision complete. Publish or install it only under the applicable authorization.
 
-Snapshot: Kishu 0.1.5; source-content SHA-256 4096d29bf19177e4df97d8879aafb03b9df2f0cb8cb03c870459a5fa7f1a298a; pstack ae5650febf4320793844c12c4adaa937f417f8da. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.
+Snapshot: Kishu 0.1.6; source-content SHA-256 9c0298b80bf75490243e14c67657cb08f64be3ba6c038102086e0b040092ae9b; pstack 246bc508c139c5e036dfafea8978d31a7433279f. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.

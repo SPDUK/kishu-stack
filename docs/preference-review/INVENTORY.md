@@ -50,7 +50,7 @@ Source: `plugin/lib/pstack/skills/architect/references/runner-prompt.md`. Edit o
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Sketch interfaces and ownership, compare alternatives, then implement. Kishu limits entry to consequential unresolved choices; the selected workflow still contains a two-design minimum.
 
-[Read and review](index.html#R-9f080830c016) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/architect/SKILL.md)
+[Read and review](index.html#R-9f080830c016) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/architect/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/architect/SKILL.md`. Edit owner: `src/patches.json`.
 
@@ -92,7 +92,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/playbooks/bug-fix.md`. Edit owner: 
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu grounds the change, chooses a useful design approach, implements directly or with useful delegation, tests relevant logic, and supplies proof.
 
-[Read and review](index.html#R-557b4eccbc30) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/feature.md)
+[Read and review](index.html#R-557b4eccbc30) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/feature.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/feature.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/feature.md`.
 
@@ -102,7 +102,7 @@ Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/feature.md`. Edit o
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu reuses sufficient investigation and tests, limits scope, and verifies behavior. It does not mandate a second architecture competition or a PR for every refactor.
 
-[Read and review](index.html#R-801e61a3057e) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/refactoring.md)
+[Read and review](index.html#R-801e61a3057e) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/refactoring.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/refactoring.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/refactoring.md`.
 
@@ -112,7 +112,7 @@ Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/refactoring.md`. Ed
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu reproduces on the relevant surface, traces the cause, adds useful regression coverage, and verifies the fix. Expensive tests require a decision, not silent skipping.
 
-[Read and review](index.html#R-f6f106edc14b) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/bug-fix.md)
+[Read and review](index.html#R-f6f106edc14b) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/bug-fix.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/bug-fix.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/bug-fix.md`.
 
@@ -304,7 +304,7 @@ Source: `plugin/lib/pstack/skills/principle-boundary-discipline/SKILL.md`. Edit 
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Requires competing prototypes for novel architecture or interaction choices. Kishu's proportionality rule limits when the exercise is useful.
 
-[Read and review](index.html#R-761ff5042b22) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/principle-exhaust-the-design-space/SKILL.md)
+[Read and review](index.html#R-761ff5042b22) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/principle-exhaust-the-design-space/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/principle-exhaust-the-design-space/SKILL.md`. Edit owner: `src/patches.json`.
 
@@ -314,7 +314,7 @@ Source: `upstream/pstack/pstack/skills/principle-exhaust-the-design-space/SKILL.
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Build the cheapest useful experiment for an observable uncertainty. Product preferences still belong to the user; Kishu's scope rule applies.
 
-[Read and review](index.html#R-d138cd36e556) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/prototype.md)
+[Read and review](index.html#R-d138cd36e556) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/prototype.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/prototype.md`. Edit owner: `src/patches.json`.
 
@@ -418,7 +418,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/playbooks/babysit.md`. Edit owner: 
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu performs scoped review and relevant checks, writes a useful description, and opens a PR only when delivery calls for it.
 
-[Read and review](index.html#R-d51b73f2381c) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/opening-a-pr.md)
+[Read and review](index.html#R-d51b73f2381c) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/opening-a-pr.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/opening-a-pr.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/opening-a-pr.md`.
 
@@ -820,7 +820,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/scripts/worktree-audit.sh`. Edit ow
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Executable supporting check-plan.mjs. These checks or limits apply only when this tool is invoked. The code is included so enforced requirements are reviewable alongside prose.
 
-[Read and review](index.html#R-f77de7f99148) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/scripts/check-plan.mjs)
+[Read and review](index.html#R-f77de7f99148) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/scripts/check-plan.mjs)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/scripts/check-plan.mjs`. Edit owner: `overrides/pstack/skills/poteto-mode/scripts/check-plan.mjs`.
 
@@ -1072,7 +1072,7 @@ Source: `plugin/lib/pstack/skills/how/references/explorer-prompt.md`. Edit owner
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Read-only investigation stays read-only; use evidence and only the deeper workflows that help answer the question.
 
-[Read and review](index.html#R-7e68ce50c021) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/investigation.md)
+[Read and review](index.html#R-7e68ce50c021) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/investigation.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/investigation.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/investigation.md`.
 
@@ -1082,7 +1082,7 @@ Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/investigation.md`. 
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Trace the relevant behavior. Kishu permits direct investigation and reuses findings instead of always starting another agent.
 
-[Read and review](index.html#R-30fb19518382) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/how/SKILL.md)
+[Read and review](index.html#R-30fb19518382) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/how/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/how/SKILL.md`. Edit owner: `overrides/pstack/skills/how/SKILL.md`.
 
@@ -1154,7 +1154,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/playbooks/multi-phase-plan.md`. Edi
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu limits side fixes to the authorized goal and preserves decision gates. Continued execution requires actual host support; no fictional wakeups.
 
-[Read and review](index.html#R-949bb1587932) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/autonomous-run.md)
+[Read and review](index.html#R-949bb1587932) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/autonomous-run.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/autonomous-run.md`. Edit owner: `src/patches.json`.
 
@@ -1164,7 +1164,7 @@ Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/autonomous-run.md`.
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Uses PR owners and independent verifiers under an explicit grant. The universal comment/deslop passes were removed, but substantial program machinery remains.
 
-[Read and review](index.html#R-4013a8340fae) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/autopilot-full.md)
+[Read and review](index.html#R-4013a8340fae) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/autopilot-full.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/autopilot-full.md`. Edit owner: `src/patches.json`.
 
@@ -1174,7 +1174,7 @@ Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/autopilot-full.md`.
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Produces a plan before execution. The selected workflow requires ten live lanes and interaction review. Kishu permits an explained Not applicable performance block; relevant performance checks use grounded acceptance criteria without inventing numeric caps.
 
-[Read and review](index.html#R-1856948a395e) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md)
+[Read and review](index.html#R-1856948a395e) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md`. Edit owner: `overrides/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md`.
 
@@ -1306,7 +1306,7 @@ Source: `plugin/lib/pstack/skills/kishu-help/references/recipes.md`. Edit owner:
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu's setup resolves actual host capabilities and saves per-role choices. These choices affect delegates, not the current parent chat's model.
 
-[Read and review](index.html#R-928b6b220c83) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/setup-pstack/SKILL.md)
+[Read and review](index.html#R-928b6b220c83) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/setup-pstack/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/setup-pstack/SKILL.md`. Edit owner: `overrides/pstack/skills/setup-pstack/SKILL.md`.
 
@@ -1480,7 +1480,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/playbooks/hillclimb.md`. Edit owner
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Measure before and after, try simpler interventions first, and stop when the agreed target is met. Kishu relaxes automatic architecture/delegation, not the need for credible measurement.
 
-[Read and review](index.html#R-0bbd3bf27b09) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/playbooks/perf-issue.md)
+[Read and review](index.html#R-0bbd3bf27b09) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/playbooks/perf-issue.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/playbooks/perf-issue.md`. Edit owner: `src/patches.json`.
 
@@ -1512,7 +1512,7 @@ Source: `plugin/lib/pstack/skills/kishu-mode/references/bugbot-triage.md`. Edit 
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Select only the workflow needed, preserve scope, use meaningful tests and real proof, and apply host/model preferences. Kishu's router overrides conflicting inherited defaults; it does not rewrite executable validators.
 
-[Read and review](index.html#R-6d97c7279f4f) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/poteto-mode/SKILL.md)
+[Read and review](index.html#R-6d97c7279f4f) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/poteto-mode/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/poteto-mode/SKILL.md`. Edit owner: `overrides/pstack/skills/poteto-mode/SKILL.md`.
 
@@ -1838,7 +1838,7 @@ Source: `plugin/lib/pstack/skills/principle-sequence-verifiable-units/SKILL.md`.
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu tests new or changed logic where regression is meaningful, reuses sufficient coverage, and asks before substantial testing costs. Cost alone is not permission to skip.
 
-[Read and review](index.html#R-117fe2c9fe11) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/tdd/SKILL.md)
+[Read and review](index.html#R-117fe2c9fe11) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/tdd/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/tdd/SKILL.md`. Edit owner: `overrides/pstack/skills/tdd/SKILL.md`.
 
@@ -1848,7 +1848,7 @@ Source: `upstream/pstack/pstack/skills/tdd/SKILL.md`. Edit owner: `overrides/pst
 
 Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. Kishu asks for the evidence relevant to the change and reuses still-valid evidence. A screenshot proves appearance, not all logic; a passing unit test does not prove appearance.
 
-[Read and review](index.html#R-c4d17ca93020) · [Source on GitHub](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/principle-prove-it-works/SKILL.md)
+[Read and review](index.html#R-c4d17ca93020) · [Source on GitHub](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/principle-prove-it-works/SKILL.md)
 
 Source: `upstream/pstack/pstack/skills/principle-prove-it-works/SKILL.md`. Edit owner: `overrides/pstack/skills/principle-prove-it-works/SKILL.md`.
 
