@@ -47,7 +47,7 @@ Before model-dependent delegation, reuse an applicable configuration already loa
 
 Delegate for independent investigation, independent review, or separable implementation when the benefit justifies coordination. The main agent owns the result. Respect explicit user model-role preferences and check tool availability. Inherit the current model unless an applicable supported configuration says otherwise. Missing cross-family models or optional tools must not be hidden behind invented substitutes.
 
-Agent briefs include the user's goal, scope, relevant paths, the Kishu router's absolute path, and the required evidence. Keep simultaneous writers isolated. Read a named pstack agent's brief under `../../agents/` when the host needs a general-agent equivalent.
+Agent briefs include the user's goal, scope, relevant paths, the Kishu router's absolute path, and the required evidence. Give each delegate the absolute path to the [worker instructions](worker.md). Keep simultaneous writers isolated. Read a named pstack agent's brief under `../../agents/` when the host needs a general-agent equivalent.
 
 For image evidence, require sub-agents to return the saved artifact's absolute path or a host-supported attachment reference accessible to the main agent, plus what it shows and any verification limits. Keep those artifacts available through the final reply. The main agent must open and deliver the images it uses as proof; a sub-agent's screenshot tool output, private attachment, or statement that it showed an image is not a user-facing handoff. If the artifact is missing or inaccessible, recover it or request a new capture before relying on it, or report the gap.
 
@@ -57,28 +57,27 @@ The bundled principle guides remain available. Load only a principle that change
 
 ## Playbooks
 
-Choose the closest route below and read its linked file. Ordinary non-engineering requests can be completed directly or through an installed specialist. Use [figure-it-out](../figure-it-out/SKILL.md) for genuinely ambitious work needing a bespoke plan, not merely because a request falls outside software development. An explicitly delegated long-running program can use Orchestrate. A read-only discussion stays read-only.
+Choose the closest route below and read its linked file. Ordinary non-engineering requests can be completed directly or through an installed specialist. Use [figure-it-out](../figure-it-out/SKILL.md) for genuinely ambitious work needing a bespoke plan, not merely because a request falls outside software development. A read-only discussion stays read-only.
 
-- **[Investigation](playbooks/investigation.md).** Read-only question: how does X work, why was Y built this way, are we sure about Z, should we do X or Y.
-- **[Bug fix](playbooks/bug-fix.md).** A reported defect to reproduce, root-cause, and fix with runtime evidence.
-- **[Perf issue](playbooks/perf-issue.md).** A measured slowness to trace and improve against a baseline.
-- **[Hillclimb](playbooks/hillclimb.md).** Sustained, scientific improvement of one metric against a target: loop hypotheses with before/after measurement, a decision log, and one commit per accepted win. Distinct from Perf issue, which is a one-off fix.
-- **[Runtime forensics](playbooks/runtime-forensics.md).** Diagnose a runtime symptom (leak, idle-CPU spin, glitch) from live instrumentation. The deliverable is a diagnosis, not a fix.
-- **[Trace forensics](playbooks/trace-forensics.md).** Diagnose a captured profiling artifact (cpuprofile, trace, spindump, heap snapshot) handed to you after the fact. The deliverable is a diagnosis, not a fix.
-- **[Feature](playbooks/feature.md).** New or changed behavior, built from a named data shape.
-- **[Refactoring](playbooks/refactoring.md).** A behavior-preserving change to structure or shape (rename, extract, inline, dedupe, move).
-- **[Prototype](playbooks/prototype.md).** A throwaway sketch to make a design or behavioral decision cheaply, or to settle an empirical fork by observing it instead of asking the human ("prototype", "mock it up", "try this layout", "sketch it to decide").
-- **[Visual parity](playbooks/visual-parity.md).** Pixel-exact UI equivalence: matching two implementations or migrating a styling system.
-- **[Authoring or modifying a skill](playbooks/authoring-a-skill.md).** Writing or editing a SKILL.md.
-- **[Eval](playbooks/eval.md).** Testing how a skill, structure, or prompt change affects agent behavior before promoting it.
-- **[Babysit](playbooks/babysit.md).** Driving a PR or a stack to merge-ready: conflicts, review threads, CI.
-- **[Shipping](playbooks/shipping.md).** The half after Babysit. Independently verifying a green stack, then landing the contiguous verified run bottom-up through `gh` by default or Origin when its CLI is available.
-- **[Autonomous run](playbooks/autonomous-run.md).** A long task to drive to completion without stopping ("run until done", "/loop until X").
-- **[Orchestrate](playbooks/orchestrate.md).** A standing project handed to one coordinator chat: multi-day, many stacked PRs, dozens to hundreds of subagents, minimal human turns ("run this whole project", "own this migration until it lands"). Distinct from Autonomous run, which drives one task to a predicate. Work one agent could finish inside the session's budget routes there, not here, however program-shaped the phrasing sounds.
-- **[Autopilot-full](playbooks/autopilot-full.md).** A queue of independent PRs run to merged with full autonomy. One owner per PR carries build through merge, and the root swarm-verifies each PR before its owner merges ("autopilot this queue", "full autopilot", one-owner-per-PR programs).
-- **[Autopilot-stack](playbooks/autopilot-stack.md).** Autopilot-full without the merge. A queue of PRs built and verified with full autonomy, then handed to the operator to land. A PR stacks only on a PR it builds on ("autopilot-stack", "autopilot, don't merge", "stack them, don't ship", "build the stack, I'll land it").
-- **[Session pickup](playbooks/session-pickup.md).** Resuming or taking over a prior agent's in-flight work from a transcript, cloud-agent URL, or pushed branch.
-- **[Pause safely](playbooks/pause-safely.md).** Suspending in-flight work cleanly so it can be resumed, on an explicit pause, going offline, a Cursor restart, or imminent context compaction. The complement to Session pickup.
-- **[Multi-phase or multi-PR plan](playbooks/multi-phase-plan.md).** Work that spans phases or stacked PRs.
-- **[Worktree and simulator cleanup](playbooks/worktree-cleanup.md).** Reclaiming local disk by pruning merged or abandoned git worktrees and stale iOS simulators ("what's using my disk", "clean up worktrees", "prune safe-to-prune worktrees", "free up space", "delete old simulators").
+- **[Investigation](playbooks/investigation.md).**
+- **[Bug fix](playbooks/bug-fix.md).**
+- **[Perf issue](playbooks/perf-issue.md).**
+- **[Hillclimb](playbooks/hillclimb.md).**
+- **[Runtime forensics](playbooks/runtime-forensics.md).**
+- **[Trace forensics](playbooks/trace-forensics.md).**
+- **[Feature](playbooks/feature.md).**
+- **[Refactoring](playbooks/refactoring.md).**
+- **[Prototype](playbooks/prototype.md).**
+- **[Visual parity](playbooks/visual-parity.md).**
+- **[Authoring a skill](playbooks/authoring-a-skill.md).**
+- **[Eval](playbooks/eval.md).**
+- **[Babysit](playbooks/babysit.md).**
+- **[Shipping](playbooks/shipping.md).**
+- **[Autonomous run](playbooks/autonomous-run.md).**
+- **[Autopilot-full](playbooks/autopilot-full.md).**
+- **[Autopilot-stack](playbooks/autopilot-stack.md).**
+- **[Session pickup](playbooks/session-pickup.md).**
+- **[Pause safely](playbooks/pause-safely.md).**
+- **[Multi-phase plan](playbooks/multi-phase-plan.md).**
+- **[Worktree cleanup](playbooks/worktree-cleanup.md).**
 - **[Opening a PR](playbooks/opening-a-pr.md).** Prepare and open a PR when the task or agreed project workflow calls for one.

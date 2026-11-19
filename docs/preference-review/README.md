@@ -8,7 +8,7 @@ For each instruction, choose **Keep**, **Change**, **Ask first**, **Only on requ
 
 For a document workflow, read [the review plan](REVIEW.md) and write into [FEEDBACK.md](FEEDBACK.md). The [source inventory](INVENTORY.md) explains each included file. The page's **Sources & coverage** tab also lists every excluded upstream file and its reason.
 
-This is a snapshot of the pinned pstack revision and Kishu 0.1.4. It includes software-related principles, workflows, agent briefs, supporting references, optional automation, executable tools, and Kishu's own routing/setup/update changes. Communication-only skills, the ADHD policy, and Impeccable's design system are outside scope. User/project/host instructions still outrank Kishu. Private local model choices and unrelated installed plugins are not embedded.
+The [review plan](REVIEW.md) records the Kishu version and exact pstack revision for this snapshot. It includes software-related principles, workflows, agent briefs, supporting references, optional automation, executable tools, and Kishu's own routing/setup/update changes. Communication-only skills, the ADHD policy, and Impeccable's design system are outside scope. User/project/host instructions still outrank Kishu. Private local model choices and unrelated installed plugins are not embedded.
 
 The snapshot is identified by its source-content hash, so committing the generated files does not make them stale. Exact text and per-source hashes are embedded. Kishu's GitHub links open current `main`; upstream links use the pinned revision. File ordering is stable across Windows and Linux.
 

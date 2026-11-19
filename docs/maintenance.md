@@ -78,7 +78,9 @@ The failed update names overlapping files and leaves the lock, generated plugin,
 
 5. Review source, lock, override-baseline, and generated diffs together. Reinstall the target harness or re-export the standalone skill. Bump the release version when distributing the change.
 
-`accept-overrides` records the upstream files you reviewed. It does not merge them or establish that the new instructions behave correctly. Run the applicable cases in `tests/evals/cases.md` when routing or policy changes. A new upstream router entry is imported by the builder, but still deserves review because it can change task routing.
+`accept-overrides` records the upstream files you reviewed. A `null` baseline means the path was absent at the reviewed revision. Kishu uses this for the plan checker retired in pstack 0.15.44. Kishu still bundles its adapted checker at the same path, and an upstream reintroduction requires review. Run the applicable cases in `tests/evals/cases.md` when routing or policy changes. A new upstream router entry is imported by the builder, but still deserves review because it can change task routing.
+
+The November 19 refresh imports pstack's 22-playbook catalog. Its former `orchestrate.md` route has been retired. The multi-PR planner names `autopilot-full.md` when the user authorizes merging and `autopilot-stack.md` when the user will land the PRs. Review the planner and its checker together when changing verification rules. [Planner](../overrides/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md) · [Checker](../overrides/pstack/skills/poteto-mode/scripts/check-plan.mjs) · [Regression tests](../tests/test_plan_checker.py)
 
 If an update is unwanted, restore the previous source/override/lock revision in version control and run `sync`, `build`, and `check`. Generated-file protection may require preserving and moving an edited generated tree before rebuilding; it will never overwrite those edits automatically.
 

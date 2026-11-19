@@ -18,15 +18,15 @@ Choose supported models and reasoning effort for planning, implementation, revie
 
 ## Installation and activation
 
-Requires Python 3.11+ and Git for installation. Choose one native plugin or standalone export per harness.
+The commands below install the v0.1.7 release. You need Python 3.11+ and Git. Choose one native plugin or standalone export per harness.
 
 ```sh
-git clone --branch v0.1.6 --single-branch https://github.com/SPDUK/kishu-stack.git
+git clone --branch v0.1.7 --single-branch https://github.com/SPDUK/kishu-stack.git
 cd kishu-stack
 python scripts/kishu.py install --harness codex
 ```
 
-Use `--harness cursor` or `--harness claude` for those hosts. Start a fresh session after installation.
+Use `--harness cursor` or `--harness claude` for those hosts. Start a fresh session after installation. To refresh an existing development install, run the install command from that checkout. Kishu’s update command installs the latest published stable release.
 
 | Host | Work command | Model setup |
 | --- | --- | --- |
@@ -48,13 +48,17 @@ Kishu provides native plugin entrypoints for Codex, Cursor, and Claude Code, plu
 
 Yes. Kishu setup helps you choose supported models and reasoning effort for planning, implementation, review, and other roles. Saved preferences guide delegation when it is useful. Available models depend on your host; role preferences do not change the model running your current chat.
 
+### Can I ask for a plan before Kishu writes code?
+
+Yes. Try “Plan the dashboard migration across three pull requests.” Kishu writes a Markdown checklist with each PR’s scope, dependencies, and verification steps. The bundled checker validates the plan’s structure. Live checks use your configured worker model. Implementation waits for your go-ahead.
+
 ### Can model routing reduce coding costs or save time?
 
 It can concentrate expensive reasoning on difficult decisions, give efficient coding models a focused brief, and let independent assignments run in parallel. Savings depend on the task, model prices, context, and coordination overhead. The examples on this site are illustrative, not benchmarks.
 
-### What do pstack and Impeccable do in Kishu?
+### Which projects does Kishu build on?
 
-pstack provides the engineering playbooks behind Kishu’s routing and handoffs. Impeccable provides the foundation for its design guidance. Kishu adapts these foundations with its own preferences for scope, model choices, useful checks, and clear communication; i-have-adhd informs its communication style.
+Each release pins three reviewed dependencies. Kishu v0.1.7 uses pstack 0.15.44 for engineering playbooks, Impeccable 4.10.0 for design and motion review, and i-have-adhd 0.4.1 for ADHD-aware communication.
 
 ## A real project
 

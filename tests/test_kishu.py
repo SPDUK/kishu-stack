@@ -103,6 +103,23 @@ class BuildAndUpdateTests(unittest.TestCase):
         self.assertEqual(before, kishu.tree_hashes(self.root / "plugin"))
         kishu.verify_repositories(self.root, self.lock)
 
+    def test_reviewed_local_checker_survives_updates_and_flags_an_upstream_return(self):
+        checker_path = "skills/poteto-mode/scripts/check-plan.mjs"
+        repo = Path(self.lock["sources"]["pstack"]["url"])
+        (repo / self.lock["sources"]["pstack"]["subdir"] / checker_path).unlink()
+        self.commit(repo, "Retire upstream plan checker")
+        with self.assertRaisesRegex(kishu.KishuError, "overlap"):
+            kishu.update(self.root, self.lock)
+        self.lock["sources"]["pstack"]["commit"] = kishu.git(repo, "rev-parse", "HEAD")
+        kishu.ensure_repositories(self.root, self.lock)
+        kishu.accept_overrides(self.root, self.lock, "Keep the Kishu plan checker")
+        kishu.update(self.root, self.lock)
+        packaged = self.root / "plugin/lib/pstack" / kishu.rebrand(checker_path)
+        self.assertEqual(kishu.read_text(packaged), kishu.rebrand(kishu.read_text(self.root / "overrides/pstack" / checker_path)))
+        self.remote_change("pstack", checker_path, "New upstream checker.\n")
+        with self.assertRaisesRegex(kishu.KishuError, "overlap"):
+            kishu.update(self.root, self.lock)
+
     def test_failed_lock_publish_rolls_back_build_and_revisions(self):
         kishu.build(self.root, self.lock)
         before = kishu.tree_hashes(self.root / "plugin")
@@ -167,6 +184,31 @@ class BuildAndUpdateTests(unittest.TestCase):
         kishu.standalone(self.root, target)
         self.assertEqual(before, kishu.tree_hashes(target))
 
+    def test_nested_guide_references_are_checked_in_native_and_standalone_packages(self):
+        nested = self.root / "src/guides/nested/child.md"
+        nested.parent.mkdir()
+        nested.write_text("[Missing asset](missing.svg)\n", encoding="utf-8")
+        with self.assertRaisesRegex(kishu.KishuError, "Broken or escaping reference"):
+            kishu.build(self.root, self.lock)
+        nested.write_text("[Setup](../setup.md)\n", encoding="utf-8")
+        kishu.build(self.root, self.lock)
+        target = Path(self.work.name) / "skills/kishu-mode"
+        kishu.standalone(self.root, target)
+        self.assertTrue((target / "guides/nested/child.md").exists())
+        (target / "guides/nested/child.md").write_text("[Escape](../../../../outside.md)\n", encoding="utf-8")
+        with self.assertRaisesRegex(kishu.KishuError, "Broken or escaping reference"):
+            kishu.validate_references(target, kishu.guide_resources(target))
+
+    def test_html_and_css_assets_cannot_escape_or_go_missing(self):
+        target = Path(self.work.name) / "assets"
+        target.mkdir()
+        for filename, content in (("page.html", '<script src="missing.js"></script>'),
+                                  ("style.css", 'body { background: url("../../outside.png"); }')):
+            path = target / filename
+            path.write_text(content, encoding="utf-8")
+            with self.subTest(filename=filename), self.assertRaisesRegex(kishu.KishuError, "Broken or escaping"):
+                kishu.validate_references(target, [path])
+
     def test_activation_preserves_user_rules_and_is_idempotent(self):
         instructions = self.root / "custom-rules.md"
         instructions.write_text("Keep my existing project rules.\n", encoding="utf-8")
@@ -209,6 +251,8 @@ class RealPackageTests(unittest.TestCase):
         runtime = PROJECT / "plugin/lib/pstack/skills/kishu-mode"
         catalog = kishu.playbook_catalog(original, runtime)
         self.assertIn(kishu.rebrand(catalog), kishu.read_text(runtime / "SKILL.md"))
+        for playbook in (runtime / "playbooks").glob("*.md"):
+            self.assertIn(f"](playbooks/{playbook.name})", catalog)
         kishu.validate(PROJECT / "plugin")
 
     def test_notice_and_portable_line_endings_survive_distribution(self):

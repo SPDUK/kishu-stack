@@ -6,7 +6,7 @@ Kishu is an open-source plugin for existing coding agents. Kishu mode coordinate
 
 ## Product and setup
 
-- [Product overview and common questions](https://spduk.github.io/kishu-stack/index.md): workflow, model roles, installation commands, limitations, and attribution.
+- [Product overview and common questions](https://spduk.github.io/kishu-stack/index.md): model roles, multi-PR plans, stable installation commands, and attribution.
 - [Source and full installation guide](https://raw.githubusercontent.com/SPDUK/kishu-stack/main/README.md): authoritative repository documentation.
 
 ## Project evidence

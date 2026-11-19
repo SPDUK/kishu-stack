@@ -4,13 +4,13 @@
     "pstack": {
       "url": "https://github.com/cursor/plugins.git",
       "branch": "main",
-      "commit": "246bc508c139c5e036dfafea8978d31a7433279f",
+      "commit": "50b3a3234bf2e0293849a48784d72030948e44ee",
       "subdir": "pstack"
     },
     "impeccable": {
       "url": "https://github.com/pbakaus/impeccable.git",
       "branch": "main",
-      "commit": "f2baa414a87d9acf1e21ccf776bfaec0262ad6df",
+      "commit": "b49177d32788f2dc585c42831d845dacf1ebed2c",
       "subdir": ".agents/skills/impeccable"
     },
     "i-have-adhd": {

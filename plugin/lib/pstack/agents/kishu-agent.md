@@ -2,6 +2,7 @@
 name: kishu-agent
 description: Delegate subagent for code-writing and helper tasks spawned during a `/kishu-mode` run. Use for delegates, not as the runner for `/kishu-mode` itself. Spawn a fresh `kishu-agent` for each new task, and resume one only in the strict cases that kishu-mode's Subagents section names. Reads the `kishu-mode` skill's `SKILL.md` in full before any work, including its inline Principles index. Substituting `generalPurpose` skips that read and drifts.
 is_background: true
+model: claude-opus-5-5-xhigh-fast
 ---
 
 # Poteto subagent

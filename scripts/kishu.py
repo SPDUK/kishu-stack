@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import copy
 import hashlib
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
@@ -15,11 +16,12 @@ import sys
 import tempfile
 import time
 import zipfile
+from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
 LIBRARIES = {"pstack": "pstack", "impeccable": "impeccable", "i-have-adhd": "communication"}
-VERSION = "0.1.6"
+VERSION = "0.1.7"
 MARKER = ".kishu-generated.json"
 
 
@@ -129,14 +131,20 @@ def source_at_commit(root: Path, name: str, spec: dict, relative: str) -> str:
     return run(["git", "-C", root / "upstream" / name, "show", f"{spec['commit']}:{path}"]).stdout
 
 
+def override_baseline(root: Path, name: str, spec: dict, relative: str) -> str | None:
+    path = (Path(spec["subdir"]) / relative).as_posix()
+    if not git(root / "upstream" / name, "ls-tree", spec["commit"], "--", path):
+        return None  # A reviewed Kishu file that upstream no longer ships.
+    return digest_text(source_at_commit(root, name, spec, relative))
+
+
 def accept_overrides(root: Path, lock: dict, reason: str):
     verify_repositories(root, lock)
     entries = {}
     for path in override_files(root):
         name, relative = path.relative_to(root / "overrides").parts[0], path.relative_to(root / "overrides").parts[1:]
         rel = Path(*relative).as_posix()
-        content = source_at_commit(root, name, lock["sources"][name], rel)
-        entries[f"{name}/{rel}"] = digest_text(content)
+        entries[f"{name}/{rel}"] = override_baseline(root, name, lock["sources"][name], rel)
     write_json(root / "overrides.lock.json", {"schema": 1, "review_reason": reason, "files": entries})
 
 
@@ -148,8 +156,7 @@ def check_overrides(root: Path, lock: dict):
         key = path.relative_to(root / "overrides").as_posix()
         actual.add(key)
         name, relative = key.split("/", 1)
-        content = source_at_commit(root, name, lock["sources"][name], relative)
-        if guard.get(key) != digest_text(content):
+        if key not in guard or guard[key] != override_baseline(root, name, lock["sources"][name], relative):
             conflicts.append(key)
     if actual != set(guard):
         conflicts.extend(sorted(set(guard) - actual))
@@ -172,8 +179,12 @@ def rebrand(text: str) -> str:
 
 
 def playbook_catalog(router: str, directory: Path) -> str:
-    section = router.split("## Playbooks\n", 1)[1]
+    section = router.partition("## Playbooks\n")[2].split("\n## ", 1)[0].strip()
     rows = re.findall(r"^- \*\*([^*]+)\.\*\* (.+)$", section, re.MULTILINE)
+    if not rows:
+        titles = section.split("\n\n")[-1].removesuffix(".").split(", ")
+        if all(re.fullmatch(r"[A-Za-z][A-Za-z -]*", title) for title in titles):
+            rows = [(title, "") for title in titles]
     if not rows:
         raise KishuError("Upstream pstack router has no recognized playbook catalog.")
     result = []
@@ -185,7 +196,7 @@ def playbook_catalog(router: str, directory: Path) -> str:
         if title == "Opening a PR":
             description = "Prepare and open a PR when the task or agreed project workflow calls for one."
         description = re.sub(r" File: `playbooks/[^`]+`\.", "", description)
-        result.append(f"- **[{title}](playbooks/{filename}).** {description}")
+        result.append(f"- **[{title}](playbooks/{filename}).** {description}".rstrip())
     return "\n".join(result)
 
 
@@ -306,6 +317,42 @@ def build_into(root: Path, lock: dict, target: Path):
     write_manifest(target, lock)
 
 
+class AssetReferences(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        self.links.extend(value for key, value in attrs if key in {"href", "src"} and value)
+
+
+def guide_resources(target: Path):
+    return sorted(path for path in (target / "guides").rglob("*")
+                  if path.suffix in {".md", ".html", ".css"})
+
+
+def validate_references(target: Path, paths):
+    for path in paths:
+        text = read_text(path)
+        if "{{COMMUNICATION}}" in text or "{{PLAYBOOKS}}" in text:
+            raise KishuError(f"Unrendered template: {path}")
+        if path.suffix == ".html":
+            parser = AssetReferences()
+            parser.feed(text)
+            links = parser.links
+        elif path.suffix == ".css":
+            links = re.findall(r"url\(\s*['\"]?([^'\")]+)['\"]?\s*\)", text)
+        else:
+            links = re.findall(r"\]\(([^)]+)\)", text)
+        for link in links:
+            url = urlsplit(link)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            dest = (path.parent / unquote(url.path)).resolve()
+            if not dest.is_relative_to(target.resolve()) or not dest.exists():
+                raise KishuError(f"Broken or escaping reference in {path}: {link}")
+
+
 def validate(target: Path):
     public = list((target / "skills").rglob("SKILL.md"))
     if len(public) != 2 or {p.parent.name for p in public} != {"kishu", "kishu-mode"}:
@@ -317,17 +364,8 @@ def validate(target: Path):
     required = [*public, target / "lib/pstack/skills/kishu-mode/SKILL.md",
                 target / "lib/impeccable/SKILL.md", target / "lib/communication/SKILL.md"]
     required.extend((target / "adapters").glob("*.md"))
-    required.extend((target / "guides").glob("*.md"))
-    for path in required:
-        text = read_text(path)
-        if "{{COMMUNICATION}}" in text or "{{PLAYBOOKS}}" in text:
-            raise KishuError(f"Unrendered template: {path}")
-        for link in re.findall(r"\]\(([^)]+)\)", text):
-            if re.match(r"[a-z]+:", link) or link.startswith("#"):
-                continue
-            dest = (path.parent / link.split("#", 1)[0]).resolve()
-            if not dest.is_relative_to(target.resolve()) or not dest.exists():
-                raise KishuError(f"Broken or escaping reference in {path}: {link}")
+    required.extend(guide_resources(target))
+    validate_references(target, required)
     for library in LIBRARIES.values():
         if not (target / "lib" / library / "LICENSE").is_file():
             raise KishuError(f"Missing upstream license: {library}")
@@ -474,14 +512,8 @@ def standalone(root: Path, destination: Path):
         if list(target.rglob("SKILL.md")) != [target / "SKILL.md"]:
             raise KishuError("Standalone export exposes more than one skill.")
         normalize_text_files(target)
-        for path in (target / "SKILL.md", target / "references/pstack/skills/kishu-mode/GUIDE.md",
-                     target / "references/impeccable/GUIDE.md", *(target / "guides").glob("*.md")):
-            for link in re.findall(r"\]\(([^)]+)\)", read_text(path)):
-                if re.match(r"[a-z]+:", link) or link.startswith("#"):
-                    continue
-                resolved = (path.parent / link.split("#", 1)[0]).resolve()
-                if not resolved.is_relative_to(target.resolve()) or not resolved.exists():
-                    raise KishuError(f"Broken standalone reference in {path}: {link}")
+        validate_references(target, (target / "SKILL.md", target / "references/pstack/skills/kishu-mode/GUIDE.md",
+                                     target / "references/impeccable/GUIDE.md", *guide_resources(target)))
         write_manifest(target, locked_sources(root))
         publish(target, destination)
     print(f"Exported standalone skill: {destination}")

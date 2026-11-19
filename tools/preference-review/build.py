@@ -56,7 +56,7 @@ OVERVIEWS = {
 
 PRINCIPLES = {
     "attack-the-premise": ("Investigation", "Recheck an assumption after repeated failed fixes", "After two failures sharing an assumption, test that assumption before another fix. This is a debugging stop rule, not a cap on possible solutions."),
-    "boundary-discipline": ("Code design", "Validate at boundaries and trust typed internals", "Centralize validation and separate pure logic from framework wiring. The wording 'trust internal code unconditionally' deserves judgment for dynamic, concurrent, or mixed-trust systems."),
+    "boundary-discipline": ("Code design", "Validate at boundaries and trust typed internals", "Centralize validation and separate pure logic from framework wiring. Identify where dynamic or persisted data enters typed code."),
     "build-the-lever": ("Scope & autonomy", "Write a tool for nontrivial work", "Prefers a reusable script or generator even for one-off nontrivial work. This can improve repeatability, but may add tooling where direct work would suffice."),
     "encode-lessons-in-structure": ("Stack maintenance", "Turn repeated lessons into checks", "Prefer an enforceable mechanism to repeating an instruction. Choose carefully: an overly broad check can become a hard limit, as the plan checker demonstrates."),
     "exhaust-the-design-space": ("Code design", "Try two or three designs for novel choices", "Requires competing prototypes for novel architecture or interaction choices. Kishu's proportionality rule limits when the exercise is useful."),
@@ -99,7 +99,6 @@ PLAYBOOKS = {
     "autopilot-full": ("Long-running work", "Run an authorized queue through merge", "Uses PR owners and independent verifiers under an explicit grant. The universal comment/deslop passes were removed, but substantial program machinery remains."),
     "autopilot-stack": ("Long-running work", "Prepare a queue for the user to land", "Runs an authorized multi-PR queue while reserving merge ownership for the user."),
     "autonomous-run": ("Long-running work", "Continue a task until its condition is met", "Kishu limits side fixes to the authorized goal and preserves decision gates. Continued execution requires actual host support; no fictional wakeups."),
-    "orchestrate": ("Long-running work", "Coordinate a large standing program", "A coordinator delegates implementation and audits results across a multi-day program. Ordinary work that one agent can finish should not enter this route."),
     "pause-safely": ("Long-running work", "Stop work without losing its state", "Capture enough state to resume safely and honor the user's stop across active workers."),
     "session-pickup": ("Investigation", "Take over existing work", "Inspect the actual workspace and previous evidence, preserve decisions, and resume from verified state."),
     "worktree-cleanup": ("Delivery", "Clean up worktrees safely", "Check branch, uncommitted work, and delivery state before deleting worktrees. Cleanup is conditional on the task."),
@@ -136,7 +135,9 @@ def excluded_reason(rel):
 def describe(rel):
     p = Path(rel)
     parts = p.parts
-    if "playbooks" in parts:
+    if rel == "skills/poteto-mode/worker.md":
+        group, title, note = "Delegation", "Instructions for delegated workers", "Read with the task brief to understand delegated scope, evidence, user decisions, and PR delivery."
+    elif "playbooks" in parts:
         group, title, note = PLAYBOOKS[p.stem]
     elif p.stem in {"poteto-agent", "comment-sicko"}:
         group, title, note = OVERVIEWS[p.stem]
@@ -256,12 +257,15 @@ def make_catalog(root=ROOT):
         sources.append(source)
         return source_id
 
-    for path in sorted(upstream.rglob("*"), key=lambda path: path.relative_to(upstream).as_posix()):
-        if not path.is_file():
-            continue
-        rel = path.relative_to(upstream).as_posix()
+    overrides = root / "overrides/pstack"
+    paths = {path.relative_to(base).as_posix() for base in (upstream, overrides)
+             for path in base.rglob("*") if path.is_file()}
+    for rel in sorted(paths):
+        path = upstream / rel
+        override = overrides / rel
+        inherited = path.is_file()
         reason = excluded_reason(rel)
-        item = {"path": "upstream/pstack/pstack/" + rel, "status": "excluded" if reason else "included", "reason": reason, "sources": []}
+        item = {"path": (path if inherited else override).relative_to(root).as_posix(), "status": "excluded" if reason else "included", "reason": reason, "sources": []}
         coverage.append(item)
         if reason:
             continue
@@ -269,10 +273,8 @@ def make_catalog(root=ROOT):
         runtime = root / runtime_rel
         if not runtime.exists():
             raise ValueError(f"Missing packaged source: {runtime_rel}")
-        original = read(path)
         effective = read(runtime)
         group, title, note = describe(rel)
-        override = root / "overrides/pstack" / rel
         changed = override.exists() or rel in patches
         is_reference = rel.startswith("docs/") or rel == "README.md" or rel.startswith("skills/poteto-help/")
         edition = "reference" if is_reference else "current"
@@ -284,13 +286,16 @@ def make_catalog(root=ROOT):
         elif "/scripts/" in rel:
             scope = "Only when this executable runs"
         edit_path = "overrides/pstack/" + rel if override.exists() else "src/patches.json" if rel in patches else "upstream/pstack/pstack/" + rel
-        original_url = f"https://github.com/cursor/plugins/blob/{upstream_commit}/pstack/{rel}"
+        original_url = f"https://github.com/cursor/plugins/blob/{upstream_commit}/pstack/{rel}" if inherited else ""
         url = f"https://github.com/SPDUK/kishu-stack/blob/{kishu_ref}/{runtime_rel}"
         exclusions = ("Communication", "Design") if rel == "skills/poteto-mode/SKILL.md" else ()
-        item["sources"].append(add("current:" + rel, runtime_rel, effective, group, title, note, edition, "Kishu override" if changed else "Inherited pstack", scope, url, original_url, edit_path, exclusions))
-        if changed:
+        origin = "Kishu override" if changed else "Inherited pstack"
+        if not inherited:
+            origin = "Kishu maintained"
+        item["sources"].append(add("current:" + rel, runtime_rel, effective, group, title, note, edition, origin, scope, url, original_url, edit_path, exclusions))
+        if changed and inherited:
             old_exclusions = ("Writing the reply",) if rel == "skills/poteto-mode/SKILL.md" else ()
-            item["sources"].append(add("upstream:" + rel, item["path"], original, group, title + " · original upstream", "Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. " + note, "replaced", "Original pstack", "Historical comparison", original_url, original_url, edit_path, old_exclusions))
+            item["sources"].append(add("upstream:" + rel, item["path"], read(path), group, title + " · original upstream", "Original before Kishu's replacement or patch. Read the current version beside it; the original is not an additional active instruction. " + note, "replaced", "Original pstack", "Historical comparison", original_url, original_url, edit_path, old_exclusions))
 
     local_files = [*sorted((root / "src/adapters").glob("*.md"), key=lambda path: path.name), *sorted((root / "src/guides").glob("*.md"), key=lambda path: path.name), root / "src/entrypoint.md", root / "src/admin-entrypoint.md", root / "src/scripts/update_kishu.py", root / "scripts/kishu.py"]
     for path in local_files:

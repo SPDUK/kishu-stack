@@ -42,7 +42,7 @@ Before model-dependent delegation, reuse an applicable configuration already loa
 
 Delegate for independent investigation, independent review, or separable implementation when the benefit justifies coordination. The main agent owns the result. Respect explicit user model-role preferences and check tool availability. Inherit the current model unless an applicable supported configuration says otherwise. Missing cross-family models or optional tools must not be hidden behind invented substitutes.
 
-Agent briefs include the user's goal, scope, relevant paths, the Kishu router's absolute path, and the required evidence. Keep simultaneous writers isolated. Read a named pstack agent's brief under `../../agents/` when the host needs a general-agent equivalent.
+Agent briefs include the user's goal, scope, relevant paths, the Kishu router's absolute path, and the required evidence. Give each delegate the absolute path to the [worker instructions](worker.md). Keep simultaneous writers isolated. Read a named pstack agent's brief under `../../agents/` when the host needs a general-agent equivalent.
 
 For image evidence, require sub-agents to return the saved artifact's absolute path or a host-supported attachment reference accessible to the main agent, plus what it shows and any verification limits. Keep those artifacts available through the final reply. The main agent must open and deliver the images it uses as proof; a sub-agent's screenshot tool output, private attachment, or statement that it showed an image is not a user-facing handoff. If the artifact is missing or inaccessible, recover it or request a new capture before relying on it, or report the gap.
 
@@ -52,6 +52,6 @@ The bundled principle guides remain available. Load only a principle that change
 
 ## Playbooks
 
-Choose the closest route below and read its linked file. Ordinary non-engineering requests can be completed directly or through an installed specialist. Use [figure-it-out](../figure-it-out/SKILL.md) for genuinely ambitious work needing a bespoke plan, not merely because a request falls outside software development. An explicitly delegated long-running program can use Orchestrate. A read-only discussion stays read-only.
+Choose the closest route below and read its linked file. Ordinary non-engineering requests can be completed directly or through an installed specialist. Use [figure-it-out](../figure-it-out/SKILL.md) for genuinely ambitious work needing a bespoke plan, not merely because a request falls outside software development. A read-only discussion stays read-only.
 
 {{PLAYBOOKS}}

@@ -22,9 +22,9 @@ When should measurement help a decision, and when does it become unnecessary wor
 
 **Consider:** Review whether ten live lanes suit the long-running work you select. Keep performance verification tied to the actual change, explain non-applicability, and derive numeric criteria from a relevant requirement, constraint, or agreed target.
 
-[Read exact instructions and leave feedback](index.html#R-268ec226b9c9). Topic ID: `plan-gates`.
+[Read exact instructions and leave feedback](index.html#R-821e05f4a903). Topic ID: `plan-gates`.
 
-Evidence: [R-268ec226b9c9](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/multi-phase-plan.md#L13), [R-c4cdfd6336ba](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L156), [R-64d7a723e506](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L5), [R-bc460826d2ac](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L169).
+Evidence: [R-821e05f4a903](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/multi-phase-plan.md#L13), [R-c4cdfd6336ba](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L156), [R-64d7a723e506](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L5), [R-bc460826d2ac](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/scripts/check-plan.mjs#L169).
 
 ### The benchmark checklist checks measurement quality
 
@@ -50,9 +50,9 @@ Evidence: [R-6e98e34e60f6](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 **Consider:** Distinguish a measured observation from a causal explanation or an adoption recommendation. Decide what evidence each claim needs.
 
-[Read exact instructions and leave feedback](index.html#R-a306a1052533). Topic ID: `measurement-limiter`.
+[Read exact instructions and leave feedback](index.html#R-9fb26f841a57). Topic ID: `measurement-limiter`.
 
-Evidence: [R-a306a1052533](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-explain-the-number/SKILL.md#L10), [R-644d2d2d80a0](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-explain-the-number/SKILL.md#L9).
+Evidence: [R-9fb26f841a57](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-explain-the-number/SKILL.md#L10), [R-e6ad5f539e03](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-explain-the-number/SKILL.md#L9).
 
 ### Stop optimizing once the chosen target is met
 
@@ -66,7 +66,7 @@ Evidence: [R-a306a1052533](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 [Read exact instructions and leave feedback](index.html#R-2700c826767c). Topic ID: `perf-target`.
 
-Evidence: [R-2700c826767c](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/perf-issue.md#L16), [R-01ed75c24129](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/perf-issue.md#L6).
+Evidence: [R-2700c826767c](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/perf-issue.md#L16), [R-f7956338c381](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/perf-issue.md#L6).
 
 ### Optimization loops can require a minimum number of attempts
 
@@ -78,9 +78,9 @@ Evidence: [R-2700c826767c](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 **Consider:** Make the floor, target, and stopping tradeoff explicit when starting a sustained run. Do not infer this workflow from an ordinary feature request.
 
-[Read exact instructions and leave feedback](index.html#R-4ef0eddbd757). Topic ID: `hillclimb-floor`.
+[Read exact instructions and leave feedback](index.html#R-ff9cf9be8767). Topic ID: `hillclimb-floor`.
 
-Evidence: [R-4ef0eddbd757](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/hillclimb.md#L7), [R-3227377b1daf](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/hillclimb.md#L18).
+Evidence: [R-ff9cf9be8767](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/hillclimb.md#L7), [R-3227377b1daf](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/playbooks/hillclimb.md#L18).
 
 ### Statechart has actual exploration and drawing limits
 
@@ -110,9 +110,9 @@ These rules shape whether an agent solves the task directly, adds tools, or expa
 
 **Consider:** Consider a benefit-based trigger: repeated work, meaningful error risk, or proof that needs to be rerun. Keep the option for one-off work without requiring it.
 
-[Read exact instructions and leave feedback](index.html#R-32b16a0e781f). Topic ID: `lever-everywhere`.
+[Read exact instructions and leave feedback](index.html#R-b8cad0705205). Topic ID: `lever-everywhere`.
 
-Evidence: [R-32b16a0e781f](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-build-the-lever/SKILL.md#L12), [R-2f19a87b724f](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-build-the-lever/SKILL.md#L21).
+Evidence: [R-b8cad0705205](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-build-the-lever/SKILL.md#L9), [R-b8cad0705205](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-build-the-lever/SKILL.md#L9).
 
 ### Fewer polished features must not erase requested capability
 
@@ -152,13 +152,13 @@ Useful engineering instincts, with a few strong opinions worth making explicit.
 
 **What it means:** Kishu removed the rule that crossing a function boundary automatically activates Architect. Inside Architect, two structurally distinct candidates are still required.
 
-**Effect on your work:** The outer trigger is lighter, but the selected workflow can still spend multiple model runs on an otherwise settled design.
+**Effect on your work:** Architect can sketch both designs directly. A large or contested design uses Arena for the comparison.
 
 **Consider:** Decide whether two candidates should be mandatory only when competing approaches are genuinely unresolved or when the user asks for comparison.
 
-[Read exact instructions and leave feedback](index.html#R-e6d59d9ea61f). Topic ID: `architecture-minimum`.
+[Read exact instructions and leave feedback](index.html#R-3a56ce90a7ca). Topic ID: `architecture-minimum`.
 
-Evidence: [R-e6d59d9ea61f](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/architect/SKILL.md#L33), [R-2552d7d56acd](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L15), [R-324ca3cdc3f9](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-exhaust-the-design-space/SKILL.md#L1).
+Evidence: [R-3a56ce90a7ca](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/architect/SKILL.md#L9), [R-2552d7d56acd](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L15), [R-324ca3cdc3f9](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-exhaust-the-design-space/SKILL.md#L1).
 
 ### Smallest change and first-principles redesign can pull apart
 
@@ -174,19 +174,19 @@ Evidence: [R-e6d59d9ea61f](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 Evidence: [R-ed31fdb765b3](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-redesign-from-first-principles/SKILL.md#L9), [R-5139915a4913](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-laziness-protocol/SKILL.md#L10).
 
-### Trust internal types unconditionally
+### Validate at boundaries and trust internal types
 
 **Type:** Inherited preference
 
 **What it means:** Boundary Discipline centralizes validation at inputs and treats internal validation as redundant.
 
-**Effect on your work:** This can simplify well-typed pure code. Dynamic inputs, persisted corruption, concurrency, and mixed-language boundaries need more care than a literal unconditional rule permits.
+**Effect on your work:** This simplifies well-typed code and makes it important to identify where persisted data, dynamic inputs, or calls across languages enter the system.
 
 **Consider:** Keep boundary validation as the default while allowing checks that protect a real invariant or trust boundary. Avoid adding defensive checks without a concrete failure mode.
 
-[Read exact instructions and leave feedback](index.html#R-814cb48dd04a). Topic ID: `internal-validation`.
+[Read exact instructions and leave feedback](index.html#R-3f577192e2c5). Topic ID: `internal-validation`.
 
-Evidence: [R-814cb48dd04a](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-boundary-discipline/SKILL.md#L9), [R-6b0351ee6b84](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-boundary-discipline/SKILL.md#L33).
+Evidence: [R-3f577192e2c5](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-boundary-discipline/SKILL.md#L9), [R-26b2be5d53af](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-boundary-discipline/SKILL.md#L11).
 
 ### Some TypeScript rules are stronger than common project conventions
 
@@ -214,7 +214,7 @@ Evidence: [R-3ecc6cae3e36](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 [Read exact instructions and leave feedback](index.html#R-115b47fa6a00). Topic ID: `comment-removal`.
 
-Evidence: [R-115b47fa6a00](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/agents/comment-sicko.md#L22), [R-d68eae112754](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/no-comments/SKILL.md#L20), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L19).
+Evidence: [R-115b47fa6a00](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/agents/comment-sicko.md#L22), [R-4d73ca170b9d](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/no-comments/SKILL.md#L20), [R-5e5638edf544](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L19).
 
 ## 4. Tests & visible proof
 
@@ -232,7 +232,7 @@ Keep quality high while matching verification to the behavior and its risk.
 
 [Read exact instructions and leave feedback](index.html#R-d5df73cfda40). Topic ID: `kishu-tests`.
 
-Evidence: [R-d5df73cfda40](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L14), [R-21a51dcf0c4d](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L16), [R-117fe2c9fe11](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/tdd/SKILL.md#L1), [R-e7bd6aa230a6](https://github.com/cursor/plugins/blob/246bc508c139c5e036dfafea8978d31a7433279f/pstack/skills/tdd/SKILL.md#L26).
+Evidence: [R-d5df73cfda40](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L14), [R-21a51dcf0c4d](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/tdd/SKILL.md#L16), [R-117fe2c9fe11](https://github.com/cursor/plugins/blob/50b3a3234bf2e0293849a48784d72030948e44ee/pstack/skills/tdd/SKILL.md#L1), [R-e7bd6aa230a6](https://github.com/cursor/plugins/blob/50b3a3234bf2e0293849a48784d72030948e44ee/pstack/skills/tdd/SKILL.md#L26).
 
 ### Evidence should match the claim and can be reused
 
@@ -252,7 +252,7 @@ Evidence: [R-a2a8fb0e139a](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 **Type:** Preference tension
 
-**What it means:** Outcome-Oriented Execution allows planned intermediate breakage; Sequence Verifiable Units says not to advance until a unit is green and prescribes trunk-first sequencing.
+**What it means:** Outcome-Oriented Execution allows planned intermediate breakage. Sequence Verifiable Units calls for checking each unit before advancing and landing each commit independently.
 
 **Effect on your work:** They can coexist if the verifiable unit is an agreed migration phase. A literal per-edit interpretation can create unnecessary compatibility scaffolding or repeated checks.
 
@@ -260,7 +260,7 @@ Evidence: [R-a2a8fb0e139a](https://github.com/SPDUK/kishu-stack/blob/main/plugin
 
 [Read exact instructions and leave feedback](index.html#R-9cef3d9624d4). Topic ID: `migration-sequencing`.
 
-Evidence: [R-9cef3d9624d4](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-outcome-oriented-execution/SKILL.md#L15), [R-89e7b8d4f4ab](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-sequence-verifiable-units/SKILL.md#L13).
+Evidence: [R-9cef3d9624d4](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-outcome-oriented-execution/SKILL.md#L15), [R-5405ce082caf](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/principle-sequence-verifiable-units/SKILL.md#L13).
 
 ## 5. Models, agents & budgets
 
@@ -278,7 +278,7 @@ These influence how the work is carried out, not what your software is allowed t
 
 [Read exact instructions and leave feedback](index.html#R-59cc76650833). Topic ID: `models-and-delegation`.
 
-Evidence: [R-59cc76650833](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L46), [R-2b7f04b637de](https://github.com/SPDUK/kishu-stack/blob/main/src/adapters/codex.md#L7), [R-c26340a242c0](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/arena/SKILL.md#L28).
+Evidence: [R-59cc76650833](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/kishu-mode/SKILL.md#L46), [R-2b7f04b637de](https://github.com/SPDUK/kishu-stack/blob/main/src/adapters/codex.md#L7), [R-fdb08a8cdd1f](https://github.com/SPDUK/kishu-stack/blob/main/plugin/lib/pstack/skills/arena/SKILL.md#L28).
 
 ### Phase and turn budgets should organize work, not shrink the goal
 
@@ -340,4 +340,4 @@ Use the [source inventory](INVENTORY.md) to pick a topic, or search **All instru
 4. Check representative behavior: a small edit, a logic change needing tests, an expensive-test decision, a performance request, and an explicitly rigorous long-running task.
 5. Show the resulting diff and proof before reporting the revision complete. Publish or install it only under the applicable authorization.
 
-Snapshot: Kishu 0.1.6; source-content SHA-256 9c0298b80bf75490243e14c67657cb08f64be3ba6c038102086e0b040092ae9b; pstack 246bc508c139c5e036dfafea8978d31a7433279f. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.
+Snapshot: Kishu 0.1.7; source-content SHA-256 75fa9b48c6f31c9abb242ceb3e80e28a903f85edf9fcc29332154edac9243c92; pstack 50b3a3234bf2e0293849a48784d72030948e44ee. Kishu links open current main; exact captured text and hashes are retained in the review. Impeccable and the ADHD communication policy are outside this review.

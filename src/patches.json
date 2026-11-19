@@ -2,13 +2,13 @@
   {
     "source": "pstack",
     "path": "skills/architect/SKILL.md",
-    "old": "Build a real mental model of every system the new code touches. Run the **how** skill over the relevant subsystems. Naming a file isn't grounding. Produce the architectural explanation `how` prescribes.",
-    "new": "Use current, verified investigation of the systems the change touches. Run the **how** skill only for unresolved gaps; do not repeat a completed investigation or require a separate explanation when the existing findings are sufficient."
+    "old": "Before writing code, trace every system the change touches, then sketch two different shapes for it",
+    "new": "Reuse verified findings about the systems the change touches. Trace any unresolved parts, then sketch two different shapes for the change"
   },
   {
     "source": "pstack",
     "path": "skills/poteto-mode/playbooks/perf-issue.md",
-    "old": "If it crosses a function boundary, `architect` first. Delegate implementation to a subagent using your configured perf-issue model (default `grok-4.7-xhigh-fast`).",
+    "old": "If it crosses a function boundary, `architect` first. Delegate implementation to a subagent using your configured perf-issue model (default `claude-opus-5-5-xhigh-fast`).",
     "new": "Use `architect` for consequential unresolved design choices. Implement directly or delegate separable implementation when useful, honoring the host adapter and configured model-role choices."
   },
   {
@@ -40,11 +40,5 @@
     "path": "skills/poteto-mode/playbooks/prototype.md",
     "old": "4. When comparing alternatives, build them behind one switcher (buttons or a keypress), each variant labeled. This is the **exhaust-the-design-space** principle skill made cheap.",
     "new": "4. Choose alternatives that expose the decision's meaningful tradeoffs, using Impeccable for visual and interaction judgment. When comparing alternatives, build them behind one switcher (buttons or a keypress), each variant labeled. This is the **exhaust-the-design-space** principle skill made cheap."
-  },
-  {
-    "source": "pstack",
-    "path": "skills/poteto-mode/scripts/check-plan.test.ts",
-    "old": "Tests alone are not sufficient verification. A PR is verified only when its unit, live, and perf boxes are all checked.",
-    "new": "Tests alone are not sufficient verification. A PR is verified only when its unit and live boxes and any applicable perf boxes are all checked."
   }
 ]

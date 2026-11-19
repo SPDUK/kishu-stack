@@ -2,6 +2,24 @@
 
 Verification history from the local Windows workspace. Each revision below records its executed checks and limits; the original installation checks began on November 2, 2026 (America/Los_Angeles).
 
+## Kishu v0.1.7 release checks — November 19, 2026
+
+The release ZIP matched the generated plugin byte for byte across all 646 archive entries, including the manifest and dependency lock. A fresh Codex profile discovered both public skills and passed same-version refresh and marketplace migration. In Edge at 1280px and 390px, all three installer tabs used the v0.1.7 tag, the release link pointed to v0.1.7, and the FAQ showed the reviewed dependency versions. [Release notes](releases/v0.1.7.md) · [Site checks](../site/VERIFICATION.md)
+
+## Dependency refresh — November 19, 2026
+
+The local Codex development install uses Kishu 0.1.6 with these revisions from the three tracked `main` branches.
+
+| Dependency | Version | Pinned commit |
+| --- | --- | --- |
+| pstack | 0.15.36 → 0.15.44 | [50b3a323](https://github.com/cursor/plugins/tree/50b3a3234bf2e0293849a48784d72030948e44ee/pstack) |
+| Impeccable | 4.8.2 → 4.10.0 | [b49177d3](https://github.com/pbakaus/impeccable/tree/b49177d32788f2dc585c42831d845dacf1ebed2c) |
+| i-have-adhd | 0.4.1, already current | [1ecea199](https://github.com/ayghri/i-have-adhd/tree/1ecea1993b7fce257ffbd686c070948b5e07eda6) |
+
+The generated router links all 22 upstream playbooks. Kishu retains its adapted plan checker after its removal upstream. A regression test exercises removal, explicit acceptance, rebuilding, and an upstream reintroduction. The standalone worker brief and planner links resolve to the exported files.
+
+On Windows, 46 root regression tests, 6 preference-review Python tests, 7 preference-review Node tests, and 38 site tests passed. Generated package, preference snapshot, site asset, and MMO story checks passed. The isolated Codex installation exposed both skills and passed same-version refresh and marketplace migration. The refreshed local install matched all 645 generated payload files and its manifest. The Investigation, Runtime forensics, and Trace forensics playbooks matched their prior installed contents byte for byte, and their router links resolved in the native and standalone bundles. The Impeccable launcher reported engine 0.1.27 during the dependency refresh. Live design workflows were outside this check.
+
 ## Release 0.1.6 preparation — November 10, 2026
 
 Rebuilt the package as 0.1.6 with the image-proof handoff rules and reviewed upstream refresh. Updated the README and site installation commands and generated discovery content to the new tag.

@@ -91,7 +91,7 @@
     "effect":"A rerunnable tool can be valuable proof. Making one compulsory can add maintenance and time when a direct edit plus existing checks would be sufficient.",
     "suggestion":"Consider a benefit-based trigger: repeated work, meaningful error risk, or proof that needs to be rerun. Keep the option for one-off work without requiring it.",
     "locators":[
-      {"source":"current:skills/principle-build-the-lever/SKILL.md","contains":"Default to building the lever"},
+      {"source":"current:skills/principle-build-the-lever/SKILL.md","contains":"build the tool that does it"},
       {"source":"current:skills/principle-build-the-lever/SKILL.md","contains":"The bar is triviality"}
     ]
   },
@@ -101,10 +101,10 @@
     "kind":"Optional workflow",
     "group":"Code design",
     "meaning":"Kishu removed the rule that crossing a function boundary automatically activates Architect. Inside Architect, two structurally distinct candidates are still required.",
-    "effect":"The outer trigger is lighter, but the selected workflow can still spend multiple model runs on an otherwise settled design.",
+    "effect":"Architect can sketch both designs directly. A large or contested design uses Arena for the comparison.",
     "suggestion":"Decide whether two candidates should be mandatory only when competing approaches are genuinely unresolved or when the user asks for comparison.",
     "locators":[
-      {"source":"current:skills/architect/SKILL.md","contains":"Design it twice"},
+      {"source":"current:skills/architect/SKILL.md","contains":"sketch two different shapes"},
       {"source":"current:skills/poteto-mode/SKILL.md","contains":"A function boundary alone"},
       {"source":"current:skills/principle-exhaust-the-design-space/SKILL.md","contains":"2-3 competing prototypes"}
     ]
@@ -138,15 +138,15 @@
   },
   {
     "id":"internal-validation",
-    "title":"Trust internal types unconditionally",
+    "title":"Validate at boundaries and trust internal types",
     "kind":"Inherited preference",
     "group":"Code design",
     "meaning":"Boundary Discipline centralizes validation at inputs and treats internal validation as redundant.",
-    "effect":"This can simplify well-typed pure code. Dynamic inputs, persisted corruption, concurrency, and mixed-language boundaries need more care than a literal unconditional rule permits.",
+    "effect":"This simplifies well-typed code and makes it important to identify where persisted data, dynamic inputs, or calls across languages enter the system.",
     "suggestion":"Keep boundary validation as the default while allowing checks that protect a real invariant or trust boundary. Avoid adding defensive checks without a concrete failure mode.",
     "locators":[
-      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"Trust internal code unconditionally"},
-      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"If not, validation is redundant"}
+      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"Inside, trust the types"},
+      {"source":"current:skills/principle-boundary-discipline/SKILL.md","contains":"Is this data crossing a boundary"}
     ]
   },
   {
@@ -169,12 +169,12 @@
     "title":"Migration and verification principles need compatible boundaries",
     "kind":"Preference tension",
     "group":"Tests & proof",
-    "meaning":"Outcome-Oriented Execution allows planned intermediate breakage; Sequence Verifiable Units says not to advance until a unit is green and prescribes trunk-first sequencing.",
+    "meaning":"Outcome-Oriented Execution allows planned intermediate breakage. Sequence Verifiable Units calls for checking each unit before advancing and landing each commit independently.",
     "effect":"They can coexist if the verifiable unit is an agreed migration phase. A literal per-edit interpretation can create unnecessary compatibility scaffolding or repeated checks.",
     "suggestion":"Define meaningful verification boundaries for the task, preserve useful checks, and leave commit/rebase mechanics to the actual delivery workflow.",
     "locators":[
       {"source":"current:skills/principle-outcome-oriented-execution/SKILL.md","contains":"Intermediate breakage is acceptable"},
-      {"source":"current:skills/principle-sequence-verifiable-units/SKILL.md","contains":"Rebase onto clean trunk first"}
+      {"source":"current:skills/principle-sequence-verifiable-units/SKILL.md","contains":"Each commit lands on its own"}
     ]
   },
   {

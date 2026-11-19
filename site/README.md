@@ -54,6 +54,8 @@ Kishu mode owns the routing. Its design taste engine guides interface work, and 
 
 The visible credits section names pstack, Impeccable, and i-have-adhd, their authors and licenses, and their roles within Kishu. Keep those credits consistent with the root [README](../README.md#whats-inside) and [third-party notices](../THIRD_PARTY_NOTICES.md). The [build story](BUILD_STORY.md) records the evidence behind the site's real-world example.
 
+The install panel points to a published tag. When preparing a release, update the static and interactive install commands, the plain-text instructions, and the dependency versions in the FAQ together. The FAQ in `discovery.config.mjs` supplies both the visible answers and `dist/index.md`. [Release history](https://github.com/SPDUK/kishu-stack/releases) · [Dependency verification](../docs/verification.md)
+
 ## Demo collection
 
 | Demo | Local route | Interaction |

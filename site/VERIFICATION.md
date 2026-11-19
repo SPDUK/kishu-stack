@@ -1,5 +1,11 @@
 # Verification
 
+## Kishu v0.1.7 installation and planner FAQ — November 19, 2026
+
+The FAQ explains multi-PR planning and names the three dependencies bundled in v0.1.7. The install panel links to the v0.1.7 release and pins the clone command to its tag.
+
+All 38 site tests passed, along with discovery freshness, resource and anchor checks, and the MMO story checks. In local Edge at 1280px and 390px, all three host tabs showed the tagged install command. The planning and dependency answers opened with the keyboard and fit the viewport. With JavaScript disabled, the native disclosure opened and the stable installation instructions remained readable. The generated Markdown included the same planning guidance.
+
 ## Public demo collection — November 4, 2026
 
 Veldrift (immersive MMO concept), Meridian (simulated trading dashboard), and Stillroom (local workshop booking) replace the earlier third-party-media study. The three products are fictional. Generated-image provenance and the concise build narrative are retained; earlier source-media evidence is excluded from publication.

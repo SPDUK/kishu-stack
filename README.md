@@ -36,10 +36,10 @@ Kishu is a resourceful generalist. Your instructions, project requirements and h
 
 Python 3.11+ is needed for the maintenance/install script. Git is needed to fetch or update upstreams. The generated `plugin/` is self-contained; installing it does not require the upstream checkouts.
 
-Clone the source repository, then install for your host:
+These commands install [Kishu v0.1.7](https://github.com/SPDUK/kishu-stack/releases/tag/v0.1.7).
 
 ```sh
-git clone --branch v0.1.6 --single-branch https://github.com/SPDUK/kishu-stack.git
+git clone --branch v0.1.7 --single-branch https://github.com/SPDUK/kishu-stack.git
 cd kishu-stack
 python scripts/kishu.py install --harness codex
 ```
@@ -98,6 +98,12 @@ Codex does not gain a custom slash command merely from a skill manifest. Use its
 To choose an exact published version or roll back, ask Kishu to “update to v0.1.5.” The updater accepts `--version 0.1.5` and verifies the tag matches the package version. Older `~/.kishu/source` checkouts are preserved. See [update and recovery instructions](docs/maintenance.md#update-an-installed-copy).
 
 Cursor supports the spellings above. Codex exposes the administration skill as `$kishu:kishu setup` and `$kishu:kishu update` (also available through `/skills`). Claude Code uses `/kishu:kishu setup` and `/kishu:kishu update`. The standalone export supports the same actions through `kishu-mode setup` and `kishu-mode update`, using the host's normal skill selector. Ordinary work stays on `kishu-mode`.
+
+## Plan a change across pull requests
+
+Ask Kishu to “plan the dashboard migration across three pull requests.” You get a Markdown checklist showing which PRs can proceed independently, what each one changes, and how to verify it. Kishu runs its bundled checker against the plan and returns the file with the result. Implementation starts when you give the go-ahead.
+
+For this workflow, each PR's plan calls for ten live verification scenarios. An interaction change calls for your review of screenshots and video before merge. Performance checks apply when there is a concrete concern or requirement. Otherwise the plan records why they do not apply. Live verification uses your configured `swarm workers` role. [Multi-PR playbook](overrides/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md)
 
 ## Configure models
 
@@ -169,6 +175,8 @@ Kishu brings three open-source foundations together with its own working prefere
 | ADHD-aware communication | [i-have-adhd](https://github.com/ayghri/i-have-adhd), by Ayoub G. · MIT | Adapted guidance for result-first answers, visible progress, useful evidence, and less process noise. Its separate startup hooks are not enabled. |
 
 Original licenses, notices, and upstream links remain in the bundle. See [third-party notices](THIRD_PARTY_NOTICES.md) and [pinned source revisions](upstreams.lock.json) for provenance. Credit does not imply endorsement by the upstream authors.
+
+Kishu v0.1.7 bundles **pstack 0.15.44**, **Impeccable 4.10.0** (engine **0.1.27**), and **i-have-adhd 0.4.1**. The refresh keeps Kishu's adapted plan checker and adds motion review guidance to its design taste engine. [Verification record](docs/verification.md#dependency-refresh--november-19-2026)
 
 [Publication and license notes](docs/licensing.md) cover the code, fonts and generated showcase artwork.
 
